@@ -77,7 +77,29 @@ El espín del SMBH puede ser definido como ${\bf{J}}_{bh}=|a|GM^{2}_{bh}/c$, don
 \label{subsec: Acrecion_gas}
 %------------------------------------------------
 Como se expuso anteriormente, alrededor del SMBH existe un disco de acreción, que es originado por la conservación del momentum angular de las partículas exteriores al disco de acreción. Siguiendo lo propuesto por \cite{lynden1969}, las partículas que se encuentran el disco de acreción pierden momentum angular debido a torques producidos por los campos magnéticos, a medida que se pierden momentum se van adentrando más en el disco, hasta llegar al borde interior del mismo. La orbita más interior es denominada como la ultima orbita estable (del ingles LSO), si la partícula se adentra en esta órbita será devorada por el BH. El radio para la LSO en términos del momentum angular del BH se puede reescribir de la forma \cite{bardeen1972}:
+%
+\begin{align}
+ \hat{r}_{lso}=\frac{r_{lso}}{R_g}=3+Z_{2}\pm \left[ (3-Z_{1})(3+Z_{1}+2Z_{2})\right]^{1/2} \,,
+ \label{eq: radio_lso}
+\end{align}
+%
+donde $R_{g}$ es el radio gravitacional, es definido como la mitad del radio de Schwarzchild del BH, 
 
+\begin{align}
+    R_{g}= R_{schw}/2  = \frac{GM_{BH}}{c}\,.
+\end{align}
+De la ecuación (\ref{eq: radio_lso}) se tiene que: para valores de $a<0$ el BH rota de manera contraría a las partículas que estan en la LSO, y si $a>0$ se tiene lo contrario, el BH rota con las partículas. Los parámetros $Z_1$ y $Z_2$ se escriben de la forma:
+
+\begin{eqnarray}
+    Z_1 = 1+(1-a^{2})^{1/3}\left[(1+a)^{1/3}+(1-a)^{1/3} \right]\,,\\
+    Z_2 = (3a+Z_{1}^{2})^{1/2}\,.
+\end{eqnarray}
+
+Un parámetro de gran importancia es la eficiencia radiativa del disco de acreción del BH $\epsilon_{r}$, este parámetro indica cuanta materia se transforma en energía. Al suponer un BH que rota, la eficiencia radiativa dependerá del parámetro de spin $a$ \cite{novikov1973}:
+
+\begin{align}
+    \epsilon_{r} \equiv 1- \sqrt{1-\frac{2}{3}\frac{1}{\hat{r}_{lso}(a)}}
+\end{align}
 
 %------------------------------------------------
 \subsubsection{Alineamiento o contra-alineamiento del espín}
