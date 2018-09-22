@@ -96,14 +96,44 @@ De la ecuación (\ref{eq: radio_lso}) se tiene que: para valores de $a<0$ el BH 
 \end{eqnarray}
 
 Un parámetro de gran importancia es la eficiencia radiativa del disco de acreción del BH $\epsilon_{r}$, este parámetro indica cuanta materia se transforma en energía. Al suponer un BH que rota, la eficiencia radiativa dependerá del parámetro de spin $a$ \cite{novikov1973}:
-
+%
 \begin{align}
-    \epsilon_{r} \equiv 1- \sqrt{1-\frac{2}{3}\frac{1}{\hat{r}_{lso}(a)}}
+    \epsilon_{r} \equiv 1- \sqrt{1-\frac{2}{3}\frac{1}{\hat{r}_{lso}(a)}}\,,
 \end{align}
+%
+en otras palabras: entre más acreta menos radia ó entre más radia menos acreta.
+
+A medida que el material cae al LSO y posteriormente al BH, conlleva  una emisión de energía por unidad de masa $\widetilde{e}_{lso}$ y un momentum por unidad de masa $\widetilde{l}_{lso}$. Al considerar la masa contenida en región muy cerca a LSO $dM_{0}$, permite calcular el cambio de la masa y del momentum angular del BH, de la forma:
+%
+\begin{align}
+    dM_{BH}=\frac{\widetilde{e}_{lso}}{c^{2}}dM_{0}, \, \, dJ_{BH}=\widetilde{l}_{lso}dM_{0}\,.
+    \label{eq: dM_y_dJ}
+\end{align}
+%
+Este ecuación (\ref{eq: dM_y_dJ}) se relaciona con la ecuación para el espín del BH total ${\bf{J}}_{BH}$ de la forma:
+%
+\begin{align}
+    \frac{da}{d\ln{M_{BH}}}=\frac{1}{M_{BH}}\frac{c^{3}}{G}\frac{\widetilde{l}_{lso}}{\widetilde{e}_{lso}}-2\,,
+\end{align}
+%
+La integral a esta solución es obtenida por \cite{bardeen1970}, dando como resultado: 
+\begin{align}
+    a^{f}=\frac{1}{3}\hat{r}_{lso}^{2}\frac{M_{BH}}{M_{BH}^{f}}\left[1- \left\{3\hat{r}_{lso}\left(\frac{M_{BH}}{M^{f}_{BH}} \right)^{2}-2 \right\}^{1/2} \right]\,,
+    \label{eq: espin_final a^f}
+\end{align}
+donde $a^{f}$ y $M_{BH}^{f}$, corresponden al espín y masa final del BH. La ecuación (\ref{eq: espin_final a^f}) determina la evolución del espín $a$ durante el tiempo de acreción para un estado inicial. 
 
 %------------------------------------------------
-\subsubsection{Alineamiento o contra-alineamiento del espín}
-\label{subsubsec: Aling_Spin}
+    \subsubsection{Acreción de gas en discos desalineados}
+    \label{subsubsec: Acrecion gas desaliniado}
+%------------------------------------------------
+Siguiendo lo anteriormente expuesto, se tiene un disco de acreción que orbita alrededor de un BH. Los dos sistemas al estar rotando presentan un momemtum angular ${\bf{J}}_{bh}$ y ${\bf{J}}_{d}$. Gracias al análisis y resultados en \ref{subsec: Acrecion_gas} es posible asumir que la evolución del espín del BH, depende de la Masa acretada por el mismo.
+
+
+
+%------------------------------------------------
+    \subsubsection{Alineamiento o contra-alineamiento del espín}
+    \label{subsubsec: Aling_Spin}
 %------------------------------------------------
 
 
