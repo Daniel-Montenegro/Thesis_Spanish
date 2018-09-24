@@ -132,27 +132,34 @@ donde $a^{f}$ y $M_{BH}^{f}$, corresponden al espín y masa final del BH. La ecu
     \subsubsection{Acreción de gas en discos desalineados}
     \label{subsubsec: Acrecion gas desaliniado}
 %------------------------------------------------
-Siguiendo lo anteriormente expuesto, se tiene un disco de acreción que orbita alrededor de un BH. Los dos sistemas al estar rotando presentan un momemtum angular ${\bf{J}}_{bh}$ y ${\bf{J}}_{d}$. Gracias al análisis y resultados en \ref{subsec: Acrecion_gas} es posible asumir que la evolución del espín del BH, depende de la Masa acretada por el mismo, ecuación (\ref{eq: espin_final a^f}). El proceso de acreción y cantidad de masa acomulada trasciende el análisis que se pretende realizar, sin embargo es posible tener un estimativo de estos procesos, a partir de los que sigue. Al considera el caso más general donde se tiene el disco de acreción rota en un plano diferente al plano ecuatorial del disco, (ver figura \ref{fig: desaliniamineto_bh_disco}). Al considerar este sistema se tiene entonces, que el disco de acreción genera un torque debido al efecto Lense-Thirring (LT) producto de la rotación del BH. El efecto LT puede ser puede ser escrito de la forma:
+Siguiendo lo anteriormente expuesto, se tiene un disco de acreción que orbita alrededor de un BH. Los dos sistemas al estar rotando presentan un momemtum angular ${\bf{J}}_{bh}$ y ${\bf{J}}_{d}$. Gracias al análisis y resultados en \ref{subsec: Acrecion_gas} es posible asumir que la evolución del espín del BH, depende de la Masa acretada por el mismo, ecuación (\ref{eq: espin_final a^f}). El proceso de acreción y cantidad de masa acumulada trasciende el análisis que se pretende realizar, sin embargo es posible tener un estimativo de estos procesos, a partir de los que sigue: Al considerar el caso más general donde se tiene que el disco de acreción rota en un plano diferente al plano ecuatorial del BH (los espines están desalineados), (ver figura \ref{fig: desaliniamineto_bh_disco}). Al considerar este sistema se tiene entonces, que el disco de acreción genera un torque debido al efecto Lense-Thirring (LT) producto de la rotación del BH. El efecto LT puede ser puede ser escrito de la forma:
 %
 \begin{align}
     \frac{\partial {\bf{L}}}{\partial t}={\bf{\Omega}}_{p}\times{\bf{L}}\,,
     \label{eq: lense-Thirring}
 \end{align}
 %
-donde ${\bf{L}}$ es el momentum angular por unidad de area del disco y ${\bf{\Omega}}_{p}$ es rata de preseción, definida de la forma:
+donde ${\bf{L}}$ es el momentum angular por unidad de área del disco y ${\bf{\Omega}}_{p}$ es rata de precesión, definida de la forma:
 %
 \begin{align}
     {\bf{\Omega}}_{p}=\frac{2G}{c}\frac{{\bf{J}}_{bh}}{R^{3}}\,,
 \end{align}
 %
-donde $R$ es la distancia al BH \cite{pringle1992}. La viscosidad del disco determina altamente la evolución de los espines, entre más grande sea la viscosidad de las partículas en el disco es menor su tiempo de alineación, además si es lo suficientemente alta, las partículas del interior generan otro disco que se alinea con el espín del BH. Entonces, es necesario introducir las escalas de tiempo que brindan información importante de la dinámica del sistema: Se introduce el tiempo de escala de acreción $t_{acc}\equiv R^{2}/\nu_{1}(R)$, indicando el tiempo que demora las partículas del disco en caer al BH de manera paralela, el tiempo de escala warp $t_{warp}\equiv R^{2}/\nu_{2}(R)$, que equivale al tiempo de propagación de la deformación en dirección normal.  
+donde $R$ es la distancia al BH \cite{pringle1992}. La viscosidad del disco determina altamente la evolución de los espines, entre más grande sea la viscosidad del disco, menor su tiempo de alineación, además si es lo suficientemente alta, las partículas del interior generan otro disco que se alinea con el espín del BH. Entonces, es necesario introducir las escalas de tiempo que brindan información importante de la dinámica del sistema: Se introduce el tiempo de escala de acreción $t_{acc}\equiv R^{2}/\nu_{1}(R)$, indicando el tiempo que demora las partículas del disco en caer al BH de manera paralela, el tiempo de escala warp $t_{warp}\equiv R^{2}/\nu_{2}(R)$, que equivale al tiempo de propagación de la deformación en dirección normal.  
 
-Sin embargo ese disco warp\footnote{disco interno que fue deformado por la alta viscosidad} deformado no mantiene la misma dirección, este precesa al rededor del plano ecuatorial de BH. El tiempo de precesión esta definido como:
+Sin embargo el plano ecuatorial del disco warp\footnote{disco interno que fue deformado por la alta viscosidad} no mantiene la misma dirección, este precesa al rededor del plano ecuatorial de BH. El tiempo de precesión esta definido como:
 %
 \begin{align}
-    t_{prec}= \frac{2\pi}{{\bf{\Omega}}_p(R)}
+    t_{prec}= \frac{2\pi}{{\bf{\Omega}}_p(R)}\,.
 \end{align}
-
+%
+Las escalas de tiempo permitir indicarnos si el torque producto del efecto LT, puede alinear los espines. La condición necesaria para el alineamiento es $t_{prec}\lesssim t_{warp}$ \cite{natarajan1999}. De estas es posible obtener el tamaño del disco deformado $R_{warp}$, en términos del radio de Schwarzschild $R_{Schw}$ se puede escribir de la forma \cite{volonteri2007}:
+%
+\begin{align}
+    \frac{R_{warp}}{R_{Schw}}=3.6\times 10^{3}a^{5/8}\left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{1/8}f^{-1/4}\left(\frac{\nu_{2}}{\nu_{1}} \right)^{-5/8}\alpha^{-1/2}\,,
+\end{align}
+%
+donde $f\equiv L/L_{Edd}$ es el radio de Eddington, $L_{Edd}=4\pi GM_{bh}c/\kappa$ es  la luminosidad de Eddington, con $\kappa\sim 0.3 [cm^{2}g^{-1}]$ siendo el scatering por opacidad del electrón, y $L=\epsilon_{r}\dot{M}c^{2}$ es la acreción de luminosidad, con $\dot{M}$ es la rata de acreción total, $\alpha$ es parámetro de viscosidad Shakura–Sunyaev.
 
 
 
