@@ -100,6 +100,7 @@ Un parámetro de gran importancia es la eficiencia radiativa del disco de acreci
 \begin{align}
     \epsilon_{r} \equiv 1- \sqrt{1-\frac{2}{3}\frac{1}{\hat{r}_{lso}(a)}}\,,
 \end{align}
+\label{eq: eficiencia radiativa}
 %
 en otras palabras: entre más acreta menos radia ó entre más radia menos acreta.
 
@@ -176,20 +177,51 @@ dicho que calcular la masa acretada por el BH no era trivial, sin embargo es pos
  \label{eq: Masa_acretada}
 \end{align}
 %
-
 %------------------------------------------------
     \subsubsection{Alineamiento o contra-alineamiento del espín}
     \label{subsubsec: Aling_Spin}
 %------------------------------------------------
-Los procesos que ocurren con respecto a la acreción de gas (sec \ref{subsec: Acrecion_gas} ) determinan de una manera considerable la evolución del espín del sistema en general ${\bf{J}}_{tot}$. Recordando lo mencionado en la parte inicial de esta sección, podemos decir que el parámetro de espín $a$ también juega un papel importante en el proceso de alineamiento, proporcionando dirección de rotación del sistema disco y BH. \cite{king2005} indica que para máxima contra-rotación $a=-1$ el radio de orbita estable $r_{lso}=9$ y para la mínima $r_{lso}=1$, se tiene entonces que a medida que aumenta el $r_{lso}$ disminuye (ECUACIÓN...). (HACER UNA FIGURITA). Al usar la ecuación (....) se obtiene que la eficiencia radiativa $\epsilon_{r}$ depende inversamente de $r_{lso}$, si $r_{lso}$ crece, la eficiencia disminuye. Por otro lado $\epsilon_{r}$ indica cuanta materia es expulsada en forma de energía, entonces conforme este crece menos aporta al momentum angular y proceso de acreción. Por lo tanto al ser el sistema contra-rotante el que experimenta una eficiencia radiativa menor debido al gran tamaño de la orbita $r_{lso}$ procducto del signo de $a$, es el proceso que más aporta al momentum angular y por ende a la evolución del espín. 
+\begin{center}
+\includegraphics[scale=.4]{./figures/4_Modelo_Spin/Sistema_con_region_warp.png}
+\figcaption{\emph{Comparación entre un sistema que co-rota (b) y contra-rota (a)...... citas a SEBAS}}\label{fig: sistema con zona warp}
+\end{center}
+
+Los procesos que ocurren con respecto a la acreción de gas (sec \ref{subsec: Acrecion_gas} ), determinan de una manera considerable la evolución del espín del sistema en general ${\bf{J}}_{tot}$. Recordando lo mencionado en la parte inicial de esta sección, pude decir que el parámetro de espín $a$ también juega un papel importante en el proceso de alineamiento, proporcionando la dirección de rotación del sistema disco-BH. \cite{king2005} indica que para máxima contra-rotación $a=-1$, el radio de orbita estable $r_{lso}=9$ y para máxima co-rotación $a=1$ entonces $r_{lso}=1$; se tiene entonces que a medida que aumenta el $a$ disminuye $r_{lso}$. (ver figura \ref{fig: contra-rotacion y co-rotacion}). Al usar la ecuación (\ref{eq: eficiencia radiativa}) se obtiene que la eficiencia radiativa $\epsilon_{r}$ depende inversamente de $r_{lso}$, si $r_{lso}$ crece, la eficiencia disminuye. Por otro lado $\epsilon_{r}$ indica cuanta materia es expulsada en forma de energía, entonces conforme este ($\epsilon_{r}$) crece menos aporta al momentum angular y al proceso de acreción del sistema. Por lo tanto al ser el sistema contra-rotante el que experimenta una eficiencia radiativa menor debido al gran tamaño de la orbita $r_{lso}$ (ver figura \ref{fig: eficiencia_radiativa }) producto del signo de $a$, es el proceso que más aporta al momentum angular y por ende a la evolución del espín. 
+
+\begin{center}
+\includegraphics[scale=.28]{./figures/4_Modelo_Spin/Co-rotacion_contra-rotacion.png}
+\figcaption{\emph{Comparación entre un sistema que co-rota (b) y contra-rota (a)......}}\label{fig: contra-rotacion y co-rotacion}
+\end{center}
+\begin{center}
+\includegraphics[scale=.5]{./figures/4_Modelo_Spin/eficiencia_radiativa.pdf}
+\figcaption{\emph{Dependencia entre el radio de ultima orbita estable $r_{lso}$ con la eficiencia radiativa, se puede observar que cuando $r_{lso}$ es mínimo la eficiencia es máxima, que corresponde a la máxima co-rotación $a=1$, indicando que gran parte del material se pierde y no contribuye al espín del sistema. Al observa el otro caso, pasa todo lo contario, siendo el sistema contra-rotante $a=-1$ el que mejor contribuye a la evolución del espín.}}\label{fig: eficiencia_radiativa }
+\end{center}
+
+
 Volviendo al espín del sistema, el cual se define de la forma:
 \begin{align}
 	{\bf{J}}_{tot}= {\bf{J}}_{bh}+{\bf{J}}_{d}
 \end{align}
+donde ${\bf{J}}_{d}$ es el momentum angular o espín del la región warp  (deformada), ver figura \ref{fig: sistema con zona warp}. Se define el ángulo de desalineación $\theta$ como  ${\bf{J}}_{bh}\cdot{\bf{J}}_{d}$, el cual está acotado ($-1\leq \cos\theta \leq 1$), donde $\cos \theta \to -1$ indica un anti-alineamiento, y si $\cos \theta \to 1$ indica un alineamiento \cite{king2005}. Al considerar la derivada temporal del producto escalar de  ${\bf{J}}_{bh}$ se obtiene lo siguiente \cite{king2005}:
+%
+\begin{align}
+    \frac{d }{dt}({\bf{J}}_{bh}\cdot {\bf{J}}_{bh})=  \frac{d}{dt}(J_{bh}^{2})= 0 \Rightarrow J_{bh}=cte\,.
+\end{align}
+%
+Esta ecuación indica que ${\bf{J}}_{bh}$ se mueve sobre una esfera. Bajo la suposición anterior es posible concluir que los espín del BH se termina alineando con el espín total. 
+%
+\begin{align}
+    \frac{d}{dt}(\cos\theta_{bh})\geq 0\,,
+\end{align}
+%
+donde $\theta_{bh}$ es el ángulo entre ${\bf{J}}_{bh}$ y ${\bf{J}}_{tot}$, entonces $\theta_{bh}$ debe estar definido entre (0,$\pi/2$) para que se cumpla la condición de la derivada, a medida que $\theta_{bh}$ crece el $\cos\theta_{bh}$ disminuye, lo cual implica que a medida que pasa el tiempo la diferencia entre los espines va disminuyendo, hasta llegar a alinearse.
 
-donde ${\bf{J}}_{d}$ es el momentum angular o espín del la región warp  (deformada). (ver figura (...))
-
-
+Al saber que eventualmente que el momentum angular total y el espín del BH se alinearan, proporciona gran información de la evolución del espín, sin embargo es necesario conocer si el espín del disco, se terminara alineando o contra-alineando, para ello, miremos los criterios que dan cavida a ello. Partiendo de la magnitud del momentum angular total
+%
+\begin{align}
+    J^{2}_{tot} = J^{2}_{bh}+J_{d}^{2} -2J_{bh}J_{d}\cos(\pi -\theta)
+\end{align}
+%
 
 
 
