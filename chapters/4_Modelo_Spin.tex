@@ -84,17 +84,18 @@ Como se expuso anteriormente, alrededor del SMBH existe un disco de acreción, q
 \end{align}
 %
 donde $R_{g}$ es el radio gravitacional, es definido como la mitad del radio de Schwarzchild del BH, 
-
+%
 \begin{align}
-    R_{g}= R_{schw}/2  = \frac{GM_{BH}}{c}\,.
+    R_{g}= R_{schw}/2  = \frac{GM_{bh}}{c}\,.
 \end{align}
+%
 De la ecuación (\ref{eq: radio_lso}) se tiene que: para valores de $a<0$ el BH rota de manera contraría a las partículas que estan en la LSO, y si $a>0$ se tiene lo contrario, el BH rota con las partículas. Los parámetros $Z_1$ y $Z_2$ se escriben de la forma:
-
+%
 \begin{eqnarray}
     Z_1 = 1+(1-a^{2})^{1/3}\left[(1+a)^{1/3}+(1-a)^{1/3} \right]\,,\\
     Z_2 = (3a+Z_{1}^{2})^{1/2}\,.
 \end{eqnarray}
-
+%
 Un parámetro de gran importancia es la eficiencia radiativa del disco de acreción del BH $\epsilon_{r}$, este parámetro indica cuanta materia se transforma en energía. Al suponer un BH que rota, la eficiencia radiativa dependerá del parámetro de spin $a$ \cite{novikov1973}:
 %
 \begin{align}
@@ -165,7 +166,7 @@ donde $f\equiv L/L_{Edd}$ es el radio de Eddington, $L_{Edd}=4\pi GM_{bh}c/\kapp
 La región warp\footnote{región deformada, entre el disco de acreción y el BH} proporciona bastante información de la evolución del BH. De esta región se puede inferir la cantidad de materia acretada por el BH $\dot{M_{bh}}$, el cual sera transferido de manera directa como momentum angular \cite{volonteri2007}. La masa warp se calcula a partir de $M_{warp}=\dot{M}t_{acc}(R_{warp})$, donde el tiempo de acreción en la región warp se calcula de la forma:
 %
 \begin{align}
- t_{acc}=\frac{R^{2}_{warp}}{\nu_{1}} = 3 \times10^{6}a^{7/8} \left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{11/8}\times\lambda^{-3/4}\left( \frac{\nu_{2}}{\nu_{1}}\right)^{-7/8}\alpha^{-3/2}\,\, \textit{yr}.
+ t_{acc}=\frac{R^{2}_{warp}}{\nu_{1}} = 3 \times10^{6}a^{7/8} \left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{11/8}\times f^{-3/4}\left( \frac{\nu_{2}}{\nu_{1}}\right)^{-7/8}\alpha^{-3/2}\,\, \textit{yr}.
 \end{align}
 %
 La relación entre las viscosidades $\nu_1$ y $\nu_2$ determinan que tipo proceso ocurrirá de una forma más corta: acreción ó alineación del warp. Para un disco delgado se debe cumplir que $H/\alpha < a \ll 1$. En este trabajo se considera la relación $\nu_{2}/\nu_{1}=2(1+7\alpha)/(\alpha^{2}(4+a^{2}))$ \cite{ogilvie1999} , la cual cumple la condición $\nu_{2}/\nu_{1}\approx 1/\alpha^{2}$ \cite{papaloizou1983}. Bajo la relación asumida se obtiene que $t_{warp}< t_{acc}$, lo cual implica que el disco de la región warp
@@ -216,18 +217,72 @@ Esta ecuación indica que ${\bf{J}}_{bh}$ se mueve sobre una esfera. Bajo la sup
 %
 donde $\theta_{bh}$ es el ángulo entre ${\bf{J}}_{bh}$ y ${\bf{J}}_{tot}$, entonces $\theta_{bh}$ debe estar definido entre (0,$\pi/2$) para que se cumpla la condición de la derivada, a medida que $\theta_{bh}$ crece el $\cos\theta_{bh}$ disminuye, lo cual implica que a medida que pasa el tiempo la diferencia entre los espines va disminuyendo, hasta llegar a alinearse.
 
-Al saber que eventualmente que el momentum angular total y el espín del BH se alinearan, proporciona gran información de la evolución del espín, sin embargo es necesario conocer si el espín del disco, se terminara alineando o contra-alineando, para ello, miremos los criterios que dan cavida a ello. Partiendo de la magnitud del momentum angular total
+Al saber que eventualmente que el momentum angular total y el espín del BH se alinearan, proporciona gran información de la evolución del espín, sin embargo es necesario conocer si el espín del disco, se terminara alineando o contra-alineando, para ello, miremos los criterios que dan cabida a ello. Partiendo de la magnitud del momentum angular total
 %
 \begin{align}
     J^{2}_{tot} = J^{2}_{bh}+J_{d}^{2} -2J_{bh}J_{d}\cos(\pi -\theta)
 \end{align}
 %
+El contra-alineamiento ($\theta\to\pi$) ocurre si y solo si ${\bf{J}}_{bh}^{2}>{\bf{J}}_{tot}^{2}$, que equivale a \cite{king2005}:
+%
+\begin{align}
+    \cos\theta < - \frac{{\bf{J}}_{d}}{2{\bf{J}}_{bh}}\,.   
+\end{align}
+%
+Por lo tanto, gracias a este criterio es posible indicar si el sistema BH-disco está alineado/contra-alineado: si $\theta >\pi/2$ y $2{\bf{J}}_{bh}>{\bf{J}}_{d}$ el BH está anti-alineado, si  $2{\bf{J}}_{bh}<{\bf{J}}_{d}$ el alineamiento siempre ocurre cuando el momentum angular del disco sobrepasa al del BH \cite{king2005}.
+
+La magnidtud del momentum angular del disco esta dado por [SEBASTIAN]:
+%
+\begin{align}
+    J_{d}=\int_{warp} \Sigma_{d}\Omega_{k}(R)R^{2}dS \approx M_{d}(GM_{bh}R_{warp})^{1/2}\,,
+    \label{eq: magnitid J_disco}
+\end{align}
+%
+donde $\Sigma$ es la densidad superficial del disco, $\Omega_{k}$ es la frecuencia de Kepler y la integral va sobre todo la superficie de la región warp. Se ha asumido que todo el gas que va cayendo al BH esta circulando y entonces el momentum angular debería de distribuirse sobre toda la región warp. Este argumento permite encontrar una relación entre el momentum angular del disco y el BH.
+%
+\begin{align}
+    \frac{J_{d}}{2J_{bh}}\approx \frac{M_{d}}{aM_{bh}}\left(\frac{R_{warp}}{R_{Schw}} \right)^{1/2}
+\end{align}
+%
+Este criterio permite evaluar cada episodio de acreción, con lo cual se puede conocer si hay alineamiento o contra-alineamiento antes de que se acrete el disco [SEBAS]. 
+
+%------------------------------------------------
+    \subsubsection{Discos auto-gravitantes}
+    \label{subsubsec: Disco auto-gravitantes}
+%------------------------------------------------
+Cuando se llega al caso en el cual la rata de acreción del BH es muy alta, se genera un disco de acreción aun más grande. En las regiones más externas del disco de acreción se empiezan a formar un disco grueso, que al no estar tan cerca al BH empieza a colapsar en pequeños nubes de gas (figura \ref{fig: Sistema auto-gravitante}), que a su vez se puede formar estrellas muy masivas que evolucionan rápido, y al explotar como súper novas generan vientos muy violentos que perturban el sistema, en especial que afectan al disco interior de forma caótica. 
+%
+\begin{center}
+\includegraphics[scale=.3]{./figures/4_Modelo_Spin/Sistema_auto-gravitante.png}
+\figcaption{\emph{-...[SEBAS]}}\label{fig: Sistema auto-gravitante}
+\end{center}
+%
+Para conocer de buena forma este suceso se hace uso del criterio de estabilidad de Toomre's, el cual balancea  el soporte rotacional con la gravedad propia:
+%
+\begin{align}
+    Q\equiv\frac{c_{s}\Omega_{k}}{\pi G\Sigma_{d}}\,,
+    \label{eq: estabilidad_Toomre's}
+\end{align}
+%
+donde $c_{s}$ es la velocidad del sonido en el gas. En el caso en que $Q\leq 1$ el disco es inestable, esto conduce a que se debe definir un radio de auto-gravedad $R_{sg}$ que sea usado para la evolución del espín, donde $Q(R_{sg})=1$. El radio de auto-gravedad es determinado por \cite{fanidakis2011}:
+%
+\begin{align}
+    \frac{R_{sg}}{R_{Schw}}=1.5\times 10^{3}\epsilon^{8/27}\left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{-26/27}f^{-8/27}\alpha^{14/27}
+\end{align}
+%
+Debido a que $Q$ es un parámetro que decrece monótonamente a medida que crece el radio,  entonces la parte exterior al $R_{sg}$, donde no se cumple el criterio de estabilidad de Toomre esta sujeto a fragmentación, mientras que la parte interior que sí se cumple la condición se genera el disco estable. Ya solo el material que se encuentra dentro del radio de warp puede transferir momentum angular de forma eficiente, solo se incluye los efectos de auto-gravedad si $R_{sa}\leq R_{warp}$. Si sí se cumple la relación anterior, se debe obtener la relación de la masa que contribuye al momentum angular del sistema, dada por \cite{fanidakis2011}:
+%
+\begin{align}
+    M_{sg} = 2.13\times 10^{5}\epsilon^{-5/27}\left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{23/27}f^{5/27}\alpha^{-2/17}M_{\odot}\,.
+\end{align}
+%
+Ahora con los valores de $M_{sg}$ y $R_{sg}$, se puede obtener la evolución del espín del BH en el régimen de auto-gravedad.
 
 
-
-
-
-
+%------------------------------------------------
+\subsection{Coalesencia de BH's}
+\label{subsec: Acrecion_gas}
+%------------------------------------------------
 
 
 
