@@ -283,7 +283,7 @@ Ahora con los valores de $M_{sg}$ y $R_{sg}$, se puede obtener la evolución del
 \subsection{Coalesencia de BH's}
 \label{subsec: Acrecion_gas}
 %------------------------------------------------
-La otra forma de poder cambiar la dirección del espín del BH es a partir de fusiones entre  sistemas binarios de BHs. Este fenómeno es común en procesos de formación jerárquicos, en los cuales dos galaxias colisionan, generando un poso de potencial donde los dos BHs perteneciente a cada galaxia, van a terminar coalesiendo debido a la fricción dinámica. Entonces cuando dos BHs fusionan cambian su espín, una forma de verlo es usando el ajuste analítico de \cite{rezzolla2008}. El espín resultante de la fusión se escribe como:
+La otra forma de poder cambiar la dirección del espín del BH es a partir de fusiones entre  sistemas binarios de BHs. Este fenómeno es común en procesos de formación jerárquicos, en los cuales dos galaxias colisionan, generando un poso de potencial donde los dos BHs perteneciente a cada galaxia, van a terminar fusionando debido a la fricción dinámica. Entonces cuando dos BHs fusionan cambian su espín, una forma de verlo es usando el ajuste analítico de \cite{rezzolla2008}. El espín resultante de la fusión se escribe como:
 %
 \begin{align}
     a = \frac{1}{(1+q)^{2}}(a_{1}+a_{2}q^{2}+\ell q)\,,
@@ -292,8 +292,17 @@ La otra forma de poder cambiar la dirección del espín del BH es a partir de fu
 donde $a_{1}$ es el parámetro de espín del BH más masivo, $a_{2}$ equivale al parámetro de espín del menos masivo, $q$ es la razón entre las masas $q=M_{2}/M_{1}\leq 1$ y $ \ell = {\bf{l}}/(M_{1}M_{2})$, donde ${\bf{l}}$ es la diferencia entre el momentum angular orbital ${\bf{L}}$ con el momentum angular de las ondas gravitacionales ${\bf{J}}_{og}$, en un instante antes de la fusión ${\bf{l}}={\bf{J}}-{\bf{J}}_{og}$.
 
 La norma de $\ell$ se puede obtener de un forma analítica \cite{rezzolla2008}: 
+%
+\begin{align}
+    \ell = \frac{s_{4}}{(1+q^{2})^{2}}(a_{1}^{2}+a_{2}^{2}q^{4}+2{\bf{a_{1}\cdot a_{2}}}q^{2})\\ + \frac{s_{5}\mu + t_{0}+2}{1+q^{2}}(a_{1}\cos\phi_{1}+a_{2}q^{2}\cos\phi_{2})\\ 
+    + 2\sqrt{3}+t_{2}\mu+t_{3}\mu^{2}\,,
+\end{align}
+donde $\phi_{1}(\phi_{2})$ son los ángulos entre $a_{1}(a_{2})$ y $\vec{\ell}$, y $\mu = q/(1+q)^{2}$. Al igual que supone \cite{rezzolla2008}, se considera que la dirección de $\Vec{\ell}$ es colineal con la dirección del momentun angular ${\bf{L=L_{1}+L_{2}}}$ antes de la fusión, el cual es un vector que es medido en simulación. Para tener el valor de ${\bf{L}}$ es necesario calcular el centro de masa del sistema binario ${\bf{r}}_com$, con esta posición se evalúa el momentum angular de los dos BHs relativo al centro de masa. Los coeficientes tienen los siguiente valores: $s_{4}=-0.129$, $s_{5}=-0.384$, $t_{0}=-2.686$, $t_{2}=-3.454$ y $t_{3}=2.353$.
 
-
+\begin{center}
+\includegraphics[scale=.3]{./figures/4_Modelo_Spin/fusion_BHs.png}
+\figcaption{\emph{Sistema binario de BHs, donde posteriormente va haber una fusión entre ellos. citar a SEBAS}}\label{fig: fusion_Bhs}
+\end{center}
 
 
 
