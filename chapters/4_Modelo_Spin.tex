@@ -100,8 +100,8 @@ Un parámetro de gran importancia es la eficiencia radiativa del disco de acreci
 %
 \begin{align}
     \epsilon_{r} \equiv 1- \sqrt{1-\frac{2}{3}\frac{1}{\hat{r}_{lso}(a)}}\,,
+    \label{eq: eficiencia radiativa}
 \end{align}
-\label{eq: eficiencia radiativa}
 %
 en otras palabras: entre más acreta menos irradia ó entre más irradia menos acreta.
 
@@ -169,8 +169,7 @@ La región warp\footnote{región deformada donde la fuerza viscosa no es tan fue
  t_{acc}=\frac{R^{2}_{warp}}{\nu_{1}} = 3 \times10^{6}a^{7/8} \left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{11/8}\times f^{-3/4}\left( \frac{\nu_{2}}{\nu_{1}}\right)^{-7/8}\alpha^{-3/2}\,\, \textit{yr}.
 \end{align}
 %
-La relación entre las viscosidades $\nu_1$ y $\nu_2$ determina que tipo proceso ocurrirá de una forma más corta: acreción ó alineación del warp. Para un disco delgado se debe cumplir que $H/\alpha < a \ll 1$. En este trabajo se considera la relación $\nu_{2}/\nu_{1}=2(1+7\alpha)/(\alpha^{2}(4+a^{2}))$ \cite{ogilvie1999} , la cual cumple la condición $\nu_{2}/\nu_{1}\approx 1/\alpha^{2}$ \cite{papaloizou1983}. Bajo la relación asumida se obtiene que $t_{warp}< t_{acc}$, lo cual implica que el disco de la región warp
-se alinea con el plano ecuatorial del BH en una escala de tiempo menor, que la escala de tiempo de acreción de masa. Anteriormente se había dicho que calcular la masa acretada por el BH no era trivial, sin embargo es posible suponer de muy buena manera que la masa warp que equivale a la masa acretada en un único episodio $M_{d}$, al usar la ecuación (\ref{eq: Masa_acretada}) [{\underline{SEBAS}}] se puede determinar la masa final del BH, necesaria para calcular la evolución del espín del BH (\ref{eq: espin_final a^f})
+La relación entre las viscosidades $\nu_1$ y $\nu_2$ determina que tipo proceso ocurrirá de una forma más corta: acreción ó alineación del warp. Para un disco delgado se debe cumplir que $H/\alpha < a \ll 1$. En este trabajo se considera la relación $\nu_{2}/\nu_{1}=2(1+7\alpha)/(\alpha^{2}(4+a^{2}))$ \cite{ogilvie1999} , la cual cumple la condición $\nu_{2}/\nu_{1}\approx 1/\alpha^{2}$ \cite{papaloizou1983}. Bajo la relación asumida se obtiene que $t_{warp}< t_{acc}$, lo cual implica que el disco de la región warp se alinea con el plano ecuatorial del BH, en una escala de tiempo menor, que la escala de tiempo de acreción de masa. Anteriormente se había dicho que calcular la masa acretada por el BH no era trivial, sin embargo es posible suponer de muy buena manera que la masa warp que equivale a la masa acretada en un único episodio $M_{d}$, al usar la ecuación (\ref{eq: Masa_acretada}) [{\underline{SEBAS}}] se puede determinar la masa final del BH, necesaria para calcular la evolución del espín del BH (\ref{eq: espin_final a^f})
 %
 \begin{align}
  M_{d}= \frac{M_{bh}^{f}-M_{bh}}{1-\epsilon_{r}}\,.
@@ -178,31 +177,35 @@ se alinea con el plano ecuatorial del BH en una escala de tiempo menor, que la e
 \end{align}
 %
 %------------------------------------------------
-    \subsubsection{Alineamiento o contra-alineamiento del espín}
+    \subsubsection{Alineamiento o anti-alineamiento del espín}
     \label{subsubsec: Aling_Spin}
 %------------------------------------------------
 \begin{center}
 \includegraphics[scale=.4]{./figures/4_Modelo_Spin/Sistema_con_region_warp.png}
-\figcaption{\emph{Comparación entre un sistema que co-rota (b) y contra-rota (a)...... citas a SEBAS}}\label{fig: sistema con zona warp}
+\figcaption{\emph{Esquema del sistema donde se ha dado una región warp. Se observan los diferentes espines de cada objeto, el radio warp, radio de la LSO. [SEBAS]}}\label{fig: sistema con zona warp}
 \end{center}
 
-Los procesos que ocurren con respecto a la acreción de gas (sec \ref{subsec: Acrecion_gas} ), determinan de una manera considerable la evolución del espín del sistema en general ${\bf{J}}_{tot}$. Recordando lo mencionado en la parte inicial de esta sección, pude decir que el parámetro de espín $a$ también juega un papel importante en el proceso de alineamiento, proporcionando la dirección de rotación del sistema disco-BH. \cite{king2005} indica que para máxima contra-rotación $a=-1$, el radio de orbita estable $r_{lso}=9$ y para máxima co-rotación $a=1$ entonces $r_{lso}=1$; se tiene entonces que a medida que aumenta el $a$ disminuye $r_{lso}$. (ver figura \ref{fig: contra-rotacion y co-rotacion}). Al usar la ecuación (\ref{eq: eficiencia radiativa}) se obtiene que la eficiencia radiativa $\epsilon_{r}$ depende inversamente de $r_{lso}$, si $r_{lso}$ crece, la eficiencia disminuye. Por otro lado $\epsilon_{r}$ indica cuanta materia es expulsada en forma de energía, entonces conforme este ($\epsilon_{r}$) crece menos aporta al momentum angular y al proceso de acreción del sistema. Por lo tanto al ser el sistema contra-rotante el que experimenta una eficiencia radiativa menor debido al gran tamaño de la orbita $r_{lso}$ (ver figura \ref{fig: eficiencia_radiativa }) producto del signo de $a$, es el proceso que más aporta al momentum angular y por ende a la evolución del espín. 
+Los procesos que ocurren con respecto a la acreción de gas (sec \ref{subsec: Acrecion_gas}) determinan de una manera considerable la evolución del espín del sistema en general ${\bf{J}}_{tot}$. Recordando lo mencionado en la parte inicial de esta sección, se pude decir que el parámetro de espín $a$ también juega un papel importante en el proceso de alineamiento, proporcionando la dirección de rotación del sistema disco-BH. \cite{king2005} indica que para máxima contra-rotación $a=-1$, con radio de orbita estable $r_{lso}=9$, y para máxima co-rotación $a=1$ con $r_{lso}=1$; se tiene entonces que a medida que aumenta $a$ disminuye $r_{lso}$ (ver figura \ref{fig: contra-rotacion y co-rotacion}). Al usar la ecuación (\ref{eq: eficiencia radiativa}) se obtiene que la eficiencia radiativa $\epsilon_{r}$ depende inversamente de $r_{lso}$, entonces si $r_{lso}$ crece, la eficiencia $\epsilon_{r}$ disminuye. Por otro lado, $\epsilon_{r}$ indica cuanta materia es expulsada en forma de energía, entonces conforme $\epsilon_{r}$ crece, menos aporta al momentum angular y al proceso de acreción del sistema, por lo tanto al ser el sistema contra-rotante el que experimenta una eficiencia radiativa menor, debido al gran tamaño de la orbita $r_{lso}$ (ver figura \ref{fig: eficiencia_radiativa }) 
+%producto del signo de $a$
+, es el proceso que más aporta al momentum angular y por ende a la evolución del espín. 
 
 \begin{center}
-\includegraphics[scale=.28]{./figures/4_Modelo_Spin/Co-rotacion_contra-rotacion.png}
-\figcaption{\emph{Comparación entre un sistema que co-rota (b) y contra-rota (a)......}}\label{fig: contra-rotacion y co-rotacion}
+\includegraphics[scale=.35]{./figures/4_Modelo_Spin/Co-rotacion_contra-rotacion.png}
+\figcaption{\emph{Comparación entre un sistema que co-rotante (b) y contra-rota (a). Se observa que cuando es contra-rotante ($a\to -1$)} el radio $r_{lso}\to 9$, y de forma contraria si es co-rotante ($a\to 1$) el radio $r_{lso}\to 1$.}\label{fig: contra-rotacion y co-rotacion}
 \end{center}
 \begin{center}
 \includegraphics[scale=.5]{./figures/4_Modelo_Spin/eficiencia_radiativa.pdf}
-\figcaption{\emph{Dependencia entre el radio de ultima orbita estable $r_{lso}$ con la eficiencia radiativa, se puede observar que cuando $r_{lso}$ es mínimo la eficiencia es máxima, que corresponde a la máxima co-rotación $a=1$, indicando que gran parte del material se pierde y no contribuye al espín del sistema. Al observa el otro caso, pasa todo lo contario, siendo el sistema contra-rotante $a=-1$ el que mejor contribuye a la evolución del espín.}}\label{fig: eficiencia_radiativa }
+\figcaption{\emph{Dependencia entre el radio de ultima orbita estable $r_{lso}$ con la eficiencia radiativa $\epsilon_{lso}$, se observa que cuando $r_{lso}$ es mínimo la eficiencia es máxima, que corresponde a la máxima co-rotación $a=1$, indicando que gran parte del material se pierde y no contribuye al espín del sistema. Al observa el otro caso, pasa todo lo contario, siendo el sistema contra-rotante $a=-1$ el que mejor contribuye a la evolución del espín.}}\label{fig: eficiencia_radiativa }
 \end{center}
-
+%%************************
+%SEria bueno poner las graficas de sebas sobre el la relación entre el tamaño de r, espin a y la eficiencia
+%%*************************
 
 Volviendo al espín del sistema, el cual se define de la forma:
 \begin{align}
 	{\bf{J}}_{tot}= {\bf{J}}_{bh}+{\bf{J}}_{d}
 \end{align}
-donde ${\bf{J}}_{d}$ es el momentum angular o espín del la región warp  (deformada), ver figura \ref{fig: sistema con zona warp}. Se define el ángulo de desalineación $\theta$ como  ${\bf{J}}_{bh}\cdot{\bf{J}}_{d}$, el cual está acotado ($-1\leq \cos\theta \leq 1$), donde $\cos \theta \to -1$ indica un anti-alineamiento, y si $\cos \theta \to 1$ indica un alineamiento \cite{king2005}. Al considerar la derivada temporal del producto escalar de  ${\bf{J}}_{bh}$ se obtiene lo siguiente \cite{king2005}:
+donde ${\bf{J}}_{d}$ es el momentum angular o espín del la región warp. Se define el ángulo de desalineación $\theta$ como el resultado de  ${\bf{J}}_{bh}\cdot{\bf{J}}_{d}$, el cual está acotado ($-1\leq \cos\theta \leq 1$), donde si $\cos \theta \to -1$ indica un anti-alineamiento, y si $\cos \theta \to 1$ indica un alineamiento \cite{king2005}. Al considerar la derivada temporal del producto escalar de  ${\bf{J}}_{bh}$ se obtiene lo siguiente \cite{king2005}:
 %
 \begin{align}
     \frac{d }{dt}({\bf{J}}_{bh}\cdot {\bf{J}}_{bh})=  \frac{d}{dt}(J_{bh}^{2})= 0 \Rightarrow J_{bh}=cte\,.
@@ -214,21 +217,21 @@ Esta ecuación indica que ${\bf{J}}_{bh}$ se mueve sobre una esfera. Bajo la sup
     \frac{d}{dt}(\cos\theta_{bh})\geq 0\,,
 \end{align}
 %
-donde $\theta_{bh}$ es el ángulo entre ${\bf{J}}_{bh}$ y ${\bf{J}}_{tot}$, entonces $\theta_{bh}$ debe estar definido entre (0,$\pi/2$) para que se cumpla la condición de la derivada, a medida que $\theta_{bh}$ crece el $\cos\theta_{bh}$ disminuye, lo cual implica que a medida que pasa el tiempo la diferencia entre los espines va disminuyendo, hasta llegar a alinearse.
+donde $\theta_{bh}$ es el ángulo entre ${\bf{J}}_{bh}$ y ${\bf{J}}_{tot}$, entonces $\theta_{bh}$ debe estar definido entre (0,$\pi/2$) para que se cumpla la condición de la derivada. Esta condición implica que siempre habrá un alineamiento, a medida que $\theta_{bh}$ disminuye en el tiempo, el $\cos\theta_{bh}$ aumenta, hasta llegar a su valor máximo ($\cos 0=1$) que indica un alineamiento definitivo.% lo cual implica que a medida que pasa el tiempo la diferencia entre los espines va disminuyendo, hasta llegar a alinearse.
 
-Al saber que eventualmente que el momentum angular total y el espín del BH se alinearan, proporciona gran información de la evolución del espín, sin embargo es necesario conocer si el espín del disco, se terminara alineando o contra-alineando, para ello, miremos los criterios que dan cabida a ello. Partiendo de la magnitud del momentum angular total
+Al saber que eventualmente que el momentum angular total y el espín del BH se alinearan, proporciona gran información de la evolución del espín, sin embargo es necesario conocer si el espín del disco, se terminara alineando o anti-alineando, para ello, miremos los criterios que dan cabida a ello. Partiendo de la magnitud del momentum angular total
 %
 \begin{align}
     J^{2}_{tot} = J^{2}_{bh}+J_{d}^{2} -2J_{bh}J_{d}\cos(\pi -\theta)
 \end{align}
 %
-El contra-alineamiento ($\theta\to\pi$) ocurre si y solo si ${\bf{J}}_{bh}^{2}>{\bf{J}}_{tot}^{2}$, que equivale a \cite{king2005}:
+El anti-alineamiento ($\theta\to\pi$) ocurre si y solo si ${\bf{J}}_{bh}^{2}>{\bf{J}}_{tot}^{2}$, que equivale a \cite{king2005}:
 %
 \begin{align}
     \cos\theta < - \frac{{\bf{J}}_{d}}{2{\bf{J}}_{bh}}\,.   
 \end{align}
 %
-Por lo tanto, gracias a este criterio es posible indicar si el sistema BH-disco está alineado/contra-alineado: si $\theta >\pi/2$ y $2{\bf{J}}_{bh}>{\bf{J}}_{d}$ el BH está anti-alineado, si  $2{\bf{J}}_{bh}<{\bf{J}}_{d}$ el alineamiento siempre ocurre cuando el momentum angular del disco sobrepasa al del BH \cite{king2005}.
+Por lo tanto, gracias a este criterio es posible indicar si el sistema BH-disco está alineado/anti-alineado: si $\theta >\pi/2$ y $2{\bf{J}}_{bh}>{\bf{J}}_{d}$ el BH está contra-alineado, si  $2{\bf{J}}_{bh}<{\bf{J}}_{d}$ hay alineamiento, este siempre ocurre cuando el momentum angular del disco sobrepasa al del BH \cite{king2005}.
 
 La magnidtud del momentum angular del disco esta dado por [SEBASTIAN]:
 %
@@ -237,7 +240,7 @@ La magnidtud del momentum angular del disco esta dado por [SEBASTIAN]:
     \label{eq: magnitid J_disco}
 \end{align}
 %
-donde $\Sigma$ es la densidad superficial del disco, $\Omega_{k}$ es la frecuencia de Kepler y la integral va sobre todo la superficie de la región warp. Se ha asumido que todo el gas que va cayendo al BH esta circulando y entonces el momentum angular debería de distribuirse sobre toda la región warp. Este argumento permite encontrar una relación entre el momentum angular del disco y el BH.
+donde $\Sigma$ es la densidad superficial del disco, $\Omega_{k}$ es la frecuencia de Kepler y la integral va sobre todo la superficie de la región warp. Se ha asumido que todo el gas que va cayendo al BH esta circulando sobre todo el disco, entonces el momentum angular debería de distribuirse sobre toda la región warp. Este argumento permite encontrar una relación entre el momentum angular del disco y el BH \cite{king2005}.
 %
 \begin{align}
     \frac{J_{d}}{2J_{bh}}\approx \frac{M_{d}}{aM_{bh}}\left(\frac{R_{warp}}{R_{Schw}} \right)^{1/2}
@@ -249,27 +252,27 @@ Este criterio permite evaluar cada episodio de acreción, con lo cual se puede c
     \subsubsection{Discos auto-gravitantes}
     \label{subsubsec: Disco auto-gravitantes}
 %------------------------------------------------
-Cuando se llega al caso en el cual la rata de acreción del BH es muy alta, se genera un disco de acreción aun más grande. En las regiones más externas del disco de acreción se empiezan a formar un disco grueso, que al no estar tan cerca al BH empieza a colapsar en pequeños nubes de gas (figura \ref{fig: Sistema auto-gravitante}), que a su vez se puede formar estrellas muy masivas que evolucionan rápido, y al explotar como súper novas generan vientos muy violentos que perturban el sistema, en especial que afectan al disco interior de forma caótica. 
+Cuando se llega al caso en el cual la rata de acreción del BH es muy alta, se genera un disco de acreción aun más grande. En las regiones más externas del disco de acreción se empiezan a formar un disco grueso, que al no estar tan cerca al BH, sienten una gravedad propia y empieza a colapsar en pequeñas nubes de gas (figura \ref{fig: Sistema auto-gravitante}), que a su vez forman estrellas muy masivas que evolucionan rápido, y al explotar como súper novas generan vientos muy violentos que perturban el sistema, en especial que afectan la dinámica del disco interior de forma caótica. 
 %
 \begin{center}
 \includegraphics[scale=.3]{./figures/4_Modelo_Spin/Sistema_auto-gravitante.png}
-\figcaption{\emph{-...[SEBAS]}}\label{fig: Sistema auto-gravitante}
+\figcaption{\emph{Modelo auto-gravitante, donde en la parte exterior a la región warp se forma un disco más grueso de con una dinámica auto-gravitante[SEBAS]}}\label{fig: Sistema auto-gravitante}
 \end{center}
 %
-Para conocer de buena forma este suceso se hace uso del criterio de estabilidad de Toomre's, el cual balancea  el soporte rotacional con la gravedad propia:
+Para conocer de buena forma este suceso se hace uso del criterio de estabilidad de Toomre's, el cual balancea  el soporte rotacional con la gravedad propia [Sebas]:
 %
 \begin{align}
     Q\equiv\frac{c_{s}\Omega_{k}}{\pi G\Sigma_{d}}\,,
     \label{eq: estabilidad_Toomre's}
 \end{align}
 %
-donde $c_{s}$ es la velocidad del sonido en el gas. En el caso en que $Q\leq 1$ el disco es inestable, esto conduce a que se debe definir un radio de auto-gravedad $R_{sg}$ que sea usado para la evolución del espín, donde $Q(R_{sg})=1$. El radio de auto-gravedad es determinado por \cite{fanidakis2011}:
+donde $c_{s}$ es la velocidad del sonido en el gas. En el caso en que $Q\leq 1$ el disco es inestable, esto conduce a que se deba definir un radio de auto-gravedad $R_{sg}$, donde se tenga certeza de los lugares estables, con $Q(R_{sg})=1$. El radio de auto-gravedad es determinado por \cite{fanidakis2011}:
 %
 \begin{align}
     \frac{R_{sg}}{R_{Schw}}=1.5\times 10^{3}\epsilon^{8/27}\left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{-26/27}f^{-8/27}\alpha^{14/27}
 \end{align}
 %
-Debido a que $Q$ es un parámetro que decrece monótonamente a medida que crece el radio,  entonces la parte exterior al $R_{sg}$, donde no se cumple el criterio de estabilidad de Toomre esta sujeto a fragmentación, mientras que la parte interior que sí se cumple la condición se genera el disco estable. Ya solo el material que se encuentra dentro del radio de warp puede transferir momentum angular de forma eficiente, solo se incluye los efectos de auto-gravedad si $R_{sa}\leq R_{warp}$. Si sí se cumple la relación anterior, se debe obtener la relación de la masa que contribuye al momentum angular del sistema, dada por \cite{fanidakis2011}:
+Debido a que $Q$ es un parámetro que decrece monótonamente a medida que crece el radio, entonces la parte exterior al $R_{sg}$, donde no se cumple el criterio de estabilidad de Toomre esta sujeto a fragmentación, mientras que la parte interior que sí se cumple la condición se genera el disco estable. Solo el material que se encuentra dentro del radio de warp puede transferir momentum angular de forma eficiente, solo se incluye los efectos de auto-gravedad si $R_{sa}\leq R_{warp}$. Si sí se cumple la relación anterior, se debe obtener la relación de la masa que contribuye al momentum angular del sistema, dada por \cite{fanidakis2011}:
 %
 \begin{align}
     M_{sg} = 2.13\times 10^{5}\epsilon^{-5/27}\left(\frac{M_{bh}}{10^{8}M_{\odot}} \right)^{23/27}f^{5/27}\alpha^{-2/17}M_{\odot}\,.
@@ -280,15 +283,15 @@ Ahora con los valores de $M_{sg}$ y $R_{sg}$, se puede obtener la evolución del
 
 %------------------------------------------------
 \subsection{Coalesencia de BH's}
-\label{subsec: Acrecion_gas}
+\label{subsec:fusion_BHs}
 %------------------------------------------------
-La otra forma de poder cambiar la dirección del espín del BH es a partir de fusiones entre  sistemas binarios de BHs. Este fenómeno es común en procesos de formación jerárquicos, en los cuales dos galaxias colisionan, generando un poso de potencial donde los dos BHs perteneciente a cada galaxia, van a terminar fusionando debido a la fricción dinámica. Entonces cuando dos BHs fusionan cambian su espín, una forma de verlo es usando el ajuste analítico de \cite{rezzolla2008}. El espín resultante de la fusión se escribe como:
+La otra forma de poder cambiar la dirección del espín del BH es a partir de fusiones entre  sistemas binarios de BHs (ver figura \ref{fig: fusion_Bhs}). Este fenómeno es común en procesos de formación jerárquicos, en los cuales dos galaxias colisionan, generando un poso de potencial donde los dos BHs perteneciente a cada galaxia van a terminar cayendo, y posteriormente fusionándose debido a la fricción dinámica. Entonces cuando dos BHs se fusionan cambian su espín, una forma de calcular el espín resultante de la fusión, es usando el ajuste analítico de \cite{rezzolla2008}: 
 %
 \begin{align}
     a = \frac{1}{(1+q)^{2}}(a_{1}+a_{2}q^{2}+\ell q)\,,
 \end{align}
 %
-donde $a_{1}$ es el parámetro de espín del BH más masivo, $a_{2}$ equivale al parámetro de espín del menos masivo, $q$ es la razón entre las masas $q=M_{2}/M_{1}\leq 1$ y $ \ell = {\bf{l}}/(M_{1}M_{2})$, donde ${\bf{l}}$ es la diferencia entre el momentum angular orbital ${\bf{L}}$ con el momentum angular de las ondas gravitacionales ${\bf{J}}_{og}$, en un instante antes de la fusión ${\bf{l}}={\bf{J}}-{\bf{J}}_{og}$.
+donde $a_{1}$ es el parámetro de espín del BH más masivo, $a_{2}$ equivale al parámetro de espín del menos masivo, $q$ es la razón entre las masas $q=M_{2}/M_{1}\leq 1$ y $ {\bf{\ell}} = {\bf{l}}/(M_{1}M_{2})$, donde ${\bf{l}}$ es la diferencia entre el momentum angular orbital ${\bf{L}}$ con el momentum angular de las ondas gravitacionales ${\bf{J}}_{og}$, en un instante antes de la fusión ${\bf{l}}={\bf{J}}-{\bf{J}}_{og}$.
 
 La norma de $\ell$ se puede obtener de un forma analítica \cite{rezzolla2008}: 
 %
@@ -296,11 +299,11 @@ La norma de $\ell$ se puede obtener de un forma analítica \cite{rezzolla2008}:
     \ell = \frac{s_{4}}{(1+q^{2})^{2}}(a_{1}^{2}+a_{2}^{2}q^{4}+2{\bf{a_{1}\cdot a_{2}}}q^{2})\\ + \frac{s_{5}\mu + t_{0}+2}{1+q^{2}}(a_{1}\cos\phi_{1}+a_{2}q^{2}\cos\phi_{2})\\ 
     + 2\sqrt{3}+t_{2}\mu+t_{3}\mu^{2}\,,
 \end{align}
-donde $\phi_{1}(\phi_{2})$ son los ángulos entre $a_{1}(a_{2})$ y $\vec{\ell}$, y $\mu = q/(1+q)^{2}$. Al igual que supone \cite{rezzolla2008}, se considera que la dirección de $\Vec{\ell}$ es colineal con la dirección del momentun angular ${\bf{L=L_{1}+L_{2}}}$ antes de la fusión, el cual es un vector que es medido en simulación. Para tener el valor de ${\bf{L}}$ es necesario calcular el centro de masa del sistema binario ${\bf{r}}_com$, con esta posición se evalúa el momentum angular de los dos BHs relativo al centro de masa. Los coeficientes tienen los siguiente valores: $s_{4}=-0.129$, $s_{5}=-0.384$, $t_{0}=-2.686$, $t_{2}=-3.454$ y $t_{3}=2.353$.
+donde $\phi_{1}(\phi_{2})$ son los ángulos entre $a_{1}(a_{2})$ y $\vec{\ell}$, y $\mu = q/(1+q)^{2}$. Al igual que supone \cite{rezzolla2008}, se considera que la dirección de $\Vec{\ell}$ es colineal con la dirección del momentun angular ${\bf{L=L_{1}+L_{2}}}$ antes de la fusión, el cual es un vector que es medido en simulación. Para tener el valor de ${\bf{L}}$ es necesario calcular el centro de masa del sistema binario ${\bf{r}}_{com}$, con esta posición se evalúa el momentum angular de los dos BHs relativo al centro de masa. Se tiene además los valores de coeficientes: $s_{4}=-0.129$, $s_{5}=-0.384$, $t_{0}=-2.686$, $t_{2}=-3.454$ y $t_{3}=2.353$.
 
 \begin{center}
 \includegraphics[scale=.3]{./figures/4_Modelo_Spin/fusion_BHs.png}
-\figcaption{\emph{Sistema binario de BHs, donde posteriormente va haber una fusión entre ellos. citar a SEBAS}}\label{fig: fusion_Bhs}
+\figcaption{\emph{Sistema binario de BHs, donde cada uno tiene un espín característico y la contribución de cada uno conlleva a un momentum angular del sismtema $\vec{\ell}$ [SEBAS]}.}\label{fig: fusion_Bhs}
 \end{center}
 
 
