@@ -48,8 +48,35 @@ Este método permite que en las regiones donde hay una sobre densidad de materia
 
 El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación o de fluido de la siguiente forma:
 
+Se introduce el vector de estado    
+\begin{align}
+    \vec{\bf{U}}= \begin{pmatrix} \rho \\ \rho\vec{v} \\ \rho e \end{pmatrix} = 
+    \begin{pmatrix} \rho \\ \rho\vec{v} \\ \rho u+\frac{1}{2}\rho\vec{v}^{2} \end{pmatrix}\,,
+\end{align}
+donde $\rho$ es la densidad del fluido, $\vec{v}$ es el campo de velocidad y $e=u+ \vec{v}^{2}/2$ es la energía por unidad de masa. el parámetro $u$ indica la energía térmica por unidad de masa. Las cantidades del fluido son dependientes del espacio y del tiempo $\vec{\bf{U}}(\vec{\bf{x}},t)$, se define además la función de flujo
 
+\begin{align}
+    \vec{\bf{F}}(\vec{\bf{U}})=
+    \begin{pmatrix} \rho\vec{v} \\ \rho\vec{v}\vec{v}^{T}+ P \\ (\rho e + P)\vec{v} \end{pmatrix}\,,
+\end{align}
+donde $P$ es la ecuación de estado queda la presión del fluido. Es por tanto que la ecuación de Euler se puede escribir de forma compacta como 
+\begin{align}
+    \frac{\partial\vec{\bf{U}}}{\partial t} + \vec{\nabla}\cdot \vec{\bf{F}}\,.
+\end{align}
 
+En el código de {\it{Arepo}} se considera una discretización del fluido como un conjunto de volúmenes finitos, donde cada celda se identifica bajo el uso de un contador "$i$". Cada celda contiene la información de la masa $m_{i}$, momentum $p_{i}$ y la energía $E_{i}$. %
+\begin{align}
+    {\bf{Q}_{i}} = \begin{pmatrix} m_{i} \\ p_{i} \\ E_{i} \end{pmatrix} = \int_{V_{i}} \vec{\bf{U}}d\vec{\bf{V}}\,.
+\end{align}
+%
+Usando la ecuación de Euler, es posible calcular la razón de cambio de ${\bf{Q}_{i}}$ en el tiempo, al usar el teorema de Gauss
+%\
+\begin{align}
+    \frac{d{\bf{Q_{i}}}}{dt} = -\int_{\partial V_{i}}[\vec{\bf{F}}(\vec{\bf{U}})-\vec{\bf{U}}\vec{\bf{w}}^{T}]d\vec{\bf{n}}\,,
+\end{align}
+donde $\vec{\bf{w}}$ es la velocidad particular de cada partícula y $\vec{\bf{n}}$ es el vector normal a la superficie.
+
+El nuevo esquema presentado por \cite{springel2010} indica cuales fueron los pasos (algoritmia) que sigue el código. Parte del estado del fluido para cada celda ${\bf{Q_{i}}}$ y al hacerlo evolucionar es capaz de dar los resultados no invarianza galileana y buena resolución en la simulaciones. 
 
 %*****************************************************
 \section{Caracterización del entorno}
