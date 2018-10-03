@@ -23,6 +23,33 @@ En la búsqueda de poder conocer como se pueden alinear los SMBH en AGNs con su 
 \label{sec: codigo arepo}
 %***********************************************
 
+%El código {\textsc{Arepo}} es una simulación cosmológica, que pretende diseñar una nueva forma de hacer simulaciones hidrodinámicas que son capaces reproducir la dinámica del universo, evolución estelar, formación de estructuras y evolución de parámetros en las galaxia. Este modelo hidrodinámico tiene como objetivo mejorar dos códigos muy usados en la simulaciones de formación y evolución: Mallado de Euleriano y la técnica  hidrodinámica de suavizado de partículas Lagrangiana (SPH). 
+
+En la astrofísica se hace necesario poder contrastar los modelos teóricos con lo observacional. Es por eso que se hace uso de los modelos computacionales que al usar los modelos teóricos pueda obtener como resultado lo observacional. Una forma de poder reproducir lo que ocurre en el universo se considera la dinámica de fluidos haciendo uso de los modelos hidrodinámicos, los modelos más sobresalientes en este ámbito son: SPH \cite{monaghan1992} y hidrodinámica Euleriana basada en mallas \cite{stone2008} con refinamiento adaptativo de las mallas (AMR). A pesar de ser los modelos más usados en la hidrodinámica presentan una serie de falencias:
+
+- SPH es pobre en resolución,  ofrecen precesión de bajo orden para el tratamiento de discontinuidades de contacto, y en algunos casos suprime inestabilidades de los fluidos
+
+- Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles para grandes cambios en velocidades de volumen.\\
+
+En busqueda de poder mejorar las falencias de las simulaciones mencionadas y además tomar lo mejor de cada una, el código  {\it{Arepo}} toma lo mejor de cada simulación y mejora las falelcias de cada una. En general el código {\it{Arepo}} \cite{springel2010} introduce una nueva forma de modelación hidrodinámica continua en mallas dinámicas. Lo que se va argumentar a continuación esta basado en \cite{springel2010}:
+
+La precisión del modelo viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente y se les permite mover libremente. 
+
+El método de Voronoi es el método de interpolación más simple, que se basa en la distancia euclidea. Permite crear celdas de tal forma que la región encerrada esta lo más cerca posible a sus celdas vecinas. Los polígonos se diseñan al unir los puntos entre si, trazando luego una mediatriz entre los segmentos de unión. La intersección de las mediatrices dan como resultado los polígonos y por lo tanto la malla (ver figura \ref{fig: voronoi}). Cada celda en la malla lleva consigo variables de fluido que se conservan (masa, momentum y energía total).
+%
+\begin{center}
+\includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/voronoi.png}
+\figcaption{\emph{Representación gráfica de la teselación de Voronoi. En esta gráfica se puede ver la doble topología del digrama de Voronoi, pues es equivalente topológicamente a la teselación de Delaunay.}}\label{fig: voronoi}
+\end{center}
+%
+La importancia de la simulación Voronoid, es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto permite que a medida que trascurren los pasos numéricos, se actualice la información del fluido en la celda. Este método permite solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, por ende se obtengan valores no sesgados para la alineación de los BHs en cada celda y del momentum angular del gas que circula alrededor del BH. 
+
+Este método permite que en las regiones donde hay una sobre densidad de materia, se generan una mayor cantidad de celdas, mientras que en un región donde la sobre densidad es pequeña el número de celdas, permitiendo modelar de forma más precisa la dinámica y acreción de materia en los BHs.
+
+El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación o de fluido de la siguiente forma:
+
+
+
 
 %*****************************************************
 \section{Caracterización del entorno}
