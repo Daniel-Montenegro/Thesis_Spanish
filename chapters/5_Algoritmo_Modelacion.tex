@@ -16,7 +16,7 @@
 %*****************************************************
 %El desarrollo de modelos computacionales permiten reproducir sucesos que escapan a acontecer de una vida humana. Es por eso la importancia de los modelos
 
-En la búsqueda de poder conocer como se pueden alinear los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en el universo. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, ratas de acreción de BHs, feadback de BHs y propiedades de galaxias donde se hospedan los BHs. La simulación que se va usar para tal propósito es el código de Magneto-hidrodinámica para N-cuerpos AREPO \cite{springel2010}, que es capaz de reproducir mallas que cambian de forma, moviendosen con el fluido, y hace seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo o mejor aun, permiten hacer una clasificación y estructuración del mismo. El método que se usa para la clasificación de las estructuras en el universo es el T-web \cite{hahn2007}, que es capaz de categorizar las regiones del universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras, que permite localizar zonas de sobre densidad, que indican la presencia de un halo de materia oscura, grupo o cúmulo  de galaxias. 
+En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en este sistema. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, ratas de acreción de BHs, feadback de BHs y entre otras propiedades de las galaxias. La simulación que se va usar para tal propósito es el código Magneto-hidrodinámico para N-cuerpos AREPO \cite{springel2010}, capaz de reproducir mallas que cambian de forma y se mueven con el fluido a medida que corre la simulación,  haciendo seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo o mejor aun, permiten hacer una clasificación y estructuración del mismo. El método usado para la clasificación de estructuras en el universo es el  T-web \cite{hahn2007}, capaz de categorizar las regiones del universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras se hace uso del código Arepo, que emplea el método de subfind, este permite localizar zonas de sobre densidad, indicando la presencia de halos de materia oscura, grupo o cúmulo  de galaxias. 
 
 %*****************************************************
 \section{Código Arepo}
@@ -25,15 +25,15 @@ En la búsqueda de poder conocer como se pueden alinear los SMBH en AGNs con su 
 
 %El código {\textsc{Arepo}} es una simulación cosmológica, que pretende diseñar una nueva forma de hacer simulaciones hidrodinámicas que son capaces reproducir la dinámica del universo, evolución estelar, formación de estructuras y evolución de parámetros en las galaxia. Este modelo hidrodinámico tiene como objetivo mejorar dos códigos muy usados en la simulaciones de formación y evolución: Mallado de Euleriano y la técnica  hidrodinámica de suavizado de partículas Lagrangiana (SPH). 
 
-En la astrofísica se hace necesario poder contrastar los modelos teóricos con lo observacional. Es por eso que se hace uso de los modelos computacionales que al usar los modelos teóricos pueda obtener como resultado lo observacional. Una forma de poder reproducir lo que ocurre en el universo se considera la dinámica de fluidos haciendo uso de los modelos hidrodinámicos, los modelos más sobresalientes en este ámbito son: SPH \cite{monaghan1992} y hidrodinámica Euleriana basada en mallas \cite{stone2008} con refinamiento adaptativo de las mallas (AMR). A pesar de ser los modelos más usados en la hidrodinámica presentan una serie de falencias:
+En la astrofísica se hace necesario poder contrastar los modelos teóricos con lo observacional. Por eso se emplea los modelos computacionales que parten de  modelos teóricos y buscan poder reproducir los resultados observacionales. Una forma de poder reproducir los procesos que ocurre en el universo, es considerando la dinámica de fluidos, y con ello los modelos hidrodinámicos. Los modelos más sobresalientes en este ámbito son: SPH \cite{monaghan1992} y hidrodinámica Euleriana basada en mallas \cite{stone2008} con refinamiento adaptativo de las mallas (AMR). A pesar de ser los modelos más usados en la hidrodinámica presentan una serie de falencias:
 
-- SPH es pobre en resolución,  ofrecen precesión de bajo orden para el tratamiento de discontinuidades de contacto, y en algunos casos suprime inestabilidades de los fluidos
+- SPH es pobre en resolución,  ofrecen precisión de bajo orden para el tratamiento de discontinuidades de contacto, y en algunos casos suprime inestabilidades de los fluidos.
 
-- Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles para grandes cambios en velocidades de volumen.\\
+- Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles a grandes cambios en velocidades de volumen.\\
 
-En busqueda de poder mejorar las falencias de las simulaciones mencionadas y además tomar lo mejor de cada una, el código  {\it{Arepo}} toma lo mejor de cada simulación y mejora las falelcias de cada una. En general el código {\it{Arepo}} \cite{springel2010} introduce una nueva forma de modelación hidrodinámica continua en mallas dinámicas. Lo que se va argumentar a continuación esta basado en \cite{springel2010}:
+{\it{Arepo}} toma lo mejor de cada simulación y mejora sus falencias. En general el código {\it{Arepo}} \cite{springel2010} introduce una nueva forma de modelación hidrodinámica continua de mallas dinámicas. El código se describe como \cite{springel2010}:
 
-La precisión del modelo viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente y se les permite mover libremente. 
+La precisión del modelo viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente, permitiendo un movimiento libre. 
 
 El método de Voronoi es el método de interpolación más simple, que se basa en la distancia euclidea. Permite crear celdas de tal forma que la región encerrada esta lo más cerca posible a sus celdas vecinas. Los polígonos se diseñan al unir los puntos entre si, trazando luego una mediatriz entre los segmentos de unión. La intersección de las mediatrices dan como resultado los polígonos y por lo tanto la malla (ver figura \ref{fig: voronoi}). Cada celda en la malla lleva consigo variables de fluido que se conservan (masa, momentum y energía total).
 %
@@ -116,16 +116,28 @@ donde $T_{ij}$ es el tensor de marea dado por el Hessiano del potencial gravitac
 %
 Este tensor de marea puede ser representado por una matriz real simétrica 3x3, con autovalores $\lambda_{1}>\lambda_{2}>\lambda_{3}$, y los autovectores $\vec{e}_{1}\, \vec{e}_{2}\, \vec{e}_{3}$. Los autovalores son de gran importancia a la hora de clasificar el entorno cosmológico, estos son los indicadores de la estabilidad de la orbita de las partículas de prueba, que se mueven en la dirección del autovector [PENDIENTE DE CITAR].
 
-Al usar la teoría de \cite{zeldovich1970}, que se estudio en la sección (\ref{subsubsec:Zeldovich_Aproximation}), es posible definir una clasificación a partir de los autovalores del tipo de estructura:
+Al usar la teoría de \cite{zeldovich1970}, que se estudio en la sección (\ref{subsubsec:Zeldovich_Aproximation}), es posible definir una clasificación a partir de los autovalores en cada región del espacio:\\
 
+$i)$ {\it{vacíos (voids)}: región del espacio donde los tres autovalores $\lambda$ son positivos (orbita estable), indicando una divergencia o expansión en esa región.}\\
 
+$ii)$ {\it{hoja (sheet)}: región donde hay dos autovalores positivos $\lambda_{1} \geq \lambda_{2}>0$ y uno negativo $\lambda_{3}<0$, esto indica un colapso en una dirección del espacio mientras que en las otras dos hay una expansión.}\\
 
+$iii)$ {\it{filamentos (filament)}: región del espacio donde solo hay un autovalor positivo $\lambda_{1}\geq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
 
+$iv)$ {\it{nudo (knot)}: región donde los tres autovalores son negativos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
 
+En la figura (\ref{fig: formacion de estructura con autovalores}), es posible observar los cuatro casos donde se representan los tipos de estructuras dependiendo del autovalor.
+%
+\begin{center}
+\includegraphics[scale=.39]{./figures/5_Algoritmo_Modelacion/formacion_estructuras.png}
+\figcaption{\emph{El valor de los autovalores permiten clasificar el tipo de estructura en la cual se encuentran [Sebas].}}\label{fig: formacion de estructura con autovalores}
+\end{center}
+%
+Lo destacable de este método es el resultado de un análisis meramente dinámico, lo cual le da más jerarquía que los métodos que usan principios meramentes geométricos. Permite identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
 
+El código que se esta implementando para la clasificación del entorno, hace uso del valor "límite" $\lambda_{th}$ para los autovalores \cite{bustamante2015}. Este límite permite que la clasificación sea más adecauda.. 
 
-
-
+PONER IMAGENES DEL ENTORNO HECHAS POR MI .
 
 
 %*****************************************************
@@ -133,18 +145,37 @@ Al usar la teoría de \cite{zeldovich1970}, que se estudio en la sección (\ref{
 \label{sec: detección sub-estructuras}
 %*****************************************************
 
+Una vez obtenido la clasificación del entorno a gran escala, es necesario poder conocer cómo se distribuye la materia en el interior de ellas. Se hace necesario un criterio para clasificación de sub-estructuras. La continuidad de la distribución de la materia en el universo implica un grave problema a la hora de caracterizar la materia en dichas sub-estructuras, es necesario poder discretizar la materia para poder distinguir entre halos de materia oscura y  galaxias. La discretización permite poder hacer uso de modelos computacionales que permitan representar la formación y evolución de las estructuras en regiones del universo.
+
 %----------------------------------------------------    
     \subsection{Método de FoF}
     \label{subsec: FoF}
 %----------------------------------------------------
 
+Es uno de los métodos más usados para la detección de sub-estructururas en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, es usado en gran medida para la comparación de modelos para determinar que tan confiable es el método en comparación. 
+
+El método FoF consiste básicamente encontrar intercesiones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ dado por la expresión \cite{bustamente01}:
+%
+\begin{align}
+    R_{i}=\frac{1}{2}b\ell\,,
+\end{align}
+%
+donde b es el parámetro de vinculación y $\ell$ camino libre medio de las partículas en la simulación. 
+%
+\begin{center}
+\includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/FoF_metodo.png}
+\figcaption{\emph{Esquema de cómo funciona el método de FoF, consiste en determinar que partículas interactuan entre sí a partir de la intersección de regiones de vinculación. }}\label{fig: FoF esquema}
+\end{center}
+%
 
 %----------------------------------------------------    
     \subsection{Algorimo Subgrid}
     \label{subsec: Algoritmo subgrid}
 %----------------------------------------------------
 
+Subfind es un método usado para extraer de una forma más precisa las sub-estructuras, por lo general centro de halos; esto considerando las sobre densidades. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello se determinan las regiones de sobre densidad (picos de densidad), una vez se obtiene las regiones de sobre densidad se procede a construir esferoides concéntricos al pico. Cuando la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y de determina una sub-estructura.
 
+La mejor forma de optimizar es encontrar el pico de densidad con el método de FoF y a partir de allí usar {\it{subfind}} para determinar la sub-estructura.
 
 
 
