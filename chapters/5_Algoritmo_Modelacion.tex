@@ -42,11 +42,11 @@ El método de Voronoi es el método de interpolación más simple, que se basa e
 \figcaption{\emph{Representación gráfica de la teselación de Voronoi. En esta gráfica se puede ver la doble topología del digrama de Voronoi, pues es equivalente topológicamente a la teselación de Delaunay.}}\label{fig: voronoi}
 \end{center}
 %
-La importancia de la simulación Voronoid, es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto permite que a medida que trascurren los pasos numéricos, se actualice la información del fluido en la celda. Este método permite solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, por ende se obtengan valores no sesgados para la alineación de los BHs en cada celda y del momentum angular del gas que circula alrededor del BH. 
+La importancia de la simulación Voronoid, es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto garantiza que a medida que trascurren los pasos numéricos se actualice la información del fluido en la celda. Este método posibilita la solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, y por ende se obtengan valores no sesgados para la alineación de los BHs en cada celda y del momentum angular del gas que circula alrededor del BH. 
 
-Este método permite que en las regiones donde hay una sobre densidad de materia, se generan una mayor cantidad de celdas, mientras que en un región donde la sobre densidad es pequeña el número de celdas, permitiendo modelar de forma más precisa la dinámica y acreción de materia en los BHs.
-
-El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación o de fluido de la siguiente forma:
+Este método permite que en las regiones donde hay una mayor sobre densidad de materia, se genere una mayor cantidad de celdas, proporcionando una modelación más precisa dando como resultado una mejor respuesta a la dinámica del fluido.
+%aca voy
+El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido de manera muy precisa, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación o de fluido de la siguiente forma:
 
 Se introduce el vector de estado    
 \begin{align}
@@ -76,27 +76,27 @@ Usando la ecuación de Euler, es posible calcular la razón de cambio de ${\bf{Q
 \end{align}
 donde $\vec{\bf{w}}$ es la velocidad particular de cada partícula y $\vec{\bf{n}}$ es el vector normal a la superficie.
 
-El nuevo esquema presentado por \cite{springel2010} indica cuales fueron los pasos (algoritmia) que sigue el código. Parte del estado del fluido para cada celda ${\bf{Q_{i}}}$ y al hacerlo evolucionar es capaz de dar los resultados no invarianza galileana y buena resolución en la simulaciones. 
+El nuevo esquema presentado por \cite{springel2010} indica cuales son los pasos (algoritmia) que sigue el código. Parte del estado del fluido para cada celda ${\bf{Q_{i}}}$ y al hacerlo evolucionar es capaz de dar los resultados de no invarianza galileana y buena resolución. 
 
 %*****************************************************
 \section{Caracterización del entorno}
 \label{sec: Caracterizacion entorno}
 %*****************************************************
 
-Al recordar lo mencionado en (\ref{sec: Estructure_Formation}), es posible decir que las simulaciones computacionales asumiendo el régimen lineal o no lineal son capaces de reproducir la estructura del universo. Al obtener la estructura del universo se ve la emergencia de regiones donde hay un cambio en la densidades, donde la estructura cambia considerablemente.
+Al recordar lo mencionado en la sección (\ref{sec: Estructure_Formation}), es posible decir que las simulaciones computacionales asumiendo el régimen lineal o no lineal son capaces de reproducir la estructura del universo. Al obtener la estructura del universo se observa la emergencia de regiones donde hay un cambio en la densidades (una abundancia de materia), donde la estructura cambia considerablemente.
 
 %----------------------------------------------------    
     \subsection{Método T-web}
     \label{subsec: Metodo_T-web}
 %----------------------------------------------------
-Al considerar el método propuesto por \cite{hahn2007} es posible argumentar lo siguiente: Parte del criterio de estabilidad de la teoría de sistemas dinámicos, donde se realiza un análisis de estabilidad local para orbitas de prueba alrededor de halos materia oscura. Estas partículas de prueba se mueven por acción de un potencial gravitacional $\phi$.
+Al considerar el método propuesto por \cite{hahn2007} es posible argumentar lo siguiente: Asumiendo la teoría concerniente a los sistemas dinámicos, se realiza un análisis de estabilidad local para orbitas de prueba alrededor de halos materia oscura. Donde cada una de las partículas de prueba se mueven por acción de un potencial gravitacional $\phi$.
 
 La ecuación de movimiento que describe la partícula en coordenadas comóviles está dada por 
 \begin{align}
     \ddot{x}=-\nabla\phi\,.
 \end{align}
 %
-Al asumir el potencial gravitacional $\phi$ actuando en el centro de masa ($\bar{x}_{i}$) como máximo local, dando como resultado lo siguiente:
+Al asumir que el potencial gravitacional $\phi$ está actuando en el centro de masa ($\bar{x}_{i}$) como un máximo local, da como resultado lo siguiente:
 %
 \begin{align}
     \nabla\phi(\bar{x}_{i})=0\,.
@@ -114,28 +114,28 @@ donde $T_{ij}$ es el tensor de marea dado por el Hessiano del potencial gravitac
     T_{ij}=\frac{\partial \phi}{\partial r_{i} \partial r_{j}}\,.
 \end{align}
 %
-Este tensor de marea puede ser representado por una matriz real simétrica 3x3, con autovalores $\lambda_{1}>\lambda_{2}>\lambda_{3}$, y los autovectores $\vec{e}_{1}\, \vec{e}_{2}\, \vec{e}_{3}$. Los autovalores son de gran importancia a la hora de clasificar el entorno cosmológico, estos son los indicadores de la estabilidad de la orbita de las partículas de prueba, que se mueven en la dirección del autovector [PENDIENTE DE CITAR].
+Este tensor de marea puede ser representado por una matriz real simétrica 3x3, con autovalores $\lambda_{1}>\lambda_{2}>\lambda_{3}$ y  autovectores $\vec{e}_{1}\, \vec{e}_{2}\, \vec{e}_{3}$. Los autovalores son de gran importancia a la hora de clasificar el entorno cosmológico, estos son los indicadores de la estabilidad de la orbita de las partículas de prueba, que se mueven en la dirección del autovector \cite{padmanabhan1995}, \cite{hahn2007}.
 
 Al usar la teoría de \cite{zeldovich1970}, que se estudio en la sección (\ref{subsubsec:Zeldovich_Aproximation}), es posible definir una clasificación a partir de los autovalores en cada región del espacio:\\
 
-$i)$ {\it{vacíos (voids)}: región del espacio donde los tres autovalores $\lambda$ son positivos (orbita estable), indicando una divergencia o expansión en esa región.}\\
+$i)$ {\it{vacíos (voids)}: región del espacio donde los tres autovalores $\lambda$ son negativos (orbita estable), indicando una divergencia o expansión en esa región.}\\
 
-$ii)$ {\it{hoja (sheet)}: región donde hay dos autovalores positivos $\lambda_{1} \geq \lambda_{2}>0$ y uno negativo $\lambda_{3}<0$, esto indica un colapso en una dirección del espacio mientras que en las otras dos hay una expansión.}\\
+$ii)$ {\it{hoja (sheet)}: región donde hay un autovalor positivo $\lambda_{1}>0$ y dos negativos $\lambda_{2} \leq \lambda_{3}< 0$, esto indica un colapso en una dirección del espacio mientras que en las otras dos hay una expansión.}\\
 
-$iii)$ {\it{filamentos (filament)}: región del espacio donde solo hay un autovalor positivo $\lambda_{1}\geq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
+$iii)$ {\it{filamentos (filament)}: región del espacio donde solo hay un autovalor negativo $\lambda_{3}\leq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
 
-$iv)$ {\it{nudo (knot)}: región donde los tres autovalores son negativos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
+$iv)$ {\it{nudo (knot)}: región donde los tres autovalores son positivos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
 
 En la figura (\ref{fig: formacion de estructura con autovalores}), es posible observar los cuatro casos donde se representan los tipos de estructuras dependiendo del autovalor.
 %
 \begin{center}
 \includegraphics[scale=.39]{./figures/5_Algoritmo_Modelacion/formacion_estructuras.png}
-\figcaption{\emph{El valor de los autovalores permiten clasificar el tipo de estructura en la cual se encuentran [Sebas].}}\label{fig: formacion de estructura con autovalores}
+\figcaption{\emph{El valor de los autovalores permiten clasificar el tipo de estructura en la cual se encuentran \cite{bustamente01}.}}\label{fig: formacion de estructura con autovalores}
 \end{center}
 %
-Lo destacable de este método es el resultado de un análisis meramente dinámico, lo cual le da más jerarquía que los métodos que usan principios meramentes geométricos. Permite identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
+Lo destacable de este método es su análisis meramente dinámico, lo cual le da más jerarquía que los métodos que usan principios meramentes geométricos, permitiendo identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
 
-El código que se esta implementando para la clasificación del entorno, hace uso del valor "límite" $\lambda_{th}$ para los autovalores \cite{bustamante2015}. Este límite permite que la clasificación sea más adecauda.. 
+El código que se esta implementando para la clasificación del entorno, hace uso del valor "límite" $\lambda_{th}$ para los autovalores \cite{bustamante2015}, pasando de ser $\lambda_{th}=0$ a $\lambda_{th}=0.265$. Se hace uso de este valor límite, porque es capaz de traza de muy buena forma la red cósmica. 
 
 PONER IMAGENES DEL ENTORNO HECHAS POR MI .
 
@@ -145,16 +145,16 @@ PONER IMAGENES DEL ENTORNO HECHAS POR MI .
 \label{sec: detección sub-estructuras}
 %*****************************************************
 
-Una vez obtenido la clasificación del entorno a gran escala, es necesario poder conocer cómo se distribuye la materia en el interior de ellas. Se hace necesario un criterio para clasificación de sub-estructuras. La continuidad de la distribución de la materia en el universo implica un grave problema a la hora de caracterizar la materia en dichas sub-estructuras, es necesario poder discretizar la materia para poder distinguir entre halos de materia oscura y  galaxias. La discretización permite poder hacer uso de modelos computacionales que permitan representar la formación y evolución de las estructuras en regiones del universo.
+Una vez se obtiene la clasificación del entorno a gran escala (red cósmica), es necesario poder conocer cómo se distribuye la materia en el interior de estas estructuras, por esto se hace necesario un criterio para clasificación de sub-estructuras. La continuidad de la distribución de materia en el universo implica un grave problema a la hora de caracterizar la materia en dichas sub-estructuras. Poder discretizar la distribución de materia en el espacio posibilita hacer uso de modelos computacionales, capaces de reproducir las estructuras internas.
 
 %----------------------------------------------------    
     \subsection{Método de FoF}
     \label{subsec: FoF}
 %----------------------------------------------------
 
-Es uno de los métodos más usados para la detección de sub-estructururas en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, es usado en gran medida para la comparación de modelos para determinar que tan confiable es el método en comparación. 
+Es uno de los métodos más usados para la detección de sub-estructururas en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, debido a la comparación entre vecinos o "amigos". Es usado en gran medida para la comparación de modelos,  determinando que tan confiable es el método contrastado. 
 
-El método FoF consiste básicamente encontrar intercesiones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ dado por la expresión \cite{bustamente01}:
+El método FoF consiste básicamente encontrar intercesiones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ concéntricas a la partícula, dado por la expresión \cite{bustamente01}:
 %
 \begin{align}
     R_{i}=\frac{1}{2}b\ell\,,
@@ -173,13 +173,13 @@ donde b es el parámetro de vinculación y $\ell$ camino libre medio de las part
     \label{subsec: Algoritmo subgrid}
 %----------------------------------------------------
 
-Subfind es un método usado para extraer de una forma más precisa las sub-estructuras, por lo general centro de halos; esto considerando las sobre densidades. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello se determinan las regiones de sobre densidad (picos de densidad), una vez se obtiene las regiones de sobre densidad se procede a construir esferoides concéntricos al pico. Cuando la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y de determina una sub-estructura.
+Subfind es un método usado para extraer de forma más precisa las sub-estructuras en las simulaciones cosmológicas. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello se determinan las regiones de sobre densidad (abundancias de densidad), una vez se obtiene las regiones de sobre densidad se procede a construir esferoides concéntricos al lugar donde ocurre la sobre densidad. Cuando la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y de determina una sub-estructura \cite{springel2018}.
 
 La mejor forma de optimizar es encontrar el pico de densidad con el método de FoF y a partir de allí usar {\it{subfind}} para determinar la sub-estructura.
 
+~\\
 
-
-
+Haciendo uso de Arepo se extraen dos simulaciones {\it{Cosmo01}} y {\it{Cosmo02}}, estas simulaciones tienen  consigo una serie de parámetros de sobre las galaxias, entre los parámetros que más nos interesa son el espín del BH, momentum angular del halo, momentum angular del disco, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo. ...
 
 
 
