@@ -1,12 +1,8 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-%Quote
+Quote
 \begin{savequote}[50mm]
-%‘‘El cosmos es todo lo que es, todo lo que fue y todo lo que será. Nuestras 
-%más ligeras contemplaciones del cosmos nos hacen estremecer: Sentimos como 
-%un cosquilleo nos llena los nervios, una voz muda, una ligera sensación como
-%de un recuerdo lejano o como si cayéramos desde gran altura. Sabemos que nos
-%aproximamos al más grande de los misterios.’’
-%\qauthor{Carl Sagan}
+"
+Supuestamente el cerebro humano es algo parecido a una libreta que se adquiere en la papelería: muy poco mecanismo y muchas hojas en blanco"\qauthor{Alan Turing}
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 
@@ -179,8 +175,10 @@ La mejor forma de optimizar es encontrar el pico de densidad con el método de F
 
 ~\\
 
-Haciendo uso de Arepo se extraen dos simulaciones {\it{Cosmo01}} y {\it{Cosmo02}}, estas simulaciones tienen  consigo una serie de parámetros de sobre las galaxias, entre los parámetros que más nos interesa son el espín del BH, momentum angular del halo, momentum angular del disco, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo. ...
+Haciendo uso del proyecto Ilustris TNG AGN+ physics model\footnote{Simulación cosmológica a gran escala de formación de galaxias \url{http://www.illustris-project.org}. TNG AGN+ physics model, hace referencia a simulaciones hidrodinámicas que involucran AGNs y toda la física que ello conlleva.}, que emplea el código Arepo y el método de subfind, se obtienen dos simulaciones {\it{Cosmo01}} y {\it{Cosmo02}}, estas simulaciones tienen consigo una serie de parámetros propios de la dinámica de cada galaxia. Entre los parámetros que nos interesa están: el espín del BH, momentum angular del halo, momentum angular del disco de acreción del BH, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo y la rata de acreción de materia por parte del disco de acreción y BH. Estas simulaciones se corrieron en una caja con un tamaño de 25Mpc/h, con 2$\times$512$^{3}$ Partículas (entre materia oscura y gas) indicando una alta resolución. En las simulaciones se tiene alrededor de 1200 SMBHs, donde 60 de ellos son más masivos que 10$^{8}\odot$ con un redsift $z=0$.
 
+{\it{cosmo01}} presenta acreción caótica y {\it{cosmo02}} acreción coherente. La acreción caótica asume los procesos de auto-gravedad explicados en la sección (\ref{subsubsec: Disco auto-gravitantes}), y
+ y la coherente es propia del modelo tradicional de alineamiento de espín (ver sección \ref{subsec: Acrecion_gas}).
 
 
 
