@@ -30,21 +30,22 @@ Conforme a esto, se pretende realizar un análisis a la distribución de masa (f
 Debido a que no todos los halos hospedan un BH en su interior, fue necesario descartar los halos que no cumplen con esta condición. Esto reduce de gran manera la cantidad de galaxias a estudiar, sin embargo es suficiente para realizar un análisis adecuado.
 
 %------------------------------------------------
-\subsection{ Función de masa}
-\label{subsec: funcion de masa}
+    \subsection{ Función de masa}
+    \label{subsec: funcion de masa}
 %------------------------------------------------
-La función de masa es uno de los parámetros de control más contundentes en el análisis de las simulaciones. Bajo la teoría de formación y evolución de galaxias se tiene que los objetos con baja masa son más abundantes, debido a que en los procesos evolutivos de las galaxias la interacción es jerárquica, las galaxias más masivas tiene una mayor probabilidad en fusionarse con otras debido a su gran potencial gravitacional, esto hace que las galaxias más densas se terminen fusionando y disminuyendo su población. Con base a esto la función de masa de las galaxias (halos, BHs y masa estelar) debe decrecer a medida que se aumentan las masas, i.e., La cantidad de objetos disminuye a medida que aumenta la masa, es menos probable encontrar BHs muy masivos. 
+La función de masa es uno de los parámetros de control más contundentes en el análisis de las simulaciones. Bajo la teoría de formación y evolución de galaxias se tiene que los objetos con baja masa son más abundantes, debido a que en los procesos evolutivos de las galaxias la interacción es jerárquica, las galaxias más masivas tiene una mayor probabilidad en fusionarse con otras debido a su gran potencial gravitacional, esto hace que las galaxias más densas se terminen fusionando y disminuyendo su población. Con base a esto la función de masa de las galaxias (halos, BHs y masa estelar) debe decrecer a medida que se aumentan las masas, i.e., La cantidad de objetos disminuye a medida que aumenta la masa, es menos probable encontrar BHs muy masivos.
+
 %
-\begin{figure}[-h]
+\begin{figure}
  \centering
   \subfloat{
-   \label{fig: función de masa BHs}
+   %\label{fig: función de masa BHs}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_bh.pdf}}
   \subfloat{
-   \label{fig: función de masa halos}
+   %\label{fig: función de masa halos}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_halos.pdf}}
   \subfloat{
-   \label{fig: función de masa estelar}
+   %\label{fig: función de masa estelar}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
  \caption{Funciones de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo01}}. }
  \label{fig: Funciones de masa cosmo01}
@@ -53,13 +54,13 @@ La función de masa es uno de los parámetros de control más contundentes en el
  \begin{figure}
  \centering
   \subfloat{
-   \label{fig: función de masa BHs}
+   %\label{fig: función de masa BHs}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_bh.pdf}}
   \subfloat{
-   \label{fig: función de masa halos}
+   %\label{fig: función de masa halos}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_halos.pdf}}
   \subfloat{
-   \label{fig: función de masa estelar}
+   %\label{fig: función de masa estelar}
     \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
  \caption{Funciones de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo02}}.}
  \label{fig: Funciones de masa cosmo02}
@@ -71,7 +72,7 @@ A parte de la función de distribución de masa es posible usar otros criterios 
 
 La teoría sobre la formación de galaxias indica la existencia de una relación lineal entre la masa estelar de una galaxia y del BH anfitrión, por tanto las galaxias que poseen una masa estelar considerable poseen un BH con una masa considerable también. Por tanto las simulaciones debe reproducir este resultado teórico y observacional. Al observa las figuras (\ref{fig: Mass_bhVsMass_stelar}), es posible observar que las simulaciones bajo este criterio, también reproducen las observaciones. 
 %
- \begin{figure}[-h]
+ \begin{figure}
  \centering
   \subfloat{
    %\label{fig: mass_bhVsmass_stelar}
@@ -84,15 +85,37 @@ La teoría sobre la formación de galaxias indica la existencia de una relación
 \end{figure}
 %
 %------------------------------------------------
-\subsection{ Distribución de galaxias en el entorno cosmológico}
-\label{subsec: Distribucion de galaxias}
+    \subsection{ Distribución de galaxias en el entorno cosmológico}
+    \label{subsec: Distribucion de galaxias}
 %------------------------------------------------
 
 La distribución de las galaxias en el entorno cosmológico son determinantes en el resultado de final de este trabajo. Es necesario entonces poder concluir que los resultados obtenidos por las simulaciones reproduzcan las observaciones. Haciendo uso de método de T-Web, se extraen los autovalores $\lambda_{i}$, los autovectores $\vec{e}_{i}$ y la sobre densidad $\delta$. 
 
 Como se explico en la sección (\ref{subsec: Metodo_T-web}),  los autovalores son los responsables de clasificar los entornos y con ello a las galaxias. Es necesario contrastar que la distribución de galaxias debe ser equivalente al mapa de sobre densidades. 
 
-Al observar las distribución de BHs en el espacio, se observa que gran parte de los BHs se ubica en los cluster o filamentos. Este resultado puede ser contrastado con el valores de los autovalores $\lambda_{i}$, al observar la figura (... ) también se puede concluir lo siguiente:  $\lambda_{1}\geq 0$,  $\lambda_{2}\geq 0$ y $\lambda_{3}$ esta acotado entre $-10 \leq \lambda_{3}\leq 10$, mayormente con valores positivos.
+(ANALISIS Y GRAFICA DEL LA DENSIDAD CON )
+
+Al observar las distribución de BHs en el espacio, se observa que gran parte de los BHs se ubica en los cluster o filamentos. Este resultado puede ser contrastado con el valores de los autovalores $\lambda_{i}$, al observar la figura (\ref{fig: Histograma Autovalores}) también se puede concluir lo siguiente:  $\lambda_{1}\geq 0$,  $\lambda_{2}\geq 0$ y $\lambda_{3}$ esta acotado entre $-10 \leq \lambda_{3}\leq 10$, mayormente con valores positivos, reproduciendo estructuras con características de filamentos o clusters. 
+%
+\begin{center}
+\includegraphics[scale=.38]{./figures/6_Resultados/cosmo01/histograma_autovalores2.pdf}
+\figcaption{\emph{Histograma de los autovalores $\lambda_{i}$, que proporcionan información acerca de la clasificación y dinámica de la simulación a gran escala. Estos autovalores son obtenidos del método de  T-Web, calculando la diagonal de la matriz Hessiana.}}
+\label{fig: Histograma Autovalores}
+\end{center}
+%
+
+
+
+
+%------------------------------------------------
+\section{ Alineamiento}
+\label{sec: Alineamiento}
+%------------------------------------------------
+
+En esta sección se presentan los resultados que darán pie a argumentar si existe una relación entre el espín del BH y el entorno. Se mostraran los resultados logrados con varios objetos, encaminados a comparar los resultados y dar un respuesta a la pregunta planteada en este proyecto.
+
+
+
 
 
 
