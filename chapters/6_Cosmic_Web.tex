@@ -112,11 +112,57 @@ Al observar las distribución de BHs en el espacio, se observa que gran parte de
 \label{sec: Alineamiento}
 %------------------------------------------------
 
-En esta sección se presentan los resultados que darán pie a argumentar si existe una relación entre el espín del BH y el entorno. Se mostraran los resultados logrados con varios objetos, encaminados a comparar los resultados y dar un respuesta a la pregunta planteada en este proyecto.
+En esta sección se presentan los resultados que darán pie a argumentar si existe alguna relación entre el espín del BH y el entorno. Se mostraran los resultados logrados con varios sistemas (momentum angular de BHs, discos de acreción, halos y entorno), encaminados a comparar los resultados y poder dar respuesta a la pregunta planteada en este proyecto. 
+
+Al recordando la estructuración de las galaxias, para la cual  se suponen galaxias con AGNs activos en su interior. Se consideran tres parámetros fundamentales para cada galaxia: en los halos se estudiará la masa estelar contenida en el halo, posición y momentum angular; para los AGN se estudiará el SMBH y el disco de acreción, del SMBH se extrae la masa, espín y posición y del disco de acreción el momentum angular. Estos parámetros fueron calculados usando la teoría de evolución de espín (ver capitulo \ref{cha:Modelo de Spin}) y usando el código {\it{Arepo}} (ver sección \ref{sec: codigo arepo} ) que reproduce la evolución y formación de galaxias. 
+
+Para estudiar la alineación se utiliza como parámetro el $\cos (\theta)$, el cual está acotado entre -1 y 1 (ver sección \ref{subsubsec: Aling_Spin}). Partiendo de esto se argumenta que hay alineamiento sii  $\cos (\theta) \to 1$, anti-alineamiento si $\cos (\theta)\to -1$, ortogonalidad si $\cos (\theta)\to 0$ y si $\cos (\theta)\to \pm 0.5 $ no es posible concluir algo. Con base en esto se procede a calcular la relación entre los momentum angulares de cada sistema, a continuación se nombrar los ángulos con los cuales se busca encontrar alguna relación:
+
+$\theta$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el autovector tres $\vec{\bf{e}}_{3}$.
+
+$\alpha$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$  y el disco de acreción ${\bf{J_{d}}}$ .
+
+$\beta$ :  ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el halos ${\bf{J_{halo}}}$
+
+Una vez definidos los ángulos, procedamos a presentar una serie de resultados que contrastados con la teoría aportan a la solución de la respuesta central del texto. Como primera parte, identifiquemos cómo se comportan las alineaciones en la simulación, para esto se determinará la distribución de ángulos de alineamientos. 
 
 
+(GRAFICAS HISTOGRAMAS DE ALPHA Y BETA)
+
+En las gráficas () se puede concluir que gran parte de los espines de los BHs, discos de acreción y halos se terminan alineando. Esto puede inducir que los eventos de interacción son .....
+%%%%*****************************************%%%%%%%%%%%%%%%
+(HABLAR QUE DE AHORA EN ADELANTE SOLO SE VA HA CONSIDERAR COSMO01)
+Valiéndonos de los resultados presentados en las simulaciones y de la teoría de alineamiento, se considera que la que mejor podría representar los sucesos "reales" o físicamnete más corectos es la simulación con acreción caótica. Por lo tanto a partir de acá los resultados reportados serán meramente resultados de {\it{cosmo01}}. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$. La relaciones que se obtengan de $\theta$ son de gran importancia, ya que está es la responsable de indicar si hay o no alineaminto con el entorno. Por tanto observemos que ocurre con la distribución de $\cos \theta$ para diferentes autovalores $\lambda_{i}$.
+%
+\begin{center}
+\includegraphics[scale=.35]{./figures/6_Resultados/cosmo01/histograma_cos_theta.png}
+\figcaption{\emph{Distribución de $\cos \theta$ para cada BH en la simulación de cosmo01. Se observa una gran aleatoriedad debida que no se cuenta con un gran número de datos y porque se está considerando BHs alineados y no alineados.}}\label{fig: histograma costeta}
+\end{center}
+%
+Al observar la figura (\ref{fig: histograma costeta}) se evidencia una gran aleatoriedad en la distribución de $\cos\theta$, la razón de ellos es que la distribución considera tanto BHs alineados como anti-alineados. Además se evidencia que para los tres autovalores ocurre lo mismo, una gran aleatoriedad. Para deshacernos de este problema se hace necesario estudiar el comportamiento de los BHs en regiones especificas de la simulación, donde se tenga alguna idea de un alineamiento.  
+
+Ahora en búsqueda de no estimar objetos no alienados estudiemos entornos particulares, y ver si existe alguna relación entre el parámetro de alineamiento $\cos\theta$ y parámetros relacionados con el entorno, como lo son la masa del BH, la masa estelar del halo, masa del halo y autovectores, en especial $\lambda_{3}$. La teoría de formación de galaxias y estructuras muestra que en regiones de sobre densidad (clusters o filamentos) las galaxias presentan una mayor cantidad de masa  con respecto a las galaxias que se encuentran el regiones de baja densidad, lo cual se puede traducir en los BH de estas galaxias masivas también posee un gran cantidad de masa. Es entonces la masa el criterio usado para encontrar el posible alineamiento. 
+
+
+\begin{figure} 
+\centering \subfloat{ 
+%\label{fig: función de masa BHs}
+\includegraphics[width=0.38\textwidth]{./figures/6_Resultados/cosmo01/proyecion_rango_1_masas.png}} 
+\subfloat{ 
+%\label{fig: función de masa halos}
+\includegraphics[width=0.29\textwidth]{./figures/6_Resultados/cosmo01/proyecion_rango_2_masas.png}}
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.302\textwidth]{./figures/6_Resultados/cosmo01/proyecion_rango_3_masas.png}} 
+\caption{Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ (Azul) y el espín del BH ${\bf{J_{bh}}}$ (Rojo). En esta figura se proyectan los vectores en el plano $x,y$. La figura presenta tres columnas, cada una de ellas relaciona un rango de masas, Rango 1 equivale a masas de BHs entre (6-7)/$M_{\odot}$, Rango 2 masas entre (7-8)/$M_{\odot}$ y Rango 2 masas entre (8-10)/$M_{\odot}$. Cada columna de rango consta de tres figuras, donde cada celda  representan tres cortes en la caja de la simulación, cortes hechos en el eje $z$, La primera fila indica un corte interior, BHs entre $(0, 8.3\times10^{3}) Kpc$,  la segunda fila un corte intermedio, entre $(8.3\times10^{3}, 16.6\times10^{3}) Kpc$, la ultima fila representa el corte superior, entre  $ (16.6\times10^{3}, 25\times10^{3}) Kpc$. } \label{} \end{figure}
 
 
 
 
 %***********************************************************************
+
+
+
