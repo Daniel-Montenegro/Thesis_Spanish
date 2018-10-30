@@ -1,12 +1,8 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 %Quote
-\begin{savequote}[50mm]
-%‘‘El cosmos es todo lo que es, todo lo que fue y todo lo que será. Nuestras 
-%más ligeras contemplaciones del cosmos nos hacen estremecer: Sentimos como 
-%un cosquilleo nos llena los nervios, una voz muda, una ligera sensación como
-%de un recuerdo lejano o como si cayéramos desde gran altura. Sabemos que nos
-%aproximamos al más grande de los misterios.’’
-%\qauthor{Carl Sagan}
+\begin{savequote}[60mm]
+"No me parece que este universo fantásticamente maravilloso, pueda simplemente ser un escenario para que Dios vea a los seres humanos luchar por el bien y el mal."
+\qauthor{Richard Feynman}
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 
@@ -17,60 +13,59 @@
 \chapter{Alineamiento de AGNs con su entorno a gran escala}
 \label{cha:cosmic_web}
 
-En esta sección se presentan los resultados obtenidos en la búsqueda de posible alineamiento del espín de los AGNs y el entorno cosmológico al cual pertenecen. Con al fin de poder llevar a cabo este propósito, se hace uso de: dos simulaciones cosmológicas ({\it{Cosmo01}} y {\it{Cosmo02}}), los los autovalores, autovectores, sobre densidades obtenidos con el método de T-Web y el catálogo FoF. A continuación se presentan las características de la simulaciones y de los resultados obtenidos.
+En esta sección se presentan los resultados obtenidos en la búsqueda de posible alineamiento del espín de los AGNs con el entorno cosmológico al cual pertenecen. Con el fin de poder llevar a cabo este propósito, se hace uso de dos simulaciones cosmológicas ({\it{Cosmo01}} y {\it{Cosmo02}}),  del método T-Web se usan los autovalores y autovectores. A continuación se presentan las características de las simulaciones y  los resultados obtenidos.
 
 %------------------------------------------------
 \section{Características de las simulaciones}
 \label{sec: propiedades en las simulaciones}
 %------------------------------------------------
 
-En la simulación hay parámetros o valores que dan información de la dinámica del sistema,  que arrojan criterios suficientes para decidir si lo obtenido está en acuerdo con los modelos físicos propuestos. 
-Conforme a esto, se pretende realizar un análisis a la distribución de masa (función de masa) de los halos de materia, BHs y de estrellas. 
+En las simulaciones hay parámetros o valores que dan información de la dinámica del sistema,  que arrojan criterios suficientes para decidir si lo obtenido está en acuerdo con los modelos físicos propuestos. 
+Conforme a esto, se pretende realizar un análisis a la distribución de masa (función de masa) de los halos, BHs y de masa estelar del halo. 
 
-Debido a que no todos los halos hospedan un BH en su interior, fue necesario descartar los halos que no cumplen con esta condición. Esto reduce de gran manera la cantidad de galaxias a estudiar, sin embargo es suficiente para realizar un análisis adecuado.
+Debido a que no todos los halos hospedan un BH en su interior, fue necesario descartar los halos que no cumplen con esta condición. Esto reduce en gran manera la cantidad de galaxias a estudiar, sin embargo es suficiente para realizar un análisis adecuado.
 
 %------------------------------------------------
-    \subsection{ Función de masa}
+    \subsection{ Función de distribución de masa}
     \label{subsec: funcion de masa}
 %------------------------------------------------
-La función de masa es uno de los parámetros de control más contundentes en el análisis de las simulaciones. Bajo la teoría de formación y evolución de galaxias se tiene que los objetos con baja masa son más abundantes, debido a que en los procesos evolutivos de las galaxias la interacción es jerárquica, las galaxias más masivas tiene una mayor probabilidad en fusionarse con otras debido a su gran potencial gravitacional, esto hace que las galaxias más densas se terminen fusionando y disminuyendo su población. Con base a esto la función de masa de las galaxias (halos, BHs y masa estelar) debe decrecer a medida que se aumentan las masas, i.e., La cantidad de objetos disminuye a medida que aumenta la masa, es menos probable encontrar BHs muy masivos.
-
+La función de masa es uno de los parámetros de control más contundentes en el análisis de las simulaciones. Bajo la teoría de formación y evolución de galaxias se tiene que los objetos con baja masa son más abundantes, debido a que en los procesos evolutivos en las galaxias la interacción es jerárquica, las galaxias más masivas tiene una mayor probabilidad en fusionarse con otras debido a su gran potencial gravitacional, esto hace que las galaxias más densas se terminen fusionando y así se disminuya su población. Con base a esto la función de masa de las galaxias (halos, BHs y masa estelar) debe decrecer a medida que se aumentan las masas, i.e., La cantidad de objetos disminuye a medida que aumenta la masa, es menos probable encontrar BHs muy masivos.
 %
 \begin{figure}
- \centering
-  \subfloat{
-   %\label{fig: función de masa BHs}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_bh.pdf}}
-  \subfloat{
-   %\label{fig: función de masa halos}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_halos.pdf}}
-  \subfloat{
-   %\label{fig: función de masa estelar}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
- \caption{Funciones de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo01}}. }
+\centering
+\subfloat{
+%\label{fig: función de masa BHs}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_bh.pdf}}
+\subfloat{
+%\label{fig: función de masa halos}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_halos.pdf}}
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
+\caption{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo01}}. }
  \label{fig: Funciones de masa cosmo01}
 \end{figure}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \begin{figure}
- \centering
-  \subfloat{
-   %\label{fig: función de masa BHs}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_bh.pdf}}
-  \subfloat{
-   %\label{fig: función de masa halos}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_halos.pdf}}
-  \subfloat{
-   %\label{fig: función de masa estelar}
-    \includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
- \caption{Funciones de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo02}}.}
+\begin{figure}
+\centering
+\subfloat{
+%\label{fig: función de masa BHs}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_bh.pdf}}
+\subfloat{
+%\label{fig: función de masa halos}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_halos.pdf}}
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
+\caption{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{Cosmo02}}.}
  \label{fig: Funciones de masa cosmo02}
 \end{figure}
 %
-Al observar las figuras (\ref{fig: Funciones de masa cosmo01} y \ref{fig: Funciones de masa cosmo02}), es posible concluir que los resultados de la simulación son congruentes con la teoría y con las observaciones. Para despreciar los posibles errores producto de la baja resolución en galaxias de baja masa, se consideran sistemas en los cuales las masa estelar sea mayor a $5\times 10^{8}M_{\odot}$. Este criterio hace que la distribución de masa para los halos presente  esa extraña forma, con esta gráfica es posible argumentar que los halos de baja masa presentan una gran numero de masa estelar menor a $5\times 10^{8}M_{\odot}$, a medida que aumenta la masa del halo el numero de objetos con masa estelar menos al criterio disminuye. 
+Al observar las figuras (\ref{fig: Funciones de masa cosmo01} y \ref{fig: Funciones de masa cosmo02}), es posible concluir que los resultados de la simulación son congruentes con la teoría y con las observaciones. Para despreciar los posibles errores producto de la baja resolución en galaxias de baja masa, se consideran sistemas en los cuales las masa estelar sea mayor a $5\times 10^{8}M_{\odot}$. Este criterio hace que la distribución de masa para los halos presente  esa extraña forma, con esta gráfica es posible argumentar que los halos de baja masa presentan una gran número de halos con masa estelar menor a $5\times 10^{8}M_{\odot}$, a medida que aumenta la masa del halo el numero de objetos con masa estelar del halo es menor al criterio disminuye. 
 
-A parte de la función de distribución de masa es posible usar otros criterios que den información de la simulación y de su veracidad. 
+A parte de la función de distribución de masa, es posible usar otros criterios que dan información de la simulación y de su veracidad. 
 
-La teoría sobre la formación de galaxias indica la existencia de una relación lineal entre la masa estelar de una galaxia y del BH anfitrión, por tanto las galaxias que poseen una masa estelar considerable poseen un BH con una masa considerable también. Por tanto las simulaciones debe reproducir este resultado teórico y observacional. Al observa las figuras (\ref{fig: Mass_bhVsMass_stelar}), es posible observar que las simulaciones bajo este criterio, también reproducen las observaciones. 
+La teoría sobre la formación de galaxias indica la existencia de una relación lineal entre la masa estelar de una galaxia y la masa del BH anfitrión, por tanto las galaxias que poseen una masa estelar considerable poseen un BH con una masa considerable también. Por tanto las simulaciones debe reproducir este resultado teórico y observacional. Al observa las figuras (\ref{fig: Mass_bhVsMass_stelar}), es posible observar que las simulaciones bajo este criterio, también reproducen lo esperado. 
 %
  \begin{figure}
  \centering
@@ -122,7 +117,7 @@ $\theta$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el autovector tres $
 
 $\alpha$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$  y el disco de acreción ${\bf{J_{d}}}$ .
 
-$\beta$ :  ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el halos ${\bf{J_{halo}}}$
+$\beta$ :  ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el halos ${\bf{J_{halo}}}$\\
 
 Una vez definidos los ángulos, procedamos a presentar una serie de resultados que contrastados con la teoría aportan a la solución de la respuesta central del texto. Como primera parte, identifiquemos cómo se comportan las alineaciones en la simulación, para esto se determinará la distribución de ángulos de alineamientos. 
 
@@ -146,7 +141,7 @@ Al observar la figura (\ref{fig: histograma costeta}) se evidencia una gran alea
 
 Ahora en búsqueda de no estimar objetos no alienados estudiemos entornos particulares, y ver si existe alguna relación entre el parámetro de alineamiento $\cos\theta$ y parámetros relacionados con el entorno, como lo son la masa del BH, la masa estelar del halo, masa del halo y autovectores, en especial $\lambda_{3}$. La teoría de formación de galaxias y estructuras muestra que en regiones de sobre densidad (clusters o filamentos) las galaxias presentan una mayor cantidad de masa  con respecto a las galaxias que se encuentran el regiones de baja densidad, lo cual se puede traducir en los BH de estas galaxias masivas también posee un gran cantidad de masa. Es entonces la masa el criterio usado para encontrar el posible alineamiento. 
 
-La figura (\ref{fig: proyeccion espines}) da cuenta de la discretización que se pretende hacer, se toman galaxias con diferentes masas, al diferenciar los BHs o galaxias por su tamaño, se intenta clasificar los BHs y con ello solucionar el problema anterior de conteo de galaxias no alineadas. Estas celdas permitirán determinar si existe alineamiento.
+La figura (\ref{fig: proyeccion espines}) da cuenta de la discretización que se pretende hacer, para no tener en cuenta los BHs no alineados. Se estiman tres rangos de masas de BH. Al clasificar las galaxias por la masa de su BH  se intenta  descartar la contribución de objetos no alineados que puedan producir error o incertidumbre en el resultado final. 
 
 \begin{figure} 
 \centering \subfloat{ 
@@ -158,21 +153,71 @@ La figura (\ref{fig: proyeccion espines}) da cuenta de la discretización que se
 \subfloat{
 %\label{fig: función de masa estelar}
 \includegraphics[width=0.302\textwidth]{./figures/6_Resultados/cosmo01/proyecion_rango_3_masas.png}} 
-\caption{Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ (Azul) y el espín del BH ${\bf{J_{bh}}}$ (Rojo). En esta figura se proyectan los vectores en el plano $x,y$. La figura presenta tres columnas, cada una de ellas relaciona un rango de masas, Rango 1 equivale a masas de BHs entre (6-7)/$M_{\odot}$, Rango 2 masas entre (7-8)/$M_{\odot}$ y Rango 2 masas entre (8-10)/$M_{\odot}$. Cada columna de rango consta de tres figuras, donde cada celda  representan tres cortes en la caja de la simulación, cortes hechos en el eje $z$, La primera fila indica un corte interior, BHs entre $(0, 8.3\times10^{3}) Kpc$,  la segunda fila un corte intermedio, entre $(8.3\times10^{3}, 16.6\times10^{3}) Kpc$, la ultima fila representa el corte superior, entre  $ (16.6\times10^{3}, 25\times10^{3}) Kpc$. } 
+\caption{Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ (Azul) y el espín del BH ${\bf{J_{bh}}}$ (Rojo). En esta figura se proyectan los vectores en el plano $x,y$. La figura presenta tres columnas, cada una de ellas relaciona un rango de masas, Rango 1 equivale a masas de BHs entre (6-7)/$M_{\odot}$, Rango 2 masas entre (7-8)/$M_{\odot}$ y Rango 2 masas entre (8-10)/$M_{\odot}$. Cada columna de rango consta de tres figuras, donde cada celda  representan tres cortes en la caja de la simulación, cortes hechos en el eje $z$, La primera fila indica un corte interior, BHs entre $(0-8.3)\times10^{3} Kpc$,  la segunda fila un corte intermedio, entre $(8.3-16.6)\times10^{3} Kpc$, la ultima fila representa el corte superior, entre  $ (16.6-25)\times10^{3} Kpc$. } 
 \label{fig: proyeccion espines} 
 \end{figure}
 
-(1. Mostrar las relaciones con los percentiles )
-(2. Concluir con respecto a esas gráficas)
+Para entrar a analizar el alineamiento se busca su posible relación con la masa o con el mismo autovalores 3 $\lambda_{3}$. (¿PONGO QUE EL ANALISIS PARA LOS OTROS TRES AUTOVALORES?). La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) indica que las regiones donde se forman filamentos está determinada por el valor del autovalor 3 $\lambda_{3}$, al estudiar la dinámica del flujo de materia en las estructuras, se estima  que en filamentos hay una mayor concentración de materia en una dirección, esto puede  supone que los objetos inmersos en esa región tienden a alinearse en la dirección del flujo de materia. No solo en los filamentos se debería esperar alguna alineación, se puede suponer que en regiones de alta densidad de materia, donde la materia apunta hacia una misma dirección debería ocurrir alguna alineación. La figura (\ref{fig: Histograma Autovalores}) indica que la mayoría de los BHs van a estar en filamentos o clusters. 
 
-(3. Con respecto a la conclusiones de las graficas de percentil volver a la gráfica de proyección y dar un análisis)
+\begin{figure}
+    \centering
+    \includegraphics[width=0.55\textwidth]{./figures/6_Resultados/cosmo01/percentiles/relacion_simulaciones_Mass_bh}
+    \caption{Caption....}
+    \label{fig: comparacion cosmo01 y cosmo02}
+\end{figure}
+ 
+Uno de los criterios por los cuales no se estudio {\it{cosmo02}}, son lo resultados presentados por su proceso de acreción coherente, no presenta alineamiento claro. Al observar la figura (\ref{fig: comparacion cosmo01 y cosmo02}) se puede evidenciar que la mediana de los diferentes rangos de masas de BH para la simulación {\it{comos01}} siempre estan muy cercano de 0.5, de lo cual no es posible concluir nada, mientras que para la simulación {\it{cosmo01}} si hay un cambio mostrando una alineación. 
+
+La figura (\ref{fig: median dispercion}) representa el resultado final de este trabajo. Se presentan cuatro  figuras, cada figura contiene a su vez dos gráficas, la gráfica superior de cada figura muestra la mediana para un rango de datos ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$), además se muestra los percentiles al 25$\%$ y 75$\%$, que brinda información de la distribución de la mediana para cada rango de datos; la gráfica inferior muestra la mediana de para cada rango pero con un acercamiento. 
+
+la primera da información de la mediana de los datos ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$) para cada rango de masa o de autovalor. Se evidencia que el valor del $|\cos \theta|$ va variando con respecto a la masa, a medida que aumenta la masa de los objetos, la distribución apunta a un alineamiento ortogonal entre el entorno y las masas total del la masa estelar halo y la masa del BH.  Se observa además que el mayor alineamiento ocurre entre el entorno y la masa del BH, para BHs muy masivos $|\cos\theta| \to 0.2$. Contrastando este resultados con \cite{wang2018}, que estudia la relación del entorno pero con el espín del halo, los resultados finales de la simulación son capaces de reprocudcir su resultado, dando un respaldo.......
+Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a gran escala si afecta los precesos internos en las galaxias. El campo de densidad que fluye a través de los filamentos o clusters influyen la dirección del espín del BH. Por tanto El espín del BH ${\bf{J_{bh}}}$ se alinea de forma ortogonal con el autovector tres $\vec{\bf{e}_3}$ para masas grandes. 
+%
+%\begin{align}
+% |\cos \theta| =   \left\| \frac{{\bf{J_{bh}}}\cdot \vec{\bf{e}_3}}{ %|\bf{J_{bh}}| |\vec{\bf{e}_3}|} \right\| \to 0.2
+%\end{align}
+
+\begin{figure} 
+\centering 
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.63\textwidth]{./figures/6_Resultados/cosmo01/percentiles/mean_cos_theta3_vs_eigen3_bin4.pdf}} 
+\subfloat{ 
+%\label{fig: función de masa BHs}
+\includegraphics[width=0.77\textwidth]{./figures/6_Resultados/cosmo01/percentiles/mean_cos_theta3_vs_Mass_halo_bin4}} 
+\subfloat{ 
+%\label{fig: función de masa halos}
+\includegraphics[width=0.77\textwidth]{./figures/6_Resultados/cosmo01/percentiles/mean_cos_theta3_vs_Mass_bh_bin4.pdf}}
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.63\textwidth]{./figures/6_Resultados/cosmo01/percentiles/mean_cos_theta3_vs_Mass_stelar_bin4.pdf}} 
+
+\caption{.} 
+\label{fig: median dispercion} 
+\end{figure}
+
+
+
+%(1. Mostrar las relaciones con los percentiles )
+%(2. Concluir con respecto a esas gráficas)
+%(3. Con respecto a la conclusiones de las graficas de percentil volver a la gráfica de proyección y dar un análisis)
 
 
 %------------------------------------------------
-\section{ Análisis y conclusión}
-\label{sec: Analisis y conclusion}
+\section{Conclusiones}
+\label{sec: conclusiones}
 %------------------------------------------------
+%En esta sección se presentan los resultados obtenidos durante este trabajo,  los cuales serán presentados a continuación: 
+Durante todo este trabajo, se ha encaminado en un objetivo específico, la posible alineación entre el entorno cosmológico y los AGNs. En esta sección se mostraran los resultados obtenidos a lo largo de este trabajo. A continuación se presentaran los resultados más importante.~\\
 
+%$\bullet$ El modelo de espín [SEBAS], desempeña un papel fundamental en el alineamiento de los BHs. 
+
+$\bullet$ Al usar los datos obtenidos de las simulaciones {\it{cosmo01}} y {\it{cosmo02}} se concluye: los procesos que ocurren bajo la acreción caótica dan cuenta de un alineamiento de una forma más contundente en función de la masa, por otro lado, la acreción coherente no dejan ver un posible alineamiento, los resultados no permiten concluir. ~\\
+
+
+$\bullet$ Al usar {\it{cosmo01}} se puede afirmar que existe una relación entre la masa y el ángulo de alineamiento, se observa una mayor alineación para la masa de los bh.~\\
+
+$\bullet$ Del resultado anterior se puede concluir que hay un posible alineamiento entre el entorno y el espín del BH. Esto es debido a la relación que hay entre la masa y el entorno, en regiones de abundancia de materia se presenta con mayor probabilidad objetos de masas mayores.
 
 
 

@@ -12,7 +12,7 @@ Supuestamente el cerebro humano es algo parecido a una libreta que se adquiere e
 %*****************************************************
 %El desarrollo de modelos computacionales permiten reproducir sucesos que escapan a acontecer de una vida humana. Es por eso la importancia de los modelos
 
-En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en este sistema. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, ratas de acreción de BHs, feadback de BHs y entre otras propiedades de las galaxias. La simulación que se va usar para tal propósito es el código Magneto-hidrodinámico para N-cuerpos AREPO \cite{springel2010}, capaz de reproducir mallas que cambian de forma y se mueven con el fluido a medida que corre la simulación,  haciendo seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo o mejor aun, permiten hacer una clasificación y estructuración del mismo. El método usado para la clasificación de estructuras en el universo es el  T-web \cite{hahn2007}, capaz de categorizar las regiones del universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras se hace uso del código Arepo, que emplea el método de subfind, este permite localizar zonas de sobre densidad, indicando la presencia de halos de materia oscura, grupo o cúmulo  de galaxias. 
+En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en este sistema. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, su rata de acreción y el feadback producido,  entre otras propiedades de la galaxia. La simulación que se va usar para tal propósito es el código Magneto-hidrodinámico para N-cuerpos AREPO \cite{springel2010}, capaz de reproducir mallas\footnote{Las mallas hace referencia a una driscretiación del espacio, que da como resultado una cuadrícula.} que cambian de forma y se mueven con el fluido a medida que corre la simulación,  haciendo seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo y mejor aun, permiten hacer una clasificación y estructuración del mismo. El método usado para la clasificación de estructuras en el universo es el  T-Web \cite{hahn2007}, capaz de categorizar las regiones del universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras se hace uso del código Arepo, que emplea el método de subfind, este permite localizar zonas de sobre densidad, indicando la presencia de halos de materia oscura, grupos y cúmulos de galaxias. 
 
 %*****************************************************
 \section{Código Arepo}
@@ -27,9 +27,9 @@ En la astrofísica se hace necesario poder contrastar los modelos teóricos con 
 
 - Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles a grandes cambios en velocidades de volumen.\\
 
-{\it{Arepo}} toma lo mejor de cada simulación y mejora sus falencias. En general el código {\it{Arepo}} \cite{springel2010} introduce una nueva forma de modelación hidrodinámica continua de mallas dinámicas. El código se describe como \cite{springel2010}:
+{\it{Arepo}} toma lo mejor de cada simulación y mejora sus falencias. En general el código {\it{Arepo}} introduce una nueva forma de modelación hidrodinámica continua de mallas dinámicas. El código se describe como \cite{springel2010}:
 
-La precisión del modelo viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente, permitiendo un movimiento libre. 
+La precisión del modelo viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente.
 
 El método de Voronoi es el método de interpolación más simple, que se basa en la distancia euclidea. Permite crear celdas de tal forma que la región encerrada esta lo más cerca posible a sus celdas vecinas. Los polígonos se diseñan al unir los puntos entre si, trazando luego una mediatriz entre los segmentos de unión. La intersección de las mediatrices dan como resultado los polígonos y por lo tanto la malla (ver figura \ref{fig: voronoi}). Cada celda en la malla lleva consigo variables de fluido que se conservan (masa, momentum y energía total).
 %
@@ -38,11 +38,11 @@ El método de Voronoi es el método de interpolación más simple, que se basa e
 \figcaption{\emph{Representación gráfica de la teselación de Voronoi. En esta gráfica se puede ver la doble topología del digrama de Voronoi, pues es equivalente topológicamente a la teselación de Delaunay.}}\label{fig: voronoi}
 \end{center}
 %
-La importancia de la simulación Voronoid, es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto garantiza que a medida que trascurren los pasos numéricos se actualice la información del fluido en la celda. Este método posibilita la solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, y por ende se obtengan valores no sesgados para la alineación de los BHs en cada celda y del momentum angular del gas que circula alrededor del BH. 
+La importancia de la simulación al usar el método de Voronoid, es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto garantiza que a medida que trascurren los pasos numéricos se actualice la información del fluido en la celda. Este método posibilita la solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, y por ende se obtengan valores no sesgados para  el espín de los BHs y su disco de acreción.  
 
-Este método permite que en las regiones donde hay una mayor sobre densidad de materia, se genere una mayor cantidad de celdas, proporcionando una modelación más precisa dando como resultado una mejor respuesta a la dinámica del fluido.
+Este método permite que en las regiones donde hay una mayor sobre densidad de materia, se genere una mayor cantidad de celdas, proporcionando una modelación más precisa. Dando como resultado una mejor respuesta a la dinámica del fluido.
 %aca voy
-El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido de manera muy precisa, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación o de fluido de la siguiente forma:
+El objetivo principal de la simulación es poder solucionar las ecuaciones del fluido de manera muy precisa, para ello hace uso de las ecuaciones de Euler, que son leyes de la conservación de la masa, energía y momentum, que toma la forma de un sistema de ecuaciones diferenciales parciales hiperbólicas. \cite{springel2010} reescribe de forma compacta las ecuaciones de conservación del fluido de la siguiente forma:
 
 Se introduce el vector de estado    
 \begin{align}
@@ -55,12 +55,12 @@ donde $\rho$ es la densidad del fluido, $\vec{v}$ es el campo de velocidad y $e=
     \vec{\bf{F}}(\vec{\bf{U}})=
     \begin{pmatrix} \rho\vec{v} \\ \rho\vec{v}\vec{v}^{T}+ P \\ (\rho e + P)\vec{v} \end{pmatrix}\,,
 \end{align}
-donde $P$ es la ecuación de estado queda la presión del fluido. Es por tanto que la ecuación de Euler se puede escribir de forma compacta como 
+donde $P$ es la ecuación de estado que da la presión del fluido. Por tanto  la ecuación de Euler se puede escribir de forma compacta como 
 \begin{align}
     \frac{\partial\vec{\bf{U}}}{\partial t} + \vec{\nabla}\cdot \vec{\bf{F}}\,.
 \end{align}
 
-En el código de {\it{Arepo}} se considera una discretización del fluido como un conjunto de volúmenes finitos, donde cada celda se identifica bajo el uso de un contador "$i$". Cada celda contiene la información de la masa $m_{i}$, momentum $p_{i}$ y la energía $E_{i}$. %
+En el código {\it{Arepo}}  considera una discretización del fluido como un conjunto de volúmenes finitos, donde cada celda se identifica bajo el uso de un contador "$i$". Cada celda contiene la información de la masa $m_{i}$, momentum $p_{i}$ y la energía $E_{i}$. %
 \begin{align}
     {\bf{Q}_{i}} = \begin{pmatrix} m_{i} \\ p_{i} \\ E_{i} \end{pmatrix} = \int_{V_{i}} \vec{\bf{U}}d\vec{\bf{V}}\,.
 \end{align}
@@ -70,9 +70,9 @@ Usando la ecuación de Euler, es posible calcular la razón de cambio de ${\bf{Q
 \begin{align}
     \frac{d{\bf{Q_{i}}}}{dt} = -\int_{\partial V_{i}}[\vec{\bf{F}}(\vec{\bf{U}})-\vec{\bf{U}}\vec{\bf{w}}^{T}]d\vec{\bf{n}}\,,
 \end{align}
-donde $\vec{\bf{w}}$ es la velocidad particular de cada partícula y $\vec{\bf{n}}$ es el vector normal a la superficie.
+donde $\vec{\bf{w}}$ es la velocidad de cada partícula y $\vec{\bf{n}}$ es el vector normal a la superficie.
 
-El nuevo esquema presentado por \cite{springel2010} indica cuales son los pasos (algoritmia) que sigue el código. Parte del estado del fluido para cada celda ${\bf{Q_{i}}}$ y al hacerlo evolucionar es capaz de dar los resultados de no invarianza galileana y buena resolución. 
+El esquema presentado por \cite{springel2010} indica cuales son los pasos (algoritmia) que sigue el código. Parte del vector de estado del fluido para cada celda ${\bf{Q_{i}}}$ y al hacerlo evolucionar es capaz de dar los resultados de no invarianza galileana y buena resolución. 
 
 %*****************************************************
 \section{Caracterización del entorno}
@@ -82,7 +82,7 @@ El nuevo esquema presentado por \cite{springel2010} indica cuales son los pasos 
 Al recordar lo mencionado en la sección (\ref{sec: Estructure_Formation}), es posible decir que las simulaciones computacionales asumiendo el régimen lineal o no lineal son capaces de reproducir la estructura del universo. Al obtener la estructura del universo se observa la emergencia de regiones donde hay un cambio en la densidades (una abundancia de materia), donde la estructura cambia considerablemente.
 
 %----------------------------------------------------    
-    \subsection{Método T-web}
+    \subsection{Método T-Web}
     \label{subsec: Metodo_T-web}
 %----------------------------------------------------
 Al considerar el método propuesto por \cite{hahn2007} es posible argumentar lo siguiente: Asumiendo la teoría concerniente a los sistemas dinámicos, se realiza un análisis de estabilidad local para orbitas de prueba alrededor de halos materia oscura. Donde cada una de las partículas de prueba se mueven por acción de un potencial gravitacional $\phi$.
@@ -92,7 +92,7 @@ La ecuación de movimiento que describe la partícula en coordenadas comóviles 
     \ddot{x}=-\nabla\phi\,.
 \end{align}
 %
-Al asumir que el potencial gravitacional $\phi$ está actuando en el centro de masa ($\bar{x}_{i}$) como un máximo local, da como resultado lo siguiente:
+Al asumir que el potencial gravitacional $\phi$ está actuando en el centro de masa ($\bar{x}_{i}$) produciendo un máximo local, que da como resultado lo siguiente:
 %
 \begin{align}
     \nabla\phi(\bar{x}_{i})=0\,.
@@ -120,7 +120,7 @@ $ii)$ {\it{hoja (sheet)}: región donde hay un autovalor positivo $\lambda_{1}>0
 
 $iii)$ {\it{filamentos (filament)}: región del espacio donde solo hay un autovalor negativo $\lambda_{3}\leq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
 
-$iv)$ {\it{nudo (knot)}: región donde los tres autovalores son positivos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
+$iv)$ {\it{nudo (knot, cluster)}: región donde los tres autovalores son positivos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
 
 En la figura (\ref{fig: formacion de estructura con autovalores}), es posible observar los cuatro casos donde se representan los tipos de estructuras dependiendo del autovalor.
 %
@@ -131,13 +131,30 @@ En la figura (\ref{fig: formacion de estructura con autovalores}), es posible ob
 %
 Lo destacable de este método es su análisis meramente dinámico, lo cual le da más jerarquía que los métodos que usan principios meramentes geométricos, permitiendo identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
 
-El código que se esta implementando para la clasificación del entorno, hace uso del valor "límite" $\lambda_{th}$ para los autovalores \cite{bustamante2015}, pasando de ser $\lambda_{th}=0$ a $\lambda_{th}=0.265$. Se hace uso de este valor límite, porque es capaz de traza de muy buena forma la red cósmica. 
+(  PENDIENTE PARA EDITAR)
 
-PONER IMAGENES DEL ENTORNO HECHAS POR MI .
+El código que se esta implementando para la clasificación del entorno, hace uso del valor "límite" $\lambda_{th}$ para la clasificación \cite{bustamante2015}, pasando de ser $\lambda_{th}=0$ a $\lambda_{th}=0.265$. Se hace uso de este valor límite, porque es capaz de traza de muy buena forma la red cósmica. 
+
+\begin{figure} 
+\centering 
+\subfloat{
+%\label{fig: función de masa estelar}
+\includegraphics[width=0.4\textwidth]{./figures/5_Algoritmo_Modelacion/Distribution_density_inferior.png}} 
+\subfloat{ 
+%\label{fig: función de masa BHs}
+\includegraphics[width=0.4\textwidth]{./figures/5_Algoritmo_Modelacion/Distribution_density_media.png}} 
+\subfloat{ 
+%\label{fig: función de masa halos}
+\includegraphics[width=0.4\textwidth]{./figures/5_Algoritmo_Modelacion/Distribution_density_superior.png}}
+\caption{Distribución del campo de sobre densidad, resultado del modelo T-Web, las figuras son cortes en el eje $z$ a diferentes alturas. La figura superior izquierda representa un corte inferior, la superior derecha un corte medio  y la inferior da cuenta del corte superior.} 
+\label{fig: Campo de densidad } 
+\end{figure}
+
+
 
 
 %*****************************************************
-\section{Método de detección de sub estructuras}
+\section{Método de detección de subestructuras}
 \label{sec: detección sub-estructuras}
 %*****************************************************
 
@@ -148,9 +165,9 @@ Una vez se obtiene la clasificación del entorno a gran escala (red cósmica), e
     \label{subsec: FoF}
 %----------------------------------------------------
 
-Es uno de los métodos más usados para la detección de sub-estructururas en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, debido a la comparación entre vecinos o "amigos". Es usado en gran medida para la comparación de modelos,  determinando que tan confiable es el método contrastado. 
+Es uno de los métodos más usados para la detección de sub-estructururas en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, debido a la comparación entre vecinos o $"$amigos". Es usado en gran medida para la comparación de modelos,  determinando que tan confiable es el método contrastado. 
 
-El método FoF consiste básicamente encontrar intercesiones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ concéntricas a la partícula, dado por la expresión \cite{bustamente01}:
+El método FoF consiste básicamente encontrar intercesiones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ concéntricas a la partícula, dada por la expresión \cite{bustamente01}:
 %
 \begin{align}
     R_{i}=\frac{1}{2}b\ell\,,
@@ -169,16 +186,15 @@ donde b es el parámetro de vinculación y $\ell$ camino libre medio de las part
     \label{subsec: Algoritmo subgrid}
 %----------------------------------------------------
 
-Subfind es un método usado para extraer de forma más precisa las sub-estructuras en las simulaciones cosmológicas. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello se determinan las regiones de sobre densidad (abundancias de densidad), una vez se obtiene las regiones de sobre densidad se procede a construir esferoides concéntricos al lugar donde ocurre la sobre densidad. Cuando la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y de determina una sub-estructura \cite{springel2018}.
+Subfind es un método usado para extraer de forma más precisa las sub-estructuras en las simulaciones cosmológicas. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello determina las regiones de sobre densidad (abundancias de materia), una vez  obtiene estas regiones de sobre densidad se procede a construir esferoides concéntricos al lugar donde ocurre la sobre densidad. Cuando la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y de determina una sub-estructura \cite{springel2018}.
 
 La mejor forma de optimizar es encontrar el pico de densidad con el método de FoF y a partir de allí usar {\it{subfind}} para determinar la sub-estructura.
 
 ~\\
 
-Haciendo uso del proyecto Ilustris TNG AGN+ physics model\footnote{Simulación cosmológica a gran escala de formación de galaxias \url{http://www.illustris-project.org}. TNG AGN+ physics model, hace referencia a simulaciones hidrodinámicas que involucran AGNs y toda la física que ello conlleva.}, que emplea el código Arepo y el método de subfind, se obtienen dos simulaciones {\it{Cosmo01}} y {\it{Cosmo02}}, estas simulaciones tienen consigo una serie de parámetros propios de la dinámica de cada galaxia. Entre los parámetros que nos interesa están: el espín del BH, momentum angular del halo, momentum angular del disco de acreción del BH, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo y la rata de acreción de materia por parte del disco de acreción y BH. Estas simulaciones se corrieron en una caja con un tamaño de 25Mpc/h, con 2$\times$512$^{3}$ Partículas (entre materia oscura y gas) indicando una alta resolución. En las simulaciones se tiene alrededor de 1200 SMBHs, donde 60 de ellos son más masivos que 10$^{8}\odot$ con un redsift $z=0$.
+Haciendo uso del proyecto Ilustris TNG AGN+ physics model\footnote{Simulación cosmológica a gran escala de formación de galaxias \url{http://www.illustris-project.org}. TNG AGN+ physics model, hace referencia a simulaciones hidrodinámicas que involucran AGNs y toda la física que ello conlleva.}, que emplea el código Arepo y el método de subfind, se obtienen dos simulaciones {\it{Cosmo01}} y {\it{Cosmo02}}. Estas simulaciones tienen consigo una serie de parámetros propios de la dinámica de cada galaxia. Entre los parámetros que nos interesa están: el espín del BH, momentum angular del halo, momentum angular del disco de acreción del BH, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo y la rata de acreción de materia por parte del disco de acreción y BH. Estas simulaciones se corrieron en una caja cosmológica con un tamaño de 25Mpc/h, con 2$\times$512$^{3}$ partículas (entre materia oscura y gas) indicando una alta resolución. En las simulaciones se tiene alrededor de 1200 SMBHs, donde 60 de ellos son más masivos que 10$^{8}M_{\odot}$ a un redsift $z=0$.
 
-{\it{cosmo01}} presenta acreción caótica y {\it{cosmo02}} acreción coherente. La acreción caótica asume los procesos de auto-gravedad explicados en la sección (\ref{subsubsec: Disco auto-gravitantes}), y
- y la coherente es propia del modelo tradicional de alineamiento de espín (ver sección \ref{subsec: Acrecion_gas}).
+{\it{cosmo01}} presenta acreción caótica y {\it{cosmo02}} acreción coherente. La acreción caótica asume los procesos de auto-gravedad, proceso donde la materia que acreta al BH proviene de diferentes lugares (ver la sección \ref{subsubsec: Disco auto-gravitantes}), la acreción coherente por otra parte es propia del modelo tradicional de alineamiento de espín, asume que la materia acretada por el BH proviene siempre de la misma dirección (ver sección \ref{subsec: Acrecion_gas}).
 
 
 
