@@ -13,7 +13,7 @@
 \chapter{Alineamiento de AGNs con su entorno a gran escala}
 \label{cha:cosmic_web}
 
-En esta sección se presentan los resultados obtenidos en la búsqueda de posible alineamiento del espín de los AGNs con el entorno cosmológico al cual pertenecen. Con el fin de poder llevar a cabo este propósito, se hace uso de dos simulaciones cosmológicas ({\it{Cosmo01}} y {\it{Cosmo02}}) y el método T-Web, donde se usan los autovalores y autovectores. A continuación se presentan las características de las simulaciones y  los resultados obtenidos.
+En esta sección se presentan los resultados obtenidos en la búsqueda de posible alineamiento del espín de los AGNs con el entorno cosmológico al cual pertenecen. Con el fin de poder llevar a cabo este propósito, se hace uso de dos simulaciones cosmológicas ({\it{cosmo01}} y {\it{cosmo02}}) y el método T-Web, donde se usan los autovalores y autovectores. A continuación se presentan las características de las simulaciones y  los resultados obtenidos.
 
 %------------------------------------------------
 \section{Características de las simulaciones}
@@ -35,13 +35,13 @@ La función de masa es uno de los parámetros de control más contundentes en el
 \centering
 \subfloat{
 %\label{fig: función de masa BHs}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_bh.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_bh.pdf}}
 \subfloat{
 %\label{fig: función de masa halos}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_halos.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_halos.pdf}}
 \subfloat{
 %\label{fig: función de masa estelar}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
 \caption{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo01}}. }}
  \label{fig: Funciones de masa cosmo01}
 \end{figure}
@@ -50,13 +50,13 @@ La función de masa es uno de los parámetros de control más contundentes en el
 \centering
 \subfloat{
 %\label{fig: función de masa BHs}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_bh.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_bh.pdf}}
 \subfloat{
 %\label{fig: función de masa halos}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_halos.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_halos.pdf}}
 \subfloat{
 %\label{fig: función de masa estelar}
-\includegraphics[width=0.32\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
+\includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
 \caption{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo02}}.}}
  \label{fig: Funciones de masa cosmo02}
 \end{figure}
@@ -159,11 +159,13 @@ La figura (\ref{fig: proyeccion espines}) da cuenta de la discretización que se
 \label{fig: proyeccion espines} 
 \end{figure}
 
-Para entrar a analizar el alineamiento se busca su posible relación con la masa o con el mismo autovalores 3 $\lambda_{3}$. (¿PONGO QUE EL ANALISIS PARA LOS OTROS TRES AUTOVALORES?). La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) indica que las regiones donde se forman filamentos está determinada por el valor del autovalor 3 $\lambda_{3}$, al estudiar la dinámica del flujo de materia en las estructuras, se estima  que en filamentos hay una mayor concentración de materia en una dirección, esto puede suponer que los objetos inmersos en esa región tienden a alinearse en la dirección del flujo de materia. No solo en los filamentos se debería esperar alguna alineación, se puede suponer que en regiones de alta densidad de materia, donde la materia apunta hacia una misma dirección debería ocurrir alguna alineación. La figura (\ref{fig: Histograma Autovalores}) indica que la mayoría de los BHs van a estar en filamentos o clusters. 
+Para entrar a analizar el alineamiento se busca su posible relación con la masa o con el mismo autovalores $\lambda_{3}$. 
+%(¿PONGO QUE EL ANALISIS PARA LOS OTROS TRES AUTOVALORES?).
+La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) indica que las regiones donde se forman filamentos está determinada por el valor del autovalor 3 $\lambda_{3}$, al estudiar la dinámica del flujo de materia en las estructuras, se estima  que en filamentos hay una mayor concentración de materia en una dirección, esto puede suponer que los objetos inmersos en esa región tienden a alinearse en la dirección del flujo de materia. No solo en los filamentos se debería esperar alguna alineación, se puede suponer que en regiones de alta densidad de materia, donde la materia apunta hacia una misma dirección debería ocurrir alguna alineación. La figura (\ref{fig: Histograma Autovalores}) indica que la mayoría de los BHs van a estar en filamentos o clusters. 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.55\textwidth]{./figures/6_Resultados/cosmo01/percentiles/relacion_simulaciones_Mass_bh}
+    \includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/percentiles/relacion_simulaciones_Mass_bh}
     \caption{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de $M_{bh}$. Se hace una comparación entre los datos obtenidos usando los dos regímenes. La linea y puntos azules son el resultado del régimen caótico, las líneas y puntos naranjas son el resultado para el régimen coherente.}}
     \label{fig: comparacion cosmo01 y cosmo02}
 \end{figure}
@@ -207,7 +209,7 @@ Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a 
 %------------------------------------------------
 (GRAFICAS HISTOGRAMAS DE ALPHA Y BETA)
 
-En las gráficas () se puede concluir que gran parte de los espines de los BHs, discos de acreción y halos se terminan alineando. Esto puede inducir que los eventos de interacción son .....
+Durante la realización de este trabajo se analizaron una variedad de eventos, eventos encaminados en alineamientos entre diferentes sistemas (BH, halos y discos de acreción). En este sección se presentaran los resultados obtenidos y el respectivo análisis.
 
 
 
