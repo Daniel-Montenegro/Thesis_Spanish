@@ -74,7 +74,7 @@ La teoría sobre la formación de galaxias indica la existencia de una relación
  \centering
   \subfloat{
    %\label{fig: mass_bhVsmass_stelar}
-    \includegraphics[width=0.49\textwidth]{./figures/6_Resultados/cosmo01/Mass_bhVsMass_stelar_halo.pdf}}
+    \includegraphics[width=0.49\textwidth]{./figures/6_Resultados/cosmo01/Mass_bhVsMass_stelar_halo.pdf}}%\hspace{0.2mm}
   \subfloat{
    %\label{fig: función de masa halos}
     \includegraphics[width=0.49\textwidth]{./figures/6_Resultados/cosmo02/Mass_bhVsMass_stelar_halo.pdf}}
@@ -96,7 +96,7 @@ Como se explico en la sección (\ref{subsec: Metodo_T-web}),  los autovalores so
 Al observar las distribución de BHs en el espacio, se observa que gran parte de los BHs se ubica en los cluster o filamentos. Este resultado puede ser contrastado con el valores de los autovalores $\lambda_{i}$, ver figura (\ref{fig: Histograma Autovalores}). También se puede concluir lo siguiente:  $\lambda_{1}\geq 0$,  $\lambda_{2}\geq 0$ y $\lambda_{3}$ esta acotado entre $-10 \leq \lambda_{3}\leq 10$, mayormente con valores positivos, reproduciendo estructuras con características de filamentos o clusters. 
 %
 \begin{center}
-\includegraphics[scale=.38]{./figures/6_Resultados/cosmo01/histograma_autovalores2.pdf}
+\includegraphics[scale=.4]{./figures/6_Resultados/cosmo01/histograma_autovalores.pdf}
 \figcaption{\emph{Histograma de los autovalores $\lambda_{i}$, que proporcionan información acerca de la clasificación y dinámica de la simulación a gran escala. Estos autovalores son obtenidos del método de  T-Web, calculando la diagonal de la matriz Hessiana.}}
 \label{fig: Histograma Autovalores}
 \end{center}
@@ -114,13 +114,14 @@ En esta sección se presentan los resultados que darán pie a argumentar si exis
 
 Recordando la estructuración de las galaxias, para la cual se afirma que todas galaxias cuentan con un halo, que en su interior presenta un BH, cuando este está "activo" se denomina AGN. Se consideran tres parámetros fundamentales para cada galaxia: para los halos se estudiará la masa estelar contenida en el halo, posición y momentum angular; para los AGN se estudiará el SMBH y el disco de acreción, del SMBH se extrae la masa, espín y posición; del disco de acreción el momentum angular. Estos parámetros fueron calculados usando la teoría de evolución de espín (ver capitulo \ref{cha:Modelo de Spin}) y usando el código {\it{Arepo}} (ver sección \ref{sec: codigo arepo} ) que reproduce la evolución y formación de galaxias. 
 
-Para estudiar la alineación se utiliza como parámetro el $\cos (\theta)$, el cual está acotado entre -1 y 1 (ver sección \ref{subsubsec: Aling_Spin}). Partiendo de esto se argumenta que hay alineamiento sí y solo sí  $\cos (\theta) \to 1$, anti-alineamiento si $\cos (\theta)\to -1$, ortogonalidad si $\cos (\theta)\to 0$ y si $\cos (\theta)\to \pm 0.5 $ no es posible concluir algo. Con base en esto se procede a calcular la relación entre los momentum angulares de cada sistema, a continuación se nombrar los ángulos con los cuales se busca encontrar alguna relación:
+Para estudiar la alineación se utiliza como parámetro el $\cos (\theta)$, el cual está acotado entre -1 y 1 (ver sección \ref{subsubsec: Aling_Spin}). Partiendo de esto se argumenta que hay alineamiento sí y solo sí  $\cos (\theta) \to 1$, anti-alineamiento si $\cos (\theta)\to -1$, ortogonalidad si $\cos (\theta)\to 0$ y si $\cos (\theta)\to \pm 0.5 $ no es posible concluir algo.
+%Con base en esto se procede a calcular la relación entre los momentum angulares de cada sistema, a continuación se nombrar los ángulos con los cuales se busca encontrar alguna relación:
 
-$\theta$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el autovector tres $\vec{\bf{e}}_{3}$.
+%$\theta$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el autovector tres $\vec{\bf{e}}_{3}$.
 
-$\alpha$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$  y el disco de acreción ${\bf{J_{d}}}$ .
+%$\alpha$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$  y el disco de acreción ${\bf{J_{d}}}$ .
 
-$\beta$ :  ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el halos ${\bf{J_{halo}}}$\\
+%$\beta$ :  ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el halos ${\bf{J_{halo}}}$\\
 
 A continuación procedemos a presentar una serie de resultados que permitirán responder la pregunta central de esta tesis.
 %Una vez definidos los ángulos, procedamos a presentar una serie de resultados que contrastados con la teoría aportaran a la solución de la respuesta central del texto. 
@@ -137,7 +138,7 @@ Valiéndonos de los resultados logrados con las simulaciones y de la teoría de 
 Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$. La relaciones que se obtengan de $\theta$ son de gran importancia, ya que está es la responsable de indicar si hay o no alineamiento con el entorno. Por tanto observemos que ocurre con la distribución de $\cos \theta$ para diferentes autovalores $\lambda_{i}$.
 %
 \begin{center}
-\includegraphics[scale=.35]{./figures/6_Resultados/cosmo01/histograma_cos_theta.png}
+\includegraphics[scale=.37]{./figures/6_Resultados/cosmo01/histograma_cos_theta.png}
 \figcaption{\emph{Distribución de $\cos \theta$ para cada BH en la simulación de cosmo01. Se observa una gran aleatoriedad debida que no se cuenta con un gran número de datos y porque se está considerando BHs alineados y no alineados.}}\label{fig: histograma costeta}
 \end{center}
 %
@@ -215,16 +216,18 @@ Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a 
 \end{figure}
 
 
-\newpage
+%\newpage
 %------------------------------------------------
-\section{Anexos}
-\label{sec: anexos}
+%\section{Anexos}
+%\label{sec: anexos}
 %------------------------------------------------
-(GRAFICAS HISTOGRAMAS DE ALPHA Y BETA)
+%(GRAFICAS HISTOGRAMAS DE ALPHA Y BETA)
 
-Durante la realización de este trabajo se analizaron una variedad de eventos, eventos encaminados en alineamientos entre diferentes sistemas (BH, halos y discos de acreción). En este sección se presentaran los resultados obtenidos y el respectivo análisis.
+%Durante la realización de este trabajo se analizaron una variedad de eventos, eventos encaminados en alineamientos entre diferentes sistemas (BH, halos y discos de acreción). En este sección se presentaran los resultados obtenidos y el respectivo análisis.
 
+%Durante este trabajo se realizaron otros análisis con respecto a resultados obtenidos de las simulaciones. Estos resultados no influyen de manera considerable en el trabajo, sin embargo sus resultados pueden brindar información acerca del modelo de evolución de espín y de la dinámica dentro de la simulación.
 
+%Usando la misma condición de alineamiento, presentada para ${\bf{J}_{bh}}\cdot {\bf{\vec{e}}_3}$ 
 
 %(1. Mostrar las relaciones con los percentiles )
 %(2. Concluir con respecto a esas gráficas)
