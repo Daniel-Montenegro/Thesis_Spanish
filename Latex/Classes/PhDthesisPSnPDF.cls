@@ -643,11 +643,12 @@
 \pagenumbering{roman}
 
 % \chapter format
-\titleformat{\chapter}[display]%		
+\titleformat{\chapter}[display]%
+%\titleformat{\capitulo}[display]%		
 % Label and title options
 {\filleft}%
 % Label format and text
-{\color{Gray}{\filleft\small{\bfseries CHAPTER}} {\linebreak\fontsize{90}{90}\selectfont\selectfont {\bfseries \thechapter}}}	   
+{\color{Gray}{\filleft\small{\bfseries Capítulo}} {\linebreak\fontsize{90}{90}\selectfont\selectfont {\bfseries \thechapter}}}	   
 % Label and title distance
 {2ex}
 % Title format
@@ -689,7 +690,7 @@
 % Label and title options
 {\filleft}%
 % Label format and text
-{\color{Gray}{\filleft\small{\bfseries CHAPTER}} {\linebreak\fontsize{90}{90}\selectfont\selectfont {\bfseries \thechapter}}}	   
+{\color{Gray}{\filleft\Large{\bfseries Capítulo}} {\linebreak\fontsize{90}{90}\selectfont\selectfont {\bfseries \thechapter}}}	   
 % Label and title distance
 {2ex}
 % Title format
