@@ -217,7 +217,7 @@ R_{\mu\nu}-\frac{1}{2}R-g_{\mu\nu}\Lambda=\frac{8\pi G}{c^{4}}T_{\mu\nu} \,,
 %
 donde $R_{\mu\nu}$ es el tensor de Ricci, $R$ es el escalar de Ricci, $g_{\mu\nu}$ es la métrica, $\Lambda$ constante cosmológica y $T_{\mu\nu}$ es el tensor momentum-energía. 
 
-El tensor y escalar de Ricci se pueden calcular de la siguiente manera
+El tensor y escalar de Ricci se pueden calcular cómo 
 
 \begin{eqnarray}
 R_{\mu\nu} \equiv \partial_{\lambda}\Gamma^{\lambda}_{\mu\nu} - \partial_{\nu}\Gamma^{\lambda}_{\mu\lambda} + \Gamma^{\lambda}_{\lambda\rho} \Gamma^{\rho}_{\mu\nu} - \Gamma^{\rho}_{\mu\lambda} \Gamma^{\lambda}_{\nu\rho}\,,
@@ -285,14 +285,18 @@ La importancia de estas ecuaciones radica en que permiten conocer la evolución 
 
 %Buscando poder demostrar un modelo que permita modelar la estructura del universo a gran escala, se hace uso de la {\it{Inestabilidad de Jeans}}. Esta teoría representa la evolución del universo, partiendo de los principios fundamentales (homogeneidad e isotrpía).
 
-Al observar el universo a gran escala, es claro que posee alta simetría y homogeneidad, pero ?`qué pasa cuando se mira a escalas menores? A escalas menores que la cosmológicas, los sistemas son anisótropos e inhomogéneos, lo cual implica una alta complejidad. Por esto, es necesario realizar modelos que permitan reproducir las observaciones, asumiendo aproximaciones coherentes,  haciendo que el grado de dificultad disminuya. El universo a escalas menores que las cosmológicas, presenta no linealidad en muchos fenómenos físicos; la formación de estructuras es un caso de ello. La forma de introducir la linealidad o no linealidad en la formación de estructuras es considerando el campo de densidad. Para él régimen lineal se supone $\delta\rho << \bar{\rho}$, donde la perturbación de la densidad es mucho menor que la densidad media. Mientras que para el régimen no lineal se supone que la perturbación es aproximada a la densidad media ($\delta\rho \sim \bar{\rho}$).
+Al observar el universo a gran escala, se evidencia que este posee alta simetría y homogeneidad, pero ?`qué pasa cuando se mira a escalas menores? A escalas menores que la cosmológicas, los sistemas son anisótropos e inhomogéneos, lo cual implica una alta complejidad. Por esto, es necesario realizar modelos que permitan reproducir las observaciones, asumiendo aproximaciones coherentes,  haciendo que el grado de dificultad disminuya. El universo a escalas menores que las cosmológicas, presenta no linealidad en muchos fenómenos físicos; la formación de estructuras es un caso de ello. 
+%La forma de introducir la linealidad o no linealidad en la formación de estructuras es considerando el campo de densidad. 
+Para él régimen lineal de formación de estructuras se tiene que $\delta\rho << \bar{\rho}$, donde la perturbación de la densidad es mucho menor que la densidad media. Mientras que para el régimen no lineal se supone que la perturbación es aproximada o mayor a la densidad media ($\delta\rho \sim \bar{\rho}$).
 
 
 Con el propósito de poder reconstruir la estructura del universo en cualquier instante $t$ se considera lo siguiente:
 
-Al observar el pasado, se debe pensar que existieron pequeñas desviaciones en la homogeneidad en el campo de densidad de materia. A medida que el tiempo pasa, estas desviaciones incrementan, debido a la fuerza gravitacional. Esto fue generando una acumulación de materia cada vez mayor, que desencadenó la formación de estructuras, y que dio origen a las primeras galaxias. Las soluciones a las ecuaciones de Friedmann permiten incorporar las perturbaciones que darán origen a la formación de las estructuras.
+Al observar el pasado, se debe pensar que existieron pequeñas desviaciones en la homogeneidad en el campo de densidad de materia. A medida que el tiempo pasa, estas desviaciones crecen, debido a la fuerza gravitacional. Esto fue generando una acumulación de materia cada vez mayor en regiones donde la sobre densidad y por ende el pozo de potencial gravitacional aumentaban
+, esto desencadenó la formación de estructuras, que dio origen a las primeras galaxias. 
+%Las soluciones a las ecuaciones de Friedmann permiten incorporar las perturbaciones que darán origen a la formación de las estructuras.
 
-Se debe tener presente que la teoría del régimen lineal solo se cumple para desviaciones pequeñas, osea, para un universo muy joven o para escalas muy grandes, donde los modos del campo de densidad aun no se han acoplado. Para poder reproducir las estructuras del universo observable, es necesario considerar un teoría de régimen no lineal. Si se desea profundizar más en este tema, se recomienda abordar los libros: \cite{padmanabhan1995}, \cite{longair2008}, \cite{coles2002}. Los cueles fueron los textos de referencia.
+Se debe tener presente que la teoría del régimen lineal solo se cumple para desviaciones pequeñas del campo de densidad, osea, para un universo muy joven o para escalas muy grandes, donde los modos del campo de densidad aun no se han acoplado. Para poder reproducir las estructuras del universo observable, es necesario considerar un teoría de régimen no lineal. Si se desea profundizar más en este tema, se recomienda abordar los libros: \cite{padmanabhan1995}, \cite{longair2008}, \cite{coles2002}. Los cueles fueron los textos de referencia.
 
 
 %*************************************************************************
@@ -353,7 +357,9 @@ Al aplicar las pequeñas perturbaciones cuasiestáticas a la densidad ($\rho=\rh
 \end{align}	
 %\end{subequations}
 
-Ahora el propósito es poder resolver las ecuaciones con perturbaciones (\ref{eq:Navier-stoke1_perturbation}, \ref{eq:Navier-stoke2_perturbation}, \ref{eq:Navier-stoke3_perturbation}). Para ello  se puede suponer soluciones de ondas planas\footnote{Cuando se supone un universo plano, se consideró la aparición de las ondas planas}
+Ahora el propósito es poder resolver las ecuaciones con perturbaciones (\ref{eq:Navier-stoke1_perturbation}, \ref{eq:Navier-stoke2_perturbation}, \ref{eq:Navier-stoke3_perturbation}). 
+La combinación de estas ecuaciones conducen a la ecuación de la perturbación que se parece a la una ecuación de onda plana. Para resolverla
+se puede suponer soluciones de ondas planas\footnote{Cuando se supone un universo plano, se consideró la aparición de las ondas planas}
 
 \begin{equation}
 \delta u_{i} = \delta_{i}e^{i\bf{k}\cdot \bf{r}}\,,
@@ -362,11 +368,13 @@ Ahora el propósito es poder resolver las ecuaciones con perturbaciones (\ref{eq
 donde $\delta u_{i}= \delta\rho, \delta v, \delta\Phi$ y se entiende que $\delta_{i}$ equivale a las amplitudes. 
 %%Mi propósito no es solucionar estas ecuaciones, solo pretendo mostrar que consideraciones se deben hacer para llegar a los resultados
 ~\\
-Al considerar la inestabilidad gravitacional, se puede obtener unos resultados  interesantes sobre la formación de la estructura. Entonces considerando lo siguiente: 
 
-Para un fluido homogéneo e isotrópico, Jeans dice que a medida que el sistema va evoluciona se van generando pequeños cambios en la densidad $\delta \rho$ y en la velocidad $\delta v$.
+Al considerar la inestabilidad gravitacional propuesta por Jeans, se puede obtener unos resultados  interesantes sobre la formación de la estructura:
+%. Entonces considerando lo siguiente: 
 
-De igual manera Jeans plantea que la aparición de una inhomogeneidad en la distribución de materia $\delta\rho$  generará un cambio en la fuerzas que preservan la homogeneidad. Entonces si $\delta\rho>0 $  la fuerza de gravitación $F_{g}$(responsable del colapso) deberá ser mayor que la fuerza de presión $F_{p}$(responsable del no colapso), entonces   $F_{g}>F_{p}$. Esta ultima afirmación da la condición necesaria para la formación de estructuras. Usando esta idea se puede determinar el radio necesario para el cuál se cumple la desigualdad, también conocido como el radio de Jeans $\lambda$.  
+Para un fluido homogéneo e isotrópico, se tiene que a medida que el sistema evoluciona se van generando pequeños cambios en la densidad $\delta \rho$ y en la velocidad $\delta v$.
+
+De igual manera se plantea que la aparición de una inhomogeneidad en la distribución de materia $\delta\rho$  generará un cambio en la fuerzas que preservan la homogeneidad. Entonces si $\delta\rho>0 $  la fuerza de gravitación $F_{g}$ responsable del colapso, deberá ser mayor que la fuerza de presión $F_{p}$(responsable del no colapso), entonces   $F_{g}>F_{p}$. Esta ultima afirmación da la condición necesaria para la formación de estructuras. Usando esta idea se puede determinar el radio necesario para el cuál se cumple la desigualdad, también conocido como el radio de Jeans $\lambda$.  
 
 \begin{eqnarray}
 F_{g} \approx G\rho\lambda \ \ \  y \ \ \ F_{p}\approx\frac{v_{s}^{2}}{\lambda}\\
@@ -386,9 +394,13 @@ de una forma similar se puede llegar al tiempo gravitacional de caída libre
 \label{subsec:non-Lineal_Estructure_Formation}
 %************************************************************************
 
-Cuando se observa el universo en sus etapas tempranas, antes de la era de la recombinación\footnote{Instante en el universo donde la temperatura bajo lo suficiente para poder permitir la combinación de los electrones con los nucleos generando los primeros átomos. Antes de este instante se conoce como la época dominada por la radiación, electrones y protones libres.}, se considera que las fluctuaciones $\delta$  en la materia eran despreciables ($\delta \ll 1$). La anterior aproximación solo permite resolver el régimen lineal, por ende no funciona al querer entender el Universo actual a escalas galácticas, donde se manifiesta una alta no linealidad.  Sin embargo, si se pretende determinar la evolución y estructuras a escalas mayores como en la actualidad, donde $\delta \gg 1$, es necesario hacer uso de otro método que permita reconstruir la dinámica del universo. Para ello se hace uso del régimen no lineal. Cabe resaltar que esta técnica es altamente complicada donde es necesario hacer aproximaciones y muchas veces no es posible llegar a soluciones analíticas, por esto se hace uso de los métodos numéricos que permiten encontrar aproximaciones a las soluciones. 
+Cuando se observa el universo en sus etapas tempranas, antes de la era de la recombinación\footnote{Instante en el universo donde la temperatura bajo lo suficiente para poder permitir la combinación de los electrones con los núcleos generando los primeros átomos. Antes de este instante se conoce como la época dominada por la radiación, electrones y protones libres.}, se considera que las fluctuaciones $\delta$  en la materia eran despreciables ($\delta \ll 1$). La anterior aproximación solo permite resolver el régimen lineal, por ende no funciona al querer describir el Universo actual a escalas galácticas, donde se manifiesta una alta no linealidad.  Sin embargo, si se pretende determinar la evolución dinámica y de las estructuras del Universo a escalas mayores como en la actualidad, donde $\delta \gg 1$, es necesario hacer uso de otro método o aproximación que permita reconstruir la dinámica del universo. 
+%Para ello se hace uso del régimen no lineal. 
+Cabe resaltar que estos métodos o aproximaciones son altamente complicados 
+%donde es necesario hacer aproximaciones 
+y muchas veces no es posible llegar a soluciones analíticas, por esto se hace uso de los métodos numéricos que permiten encontrar aproximaciones a las soluciones. 
 
-Una forma de poder representar el régimen no lineal que presenta el Universo actualmente, es considerando la aproximación de Zeldovich, la cual provee una descripción apropiada del régimen quasi-lineal. 
+Una forma de poder aproximar el comportamiento del régimen no lineal que presenta el Universo actualmente, es considerando la aproximación de Zeldovich, la cual provee una descripción apropiada del régimen quasi-lineal. 
 
 %En la actualidad existe una gran variedad de métodos que describen la formación no lineal. Un caso especial es la aproximación de Zeldovich, la cual es capaz de reproducir el régimen lineal, permitiendo usar una  expresión analítica y reduciendo la complejidad de los cálculos. Este método además reproduce de muy buena manera el universo observable actual.
 
@@ -407,20 +419,20 @@ Una forma de poder representar el régimen no lineal que presenta el Universo ac
 
 Bajo el régimen no lineal, es posible llegar a resultados importantes de una forma analítica, asumiendo ciertas aproximaciones. Un caso particular es la aproximación de Zeldovich, que además de presentar unos resultados muy congruentes con las observaciones, permite llegar a ellos de forma analítica. 
 
-Es posible usar la aproximación de Zeldovich si se supone que las escalas de la perturbación son menores que la distancia $d_{H}$\footnote{radio de Hubble.}, lo cual permite hacer un análisis Newtoniano. La aproximación Zeldovich además comienza con suponer un universo homogéneo, con densidad uniforme $\rho_{b}(t)$, el  cual presenta pequeños crecimientos en las perturbaciones. Considerando la posición de cada porción del fluido $\bf{r}(t)$ en coordenadas Lagrangianas y relacionadas con la posición inicial $\bf{q}$
+Es posible usar la aproximación de Zeldovich si se supone que las escalas de la perturbación son menores que la distancia $d_{H}$ (radio de Hubble), lo cual permite hacer un análisis Newtoniano. La aproximación Zeldovich además comienza con suponer un universo homogéneo, con densidad uniforme $\rho_{b}(t)$, el  cual presenta pequeños crecimientos en las perturbaciones. Considerando la posición de cada porción del fluido $\bf{r}(t)$ en coordenadas Lagrangianas y relacionadas con la posición inicial $\bf{q}$
 
 \begin{align}
 {\bf{r}}(t)=a(t){\bf{q}}\,.
 \end{align}
 
-Bajo la aproximación lineal, lo necesario para poder reproducir un crecimiento en las perturbaciones es adicionar un función separable dependiente de $t$ y $\bf{q}$, $f(t){\bf{p}}({\bf{q}})=a(t)b(t){\bf{p}(\bf{q})}$, que se puede representar de la forma 
+Bajo la aproximación lineal, lo necesario para poder reproducir un crecimiento en las perturbaciones es adicionar una función separable dependiente de $t$ y $\bf{q}$, $f(t){\bf{p}}({\bf{q}})=a(t)b(t){\bf{p}(\bf{q})}$, que se puede representar de la forma 
 %
 \begin{align}
 {\bf{r}}(t)=a(t){\bf{x}}(t)=a(t)[{\bf{q}}+b(t){\bf{p(q)}}]
 \label{eq:Linear_pertubation}
 \end{align}
 %
-donde ${\bf{X}}$ representa la coordenada comovil, $a(t){\bf{q}}$  la expansión cosmológica y $b(t){\bf{p(q)}}$ la perturbación. Se sabe además que $b(t)$ describe la evolución de la perturbación en el régimen lineal. Por tanto la ecuación (\ref{eq:Linear_pertubation}) es capaz de describir la evolución lineal.
+donde ${\bf{x}}$ representa la coordenada comovil, $a(t){\bf{q}}$  la expansión cosmológica y $b(t){\bf{p(q)}}$ la perturbación. Se sabe además que $b(t)$ describe la evolución de la perturbación en el régimen lineal. Por tanto la ecuación (\ref{eq:Linear_pertubation}) es capaz de describir la evolución lineal.
 
 Para poder demostrar que la ecuación (\ref{eq:Linear_pertubation})  evoluciona linealmente, es necesario poder conocer cómo evolucionan las perturbaciones de la densidad de cada porción del fluido, bajo el régimen de la ecuación (\ref{eq:Linear_pertubation}). Al considerar $\bar{\rho}$ como la densidad inicial sin perturbación, por conservación de la masa se obtiene lo siguiente
 
@@ -480,7 +492,7 @@ Con ello se obtiene la forma del potencial gravitacional perturbado
 %
 donde $\phi = 3a\ddot{a}\Phi_{0}$.  Entonces $\Phi_{0}$ es proporcional al potencial gravitacional de la teoría lineal y ${\bf{p(q)}}$ es proporcional al campo de velocidad peculiar de la teoría lineal. 
 
-Por lo tanto, ${\bf{p(q)}}$ es un gradiente de una función escalar, y el Jacobiano de la ecuación (\ref{eq:density}) da como resultado una matriz simétrica; la cual puede ser diagonalizada en cada punto $\bf{q}$, para producir un conjunto de autovalores $-\lambda_{i}(q)$. Ahora, si los autovalores del Jacobiano ($\partial p_{i}/\partial q_{i}$) son de la forma $[-\lambda_{1}({\bf{q}}),-\lambda_{2}({\bf{q}}),-\lambda_{3}({\bf{q}})]$ entonces la densidad de perturbación esta dada por 
+Por lo tanto, ${\bf{p(q)}}$ es un gradiente de una función escalar, y el Jacobiano de la ecuación (\ref{eq:density}) da como resultado una matriz simétrica; la cual puede ser diagonalizada en cada punto $\bf{q}$, para producir un conjunto de autovalores $-\lambda_{i}(q)$. Ahora, si los autovalores del Jacobiano ($\partial p_{i}/\partial q_{i}$) son de la forma $[-\lambda_{1}({\bf{q}}),-\lambda_{2}({\bf{q}}),-\lambda_{3}({\bf{q}})]$ entonces la densidad de perturbación está dada por 
 
 \begin{align}
 \rho({\bf{r}},t)=\frac{\rho_{b}(t)}{(1-b(t)\lambda_{1}({\bf{q}}))(1-b(t)\lambda_{2}({\bf{q}}))(1-b(t)\lambda_{3}({\bf{q}}))}\,.
