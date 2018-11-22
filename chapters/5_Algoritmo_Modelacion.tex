@@ -13,7 +13,9 @@ Supuestamente el cerebro humano es algo parecido a una libreta que se adquiere e
 %*****************************************************
 %El desarrollo de modelos computacionales permiten reproducir sucesos que escapan a acontecer de una vida humana. Es por eso la importancia de los modelos
 
-En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en el Universo a gran escala y en los AGNs. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, su rata de acreción y el feadback producido,  entre otras propiedades de las galaxias. Las simulaciones se realizaron usaron el código Magneto-hidrodinámico para N-cuerpos AREPO \cite{springel2010}, capaz de reproducir mallas\footnote{Las mallas hace referencia a una driscretiación del espacio, que da como resultado una cuadrícula.} que cambian de forma y se mueven con el fluido a medida que corre la simulación,  haciendo seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo y mejor aun, permiten hacer una clasificación y estructuración. El método usado para la clasificación de estructuras en el universo es el  T-Web \cite{hahn2007}, capaz de categorizar las regiones del universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras se hace uso del código Arepo, que emplea el método de subfind \cite{springel2018}, este permite localizar zonas de sobre densidad, indicando la presencia de halos de materia oscura, grupos y cúmulos de galaxias. 
+En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con su entorno, se hace necesario el uso de modelos computacionales que sean capaces de reproducir lo fenómenos físicos que ocurren en el Universo a gran escala y en los AGNs. Para nuestro propósito se hace uso de una serie de simulaciones cosmológicas auto-consistentes, que son capaces de simular la evolución de los espines de los SMBHs, su rata de acreción y el feadback producido,  entre otras propiedades de las galaxias. Las simulaciones se realizaron usaron el código Magneto-hidrodinámico para N-cuerpos AREPO \cite{springel2010}, que hace uso de mallas\footnote{Las mallas hace referencia a una driscretiación del espacio, que da como resultado una cuadrícula.} adaptativas, 
+%capaz de reproducir mallas\footnote{Las mallas hace referencia a una driscretiación del espacio, que da como resultado una cuadrícula.} que cambian de forma y se mueven con el fluido a medida que corre la simulación,  
+haciendo seguimiento a las propiedades del gas. Sin embargo, también se hace uso de otros métodos computacionales que permiten conocer cómo se distribuye la materia en el universo y mejor aun, permiten hacer una clasificación y estructuración. El método usado para la clasificación de estructuras en el universo es el  T-Web \cite{hahn2007}, capaz de clasificar las regiones del Universo usando un modelo de sistemas dinámicos. Para el modelo de detección de sub estructuras se hace uso del código Arepo, que emplea el método de subfind \cite{springel2018}, este permite localizar zonas de sobre densidad, identificando la presencia de halos de materia oscura, grupos y cúmulos de galaxias. 
 
 %*****************************************************
 \section{Código Arepo}
@@ -22,17 +24,17 @@ En la búsqueda de poder conocer sobre el alineamiento de los SMBH en AGNs con s
 
 %El código {\textsc{Arepo}} es una simulación cosmológica, que pretende diseñar una nueva forma de hacer simulaciones hidrodinámicas que son capaces reproducir la dinámica del universo, evolución estelar, formación de estructuras y evolución de parámetros en las galaxia. Este modelo hidrodinámico tiene como objetivo mejorar dos códigos muy usados en la simulaciones de formación y evolución: Mallado de Euleriano y la técnica  hidrodinámica de suavizado de partículas Lagrangiana (SPH). 
 
-En la astrofísica se hace necesario poder contrastar los modelos teóricos con las observaciones. Por eso se emplea los modelos computacionales que parten de  modelos teóricos y buscan poder reproducir los resultados observacionales. En búsqueda de poder reproducir los procesos que ocurre en el universo, se considera la dinámica de fluidos, y con ello los modelos hidrodinámicos. Los modelos más sobresalientes en este ámbito son: hidrodinámica de la partícula suavizada (SPH) \cite{monaghan1992} e hidrodinámica Euleriana basada en mallas \cite{stone2008} con refinamiento adaptativo de las mallas (AMR). A pesar de ser los modelos más usados en la hidrodinámica presentan una serie de falencias:
+En la astrofísica se hace necesario poder contrastar los modelos teóricos con las observaciones. Por eso se emplea los modelos computacionales que parten de  modelos teóricos y buscan poder reproducir los resultados observacionales. En búsqueda de poder reproducir los procesos que ocurren en el universo, se considera la dinámica de fluidos, y con ello los modelos hidrodinámicos. Los modelos más sobresalientes en este ámbito son: hidrodinámica de la partícula suavizada (SPH) \cite{monaghan1992} e hidrodinámica Euleriana basada en mallas \cite{stone2008} con refinamiento adaptativo de las mallas (AMR). A pesar de ser los modelos más usados en la hidrodinámica presentan una serie de falencias:
 
 - SPH ofrecen precisión de bajo orden para el tratamiento de discontinuidades de contacto, y en algunos casos suprime inestabilidades de los fluidos.
 
-- Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles a grandes cambios en velocidades de volumen.\\
+- Mallas Eulerianas no producen invariantes galileanos, implicando que los resultados son sensibles a grandes cambios en velocidades del fluido.\\
 
-{\it{Arepo}} toma lo mejor de cada método hidrodinámico y mejora sus falencias. En general el código {\it{Arepo}} introduce una nueva forma de modelación hidrodinámica continua de mallas dinámicas. El código se describe como \cite{springel2010}:
+{\it{Arepo}} toma lo mejor de cada método hidrodinámico y mejora sus falencias. En general el código {\it{Arepo}} introduce una nueva forma de modelación hidrodinámica continua de mallas dinámicas \cite{springel2010}:
 
-La precisión del código viene determinado mayormente por su nueva forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente.
+La precisión del código viene determinada mayormente por su forma de diseñar las mallas (grid). Se define la malla bajo la teselación de Voronoi de un conjunto de puntos que se distribuyen espacialmente.
 
-El método de Voronoi es el método de interpolación más simple, que se basa en la distancia euclidea. Permite crear celdas de tal forma que la región encerrada esta lo más cerca posible a sus celdas vecinas. Los polígonos se diseñan al unir los puntos entre si, trazando luego una mediatriz entre los segmentos de unión. La intersección de las mediatrices dan como resultado los polígonos y por lo tanto la malla (ver figura \ref{fig: voronoi}). Cada celda en la malla lleva consigo variables de fluido que se conservan (masa, momentum y energía total).
+El método de Voronoi es el método de interpolación más simple, que se basa en la distancia euclidea. Permite crear celdas de tal forma que la región encerrada por esta es lo más cerca posible a sus celdas vecinas. Los polígonos se diseñan al unir los puntos entre si, trazando luego una mediatriz entre los segmentos de unión. La intersección de las mediatrices dan como resultado los polígonos y por lo tanto la malla (ver figura \ref{fig: voronoi}). Cada celda en la malla lleva consigo variables de fluido que se conservan (masa, momentum y energía total).
 %
 \begin{center}
 \includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/voronoi.png}
@@ -56,12 +58,12 @@ donde $\rho$ es la densidad del fluido, $\vec{v}$ es el campo de velocidad y $e=
     \vec{\bf{F}}(\vec{\bf{U}})=
     \begin{pmatrix} \rho\vec{v} \\ \rho\vec{v}\vec{v}^{T}+ P \\ (\rho e + P)\vec{v} \end{pmatrix}\,,
 \end{align}
-donde $P$ es la ecuación de estado que da la presión del fluido. Por tanto  la ecuación de Euler se puede escribir de forma compacta como 
+donde $P$ es la presión del fluido. Por tanto  la ecuación de Euler se puede escribir de forma compacta como 
 \begin{align}
     \frac{\partial\vec{\bf{U}}}{\partial t} + \vec{\nabla}\cdot \vec{\bf{F}}\,.
 \end{align}
 
-En el código {\it{Arepo}}  considera una discretización del fluido cómo un conjunto de volúmenes finitos, donde cada celda se identifica bajo el uso de un contador "$i$". Cada celda contiene la información de la masa $m_{i}$, momentum $p_{i}$ y la energía $E_{i}$. %
+En el código {\it{Arepo}} se considera una discretización del fluido cómo un conjunto de volúmenes finitos, donde cada celda se identifica bajo el uso de un contador "$i$". Cada celda contiene la información de la masa $m_{i}$, momentum $p_{i}$ y la energía $E_{i}$. %
 \begin{align}
     {\bf{Q}_{i}} = \begin{pmatrix} m_{i} \\ p_{i} \\ E_{i} \end{pmatrix} = \int_{V_{i}} \vec{\bf{U}}d\vec{\bf{V}}\,.
 \end{align}
@@ -80,7 +82,9 @@ El esquema presentado por \cite{springel2010} indica cuales son los pasos (algor
 \label{sec: Caracterizacion entorno}
 %*****************************************************
 
-Al recordar lo mencionado en la sección (\ref{sec: Estructure_Formation}), es posible decir que las simulaciones computacionales, asumiendo el régimen lineal o no lineal, son capaces de reproducir la estructura del Universo, donde estructura hace referencia a una organización u ordenamiento de la materia, a causa del potencial gravitacional. Las sobre densidades en el Universo permiten encontrar y caracterizar los diferentes tipos de estructuras.
+Al recordar lo mencionado en la sección (\ref{sec: Estructure_Formation}), es posible decir que las simulaciones computacionales, 
+%asumiendo el régimen lineal o no lineal, 
+son capaces de reproducir la estructura del Universo, donde estructura hace referencia a una organización u ordenamiento de la materia, a causa del potencial gravitacional. Las sobre densidades en el Universo permiten encontrar y caracterizar los diferentes tipos de estructuras.
 %Al obtener la estructura del universo se observa la emergencia de regiones donde hay un cambio en la densidades (una abundancia de materia), donde la estructura cambia considerablemente.
 
 %----------------------------------------------------    
@@ -114,15 +118,15 @@ donde $T_{ij}$ es el tensor de marea dado por el Hessiano del potencial gravitac
 %
 Este tensor de marea puede ser representado por una matriz real simétrica 3x3, con autovalores $\lambda_{1}>\lambda_{2}>\lambda_{3}$ y  autovectores $\vec{e}_{1},\, \vec{e}_{2},\, \vec{e}_{3}$. Los autovalores son de gran importancia a la hora de clasificar el entorno cosmológico, estos son los indicadores de la estabilidad de la orbita de las partículas de prueba, que se mueven en la dirección del autovector \cite{padmanabhan1995}, \cite{hahn2007}.
 
-Al usar la teoría de \cite{zeldovich1970}, que se estudio en la sección (\ref{subsubsec:Zeldovich_Aproximation}), es posible definir una clasificación a partir de los autovalores en cada región del espacio:\\
+Al usar la teoría de \cite{zeldovich1970}, que se estudió en la sección (\ref{subsubsec:Zeldovich_Aproximation}), es posible definir una clasificación a partir de los autovalores en cada región del espacio:\\
 
-$i)$ {\it{vacíos (voids)}: región del espacio donde los tres autovalores $\lambda$ son negativos (orbita estable), indicando una divergencia o expansión en esa región.}\\
+$i)$ {\it{Vacíos (voids)}: Región del espacio donde los tres autovalores $\lambda$ son negativos (orbita estable), indicando una divergencia o expansión en esa región.}\\
 
-$ii)$ {\it{hoja (sheet)}: región donde hay un autovalor positivo $\lambda_{1}>0$ y dos negativos $\lambda_{2} \leq \lambda_{3}< 0$, esto indica un colapso en una dirección del espacio mientras que en las otras dos hay una expansión.}\\
+$ii)$ {\it{Hoja (sheet)}: Región donde hay un autovalor positivo $\lambda_{1}>0$ y dos negativos $\lambda_{2} \leq \lambda_{3}< 0$, esto indica un colapso en una dirección del espacio mientras que en las otras dos hay una expansión.}\\
 
-$iii)$ {\it{filamentos (filament)}: región del espacio donde solo hay un autovalor negativo $\lambda_{3}\leq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
+$iii)$ {\it{Filamentos (filament)}: Región del espacio donde solo hay un autovalor negativo $\lambda_{3}\leq 0$, indicando que hay un colapso en dos direcciones y expansión en una.} \\
 
-$iv)$ {\it{nudo (knot, cluster)}: región donde los tres autovalores son positivos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
+$iv)$ {\it{Nudo (knot, cluster)}: Región donde los tres autovalores son positivos, dando como resultado un colapso en las tres direcciones, formando una región de convergencia.}\\
 
 En la figura (\ref{fig: formacion de estructura con autovalores}), es posible observar los cuatro casos donde se representan los tipos de estructuras dependiendo del autovalor.
 %
@@ -131,7 +135,8 @@ En la figura (\ref{fig: formacion de estructura con autovalores}), es posible ob
 \figcaption{\emph{El valor de los autovalores permiten clasificar el tipo de estructura en la cual se encuentran \cite{bustamente01}.}}\label{fig: formacion de estructura con autovalores}
 \end{center}
 %
-Lo destacable de este método es su análisis meramente dinámico, lo cual le da más importancia que los métodos que usan principios meramente geométricos, permitiendo identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es su dependencia de los máximos locales (hablando del campo de densidad), como los máximos solo son posibles en el interior de los halos materia oscura, implicando una baja resolución y precisión. Para reducir la aparición de máximos locales inexistentes resultado de la falta de resolución, se aplica un suavizado gaussiano.
+Lo destacable de este método es su análisis meramente dinámico, lo cual le da más importancia que los métodos que usan principios meramente geométricos, permitiendo identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es su dependencia de los máximos locales (hablando del campo de densidad). 
+Como los máximos solo son posibles en el interior de los halos materia oscura, esto implica un problema en la resolución y precisión, ya que no estudia toda las regiones del espacio. Para reducir la aparición de máximos locales inexistentes resultado de la falta de resolución, se aplica un suavizado gaussiano.
 %La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
 
 
