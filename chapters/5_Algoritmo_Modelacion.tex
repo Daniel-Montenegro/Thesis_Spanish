@@ -136,7 +136,9 @@ En la figura (\ref{fig: formacion de estructura con autovalores}), es posible ob
 \end{center}
 %
 Lo destacable de este método es su análisis meramente dinámico, lo cual le da más importancia que los métodos que usan principios meramente geométricos, permitiendo identificar zonas de igual densidad pero con propiedades dinámicas de estabilidad diferente. La desventaja de este procedimiento es su dependencia de los máximos locales (hablando del campo de densidad). 
-Como los máximos solo son posibles en el interior de los halos materia oscura, esto implica un problema en la resolución y precisión, ya que no estudia toda las regiones del espacio. Para reducir la aparición de máximos locales inexistentes resultado de la falta de resolución, se aplica un suavizado gaussiano.
+Ya que estos máximos solo son posibles al interior de los halos de materia oscura, implica un problema en la resolución y precisión en el método, ya que no se analiza todas las regiones del espacio. Para
+dar solución a este problema se aplica un suavizado gaussiano a los máximo encontrados.
+%reducir la aparición de máximos locales inexistentes resultado de la falta de resolución, se aplica un suavizado gaussiano.
 %La desventaja de este procedimiento es que depende altamente de los mínimos locales, que solo son justificados en el interior de halos de materia oscura, careciendo de resolución y precisión para lugares diferente a los halos.
 
 
@@ -165,22 +167,29 @@ El código que se esta implementando para la clasificación del entorno, hace us
 \label{sec: detección sub-estructuras}
 %*****************************************************
 
-Una vez se obtiene la clasificación del entorno a gran escala (red cósmica), es necesario poder conocer cómo se distribuye la materia en el interior de estas estructuras, por esto se hace necesario un criterio para clasificación de sub-estructuras. La continuidad de la distribución de materia en el universo implica un  problema a la hora de caracterizar la materia en dichas sub-estructuras. Poder discretizar la distribución de materia en el espacio posibilita hacer uso de modelos computacionales, capaces de reproducir las estructuras internas.
+Una vez se obtiene la clasificación del entorno a gran escala (red cósmica), es necesario poder conocer cómo se distribuye la materia en el interior de estas estructuras, por esto se hace necesario un criterio para clasificación de sub-estructuras. La continuidad de la distribución de materia en el universo implica un  problema a la hora de caracterizar la materia en dichas sub-estructuras. Poder discretizar la distribución de materia en el espacio posibilita hacer uso de modelos computacionales, capaces de identificar las estructuras internas.
 
 %----------------------------------------------------    
     \subsection{Método de FoF}
     \label{subsec: FoF}
 %----------------------------------------------------
 
-Es uno de los métodos más usados para la detección de sub-estructuras en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, debido a la comparación entre vecinos o $"$amigos". Es usado en gran medida para la comparación de modelos computacionales de la distribución de materia en el Universo,  determinando que tan confiable es el modelo contrastado. 
+Es uno de los métodos más usados para la detección de estructuras en simulaciones cosmológicas, FoF proviene de las siglas {\it{friend of friend}}, debido a la comparación entre vecinos o ``amigos". Es usado en gran medida para la comparación de modelos computacionales de la distribución de materia en el Universo.
+%,  determinando que tan confiable es el modelo contrastado. 
 
-El método FoF consiste básicamente en encontrar intercepción entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}) . La región dada por el volumen es llamada región de vinculación, las estructuras serán caracterizadas por la cantidad de regiones vinculadas. La región de vinculación se definen como esferas de radio $R_{i}$ concéntricas a la partícula, dada por la expresión \cite{bustamente01}:
+El método FoF se basa en 
+encontrar intercepciones entre volúmenes definidos alrededor de partículas (ver figura  \ref{fig: FoF esquema}).  
+%La región dada por el volumen $4/3\pi R_{i}^{3}$ es llamada región de vinculación. 
+La región de vinculación se define como esferas de radio $R_{i}$ concéntricas a la partícula, dada por la expresión \cite{bustamente01}:
 %
 \begin{align}
-    R_{i}=\frac{1}{2}b\ell\,,
+    R_{i}=b\ell\,,
 \end{align}
 %
-donde b es el parámetro de vinculación y $\ell$ camino libre medio de las partículas en la simulación. 
+donde b es el parámetro de vinculación y $\ell$ es la distancia promedio entre las partículas.
+
+Este método consiste en ubicarse en cada partícula y calcular su región de vinculación, posteriormente calcular la región de vinculación de las partículas vecina o amigas, con esto se determinan las intercepciones y posibilita la identificación de la estructura.
+Estas estructuras serán caracterizadas por la cantidad y ubicación de las partículas vinculadas. 
 %
 \begin{center}
 \includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/FoF_metodo.png}
@@ -189,11 +198,13 @@ donde b es el parámetro de vinculación y $\ell$ camino libre medio de las part
 %
 
 %----------------------------------------------------    
-    \subsection{Algorimo Subgrid}
-    \label{subsec: Algoritmo subgrid}
+    \subsection{Algoritmo Subfind}
+    \label{subsec: Algoritmo subfind}
 %----------------------------------------------------
 
-Subfind es un método usado para extraer de forma más precisa las sub-estructuras en las simulaciones cosmológicas. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la caracterización de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello determina las regiones de sobre densidad (abundancias de materia), una vez  obtiene estas regiones de sobre densidad se procede a construir esferoides concéntricos al lugar donde ocurre la sobre densidad. Cuando la densidad de la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y determina una sub-estructura \cite{springel2018}.
+Subfind es un método usado para extraer de forma más precisa las sub-estructuras en las simulaciones cosmológicas. Esta herramienta es más precisa que FoF, sin embargo el uso de los dos método permiten optimizar la clasificación de la estructura. El primer paso que realiza el modelo {\it{subfind}} es calcular la densidad en todo el espacio, a partir de ello determina las regiones de sobre densidad (abundancias de materia), en estas sobre densidades se ubican los máximos locales se desplaza hacia el exterior del máximo de forma constante. Cuando se encuentre un aumento en la sobre densidad, este aumento de densidad indica la presencia de una sobre densidad  
+
+%una vez  obtiene estas regiones de sobre densidad se procede a construir esferoides concéntricos al lugar donde ocurre la sobre densidad. Cuando la densidad de la región albergada dentro del esferoide es equivalente a aproximadamente 200 veces la densidad media del universo, que en otras palabras es equivalente al equilibrio virial, se detiene la construcción de esferoides y determina una sub-estructura \cite{springel2018}.
 
 La mejor forma de optimizar es encontrar el pico de densidad con el método de FoF y a partir de allí usar {\it{subfind}} para determinar la sub-estructura.
 
