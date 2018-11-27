@@ -1,8 +1,8 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 %Quote
 \begin{savequote}[60mm]
-"No me parece que este universo fantásticamente maravilloso, pueda simplemente ser un escenario para que Dios vea a los seres humanos luchar por el bien y el mal."
-\qauthor{Richard Feynman}
+"Bien sé que soy mortal, una criatura de un día. Pero si mi mente observa los serpenteantes caminos de las estrellas, entonces mis pies ya no pisan la Tierra, sino que al lado de Zeus mismo me lleno con ambrosía, el divino manjar."
+\qauthor{Ptolomeo.} 
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 
@@ -59,7 +59,7 @@ Con base a esto la distribución de masa de las galaxias (halos, BHs y masa este
 \subfloat{
 %\label{fig: función de masa estelar}
 \includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/histo_Mass_stelar.pdf}}
-\caption{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo01}}. }}
+\caption[Funciones de distribución de masa {\it{cosmo01}}]{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo01}}. }}
  \label{fig: Funciones de masa cosmo01}
 \end{figure}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,7 +74,7 @@ Con base a esto la distribución de masa de las galaxias (halos, BHs y masa este
 \subfloat{
 %\label{fig: función de masa estelar}
 \includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo02/histo_Mass_stelar.pdf}}
-\caption{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo02}}.}}
+\caption[Funciones de distribución de masa {\it{cosmo02}}]{\emph{Funciones de distribución de masa para agujeros negros, halos y masa estelar, estas información da cuenta del número de objetos con una masa determinada, esto se realizo para {\it{cosmo02}}.}}
  \label{fig: Funciones de masa cosmo02}
 \end{figure}
 
@@ -94,7 +94,7 @@ La teoría sobre la formación de galaxias indica la existencia de una relación
   \subfloat{
    %\label{fig: función de masa halos}
     \includegraphics[width=0.49\textwidth]{./figures/6_Resultados/cosmo02/Mass_bhVsMass_stelar_halo.pdf}}
- \caption{\emph{Relación Masa BH y Masa estelar, según los resultados observacionales hay una dependencia lineal entre la masa del BH y la masa estelar para cada galaxia. La imagen de la derecha pertenece a {\it{cosmo01}} y el de la izquierda a {\it{cosmo02}}. La linea naranja es la teórica \cite{McConnell2013}, con la cual se puede asegurar que la simulación es consistente con lo observacional.}}
+ \caption[Relación Masa BH y Masa estelar]{\emph{Relación Masa BH y Masa estelar, según los resultados observacionales hay una dependencia lineal entre la masa del BH y la masa estelar para cada galaxia. La imagen de la derecha pertenece a {\it{cosmo01}} y el de la izquierda a {\it{cosmo02}}. La linea naranja es la teórica \cite{McConnell2013}, con la cual se puede asegurar que la simulación es consistente con lo observacional.}}
  \label{fig: Mass_bhVsMass_stelar}
 \end{figure}
 %
@@ -115,7 +115,7 @@ Al observar la distribución de BHs en las simulaciones, se observa que gran par
 %
 \begin{center}
 \includegraphics[scale=.4]{./figures/6_Resultados/cosmo01/histograma_autovalores.pdf}
-\figcaption{\emph{Histograma de los autovalores $\lambda_{i}$, que proporcionan información acerca de la clasificación y dinámica de la simulación a gran escala. Estos autovalores son obtenidos del método de  T-Web, calculando la diagonal de la matriz Hessiana.}}
+\figcaption[Histograma de los autovalores $\lambda_{i}$]{\emph{Histograma de los autovalores $\lambda_{i}$, que proporcionan información acerca de la clasificación y dinámica de la simulación a gran escala. Estos autovalores son obtenidos del método de  T-Web, calculando la diagonal de la matriz Hessiana.}}
 \label{fig: Histograma Autovalores}
 \end{center}
 %
@@ -160,7 +160,7 @@ Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$.
 %
 \begin{center}
 \includegraphics[scale=.37]{./figures/6_Resultados/cosmo01/histograma_cos_theta.png}
-\figcaption{\emph{Distribución de $\cos \theta$ para cada BH en la simulación de cosmo01. Se observa una gran aleatoriedad debida que no se cuenta con un gran número de datos y porque se está considerando BHs alineados y no alineados.}}\label{fig: histograma costeta}
+\figcaption[Distribución de $\cos \theta$ para cada BH en la simulación de cosmo01]{\emph{Distribución de $\cos \theta$ para cada BH en la simulación de cosmo01. Se observa una gran aleatoriedad debida que no se cuenta con un gran número de datos y porque se está considerando BHs alineados y no alineados.}}\label{fig: histograma costeta}
 \end{center}
 %
 Al observar la figura (\ref{fig: histograma costeta}) se evidencia una gran aleatoriedad en la distribución de $\cos\theta$, la razón de ello es que la distribución considera tanto BHs alineados como no alineados. Además se evidencia que para los tres autovalores ocurre lo mismo, una gran aleatoriedad. Para deshacernos de este problema es necesario estudiar el comportamiento de los BHs en regiones especificas de la simulación.
@@ -192,7 +192,7 @@ Se estiman tres rangos de masas de BHs para la discretización: Rango 1 equivale
 
 \begin{figure}
     \includegraphics[width=1\textwidth]{./figures/6_Resultados/cosmo01/ll.jpeg}
-   \caption{\emph{Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ (Azul) y el espín del BH ${\bf{J_{bh}}}$ (Rojo). En esta figura se proyectan los vectores en el plano $x,y$. La figura presenta tres columnas, cada una de ellas relaciona un rango de masas, Rango 1 equivale a masas de BHs entre ($10^6-10^7)M_{\odot}$, Rango 2 masas entre ($10^7-10^8)M_{\odot}$ y Rango 3 masas entre ($10^8-10^10)M_{\odot}$. Cada columna de rango consta de tres figuras, donde cada celda  representan tres cortes en la caja de la simulación, cortes hechos en el eje $z$, La primera fila indica un corte interior, BHs entre $(0-8.3)\times10^{3} kpc$,  la segunda fila un corte intermedio, entre $(8.3-16.6)\times10^{3} kpc$, la ultima fila representa el corte superior, entre  $ (16.6-25)\times10^{3} kpc$. }}
+   \caption[Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ y el espín del BH  ${\bf{J_{bh}}}$]{\emph{Representación de la correlación entre el autovector tres ${\bf{\vec{e}}_{3}}$ (Azul) y el espín del BH ${\bf{J_{bh}}}$ (Rojo). En esta figura se proyectan los vectores en el plano $x,y$. La figura presenta tres columnas, cada una de ellas relaciona un rango de masas, Rango 1 equivale a masas de BHs entre ($10^6-10^7)M_{\odot}$, Rango 2 masas entre ($10^7-10^8)M_{\odot}$ y Rango 3 masas entre ($10^8-10^10)M_{\odot}$. Cada columna de rango consta de tres figuras, donde cada celda  representan tres cortes en la caja de la simulación, cortes hechos en el eje $z$, La primera fila indica un corte interior, BHs entre $(0-8.3)\times10^{3} kpc$,  la segunda fila un corte intermedio, entre $(8.3-16.6)\times10^{3} kpc$, la ultima fila representa el corte superior, entre  $ (16.6-25)\times10^{3} kpc$. }}
     \label{fig: proyeccion espines}
 \end{figure}
 
@@ -204,7 +204,7 @@ La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) i
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{./figures/6_Resultados/cosmo01/relacion_simulaciones_Mass_bh.pdf}
-    \caption{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de $M_{bh}$. Se hace una comparación entre los datos obtenidos usando los dos regímenes. La linea y puntos azules son el resultado del régimen caótico, las líneas y puntos naranjas son el resultado para el régimen coherente.}}
+    \caption[Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de $M_{bh}$]{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de $M_{bh}$. Se hace una comparación entre los datos obtenidos usando los dos regímenes. La linea y puntos azules son el resultado del régimen caótico, las líneas y puntos naranjas son el resultado para el régimen coherente.}}
     \label{fig: comparacion cosmo01 y cosmo02}
 \end{figure}
  
@@ -215,7 +215,9 @@ Uno de los criterios por los cuales no se presento un análisis sobre {\it{cosmo
 La figura (\ref{fig: median dispercion}) representa el resultado final de este trabajo. Se presentan cuatro  figuras, cada figura contiene a su vez dos gráficas, la gráfica superior de cada figura muestra la mediana para un rango de datos ($\lambda_{3}, M_{bh}, M_{halo}\,\, y\,\, M_{estelar}$), además se muestra los percentiles al 25$\%$ y 75$\%$, que brinda información de la distribución de los datos para cada rango; la gráfica inferior muestra los valores de la  mediana para cada rango.
 %voy acala primera da información de la mediana de los datos ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$) para cada rango de masa o de autovalor. 
 
-Se evidencia que el valor del $|\cos \theta|$ varia con respecto a la masa, a medida que aumenta la masa de los objetos, la distribución apunta a un alineamiento ortogonal entre el entorno y las masas. Se observa en especial, que el mayor alineamiento ocurre entre el entorno y la masa del BH, para BHs muy masivos $|\cos\theta| \to 0.2$. Contrastando este resultados con \cite{wang2018}, que estudia la relación del entorno con el espín del halo. Es importante resaltar que los resultados acá obtenidos son capaces de reproducir lo mostrado por \cite{wang2018} y además reproduce las observaciones \cite{hutsemekers2014}.
+Se evidencia que el valor del $|\cos \theta|$ varia con respecto a la masa, a medida que aumenta la masa de los objetos.
+%la distribución apunta a un alineamiento ortogonal entre el entorno y las masas. 
+Se observa en especial, que el mayor alineamiento ocurre entre el entorno y la masa del BH, para BHs muy masivos $|\cos\theta| \to 0.2$. Contrastando este resultados con \cite{wang2018}, que estudia la relación del entorno con el espín del halo. Es importante resaltar que los resultados acá obtenidos son capaces de reproducir lo mostrado por \cite{wang2018} y además reproduce las observaciones \cite{hutsemekers2014}.
 %por lo tanto el modelo de evolución espín presentado por \cite{Bustamante2018b} permite 
 %los resultados finales de nuestra simulación son capaces de reproducir su resultado, dando  respaldo a la simulación y al modelo.
 
@@ -239,7 +241,7 @@ Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a 
 \subfloat{
 %\label{fig: función de masa estelar}
 \includegraphics[width=0.79\textwidth]{./figures/6_Resultados/cosmo01/percentiles_pdf/mean_cos_theta3_vs_Mass_stelar_bin4.pdf}} 
-\caption{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$). Se tienen 4 figuras, cada figura contiene dos gráficas, las gráficas superiores muestran el valor de la mediana para varios rangos de datos, donde además se muestra los percentiles al 25$\%$ y 75$\%$. la gráfica inferior muestra solamente los valores de la mediana para cada rango.} }
+\caption[Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$)]{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$). Se tienen 4 figuras, cada figura contiene dos gráficas, las gráficas superiores muestran el valor de la mediana para varios rangos de datos, donde además se muestra los percentiles al 25$\%$ y 75$\%$. la gráfica inferior muestra solamente los valores de la mediana para cada rango.} }
 \label{fig: median dispercion} 
 \end{figure}
 
@@ -267,11 +269,11 @@ Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a 
 \label{sec: conclusiones}
 %------------------------------------------------
 %En esta sección se presentan los resultados obtenidos durante este trabajo,  los cuales serán presentados a continuación: 
-Durante todo este trabajo, se ha encaminado en un objetivo específico, encontrar un posible alineación entre el entorno cosmológico y los AGNs. En esta sección se mostraran los resultados obtenidos a lo largo de este trabajo.
+Durante todo este trabajo, se ha encaminado en un objetivo específico, encontrar un posible alineación entre el entorno cosmológico y los AGNs. En esta sección se resumirán los resultados obtenidos a lo largo de este trabajo.
 
 %$\bullet$ El modelo de espín [SEBAS], desempeña un papel fundamental en el alineamiento de los BHs. 
 
-En este trabajo se presento un modelo de evolución de espín, a partir del cual se pretende encontrar algún tipo de alineación entre el entorno cosmológico y la orientación del AGN. Se hizo uso de las simulaciones cosmológicas hidrodinámicas. El criterio de alineamiento está basado en el valor obtenido del $|\cos \theta|$ para diferentes variables en la simulación ($\lambda_{3}, M_{bh}, M_{halo} \,\, y \,\, M_{estelar}$). 
+En este trabajo se presento un modelo de evolución de espín, a partir del cual se pretende encontrar algún tipo de alineación entre el entorno cosmológico y la orientación del AGN. Se hizo uso de las simulaciones cosmológicas hidrodinámicas presentadas en \cite{Bustamante2018b}. El criterio de alineamiento está basado en el valor obtenido del $|\cos \theta|$ para diferentes variables en la simulación ($\lambda_{3}, M_{bh}, M_{halo} \,\, y \,\, M_{estelar}$). 
 
 Al usar los datos obtenidos de las simulaciones {\it{cosmo01}} y {\it{cosmo02}} se evidencia que los procesos que ocurren bajo la acreción caótica dan cuenta de una ortogonalización más contundente, en especial para la masa. Para la acreción coherente no se evidencia un posible alineamiento, los resultados no permiten concluir. 
 

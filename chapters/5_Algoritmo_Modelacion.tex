@@ -38,7 +38,7 @@ El método de Voronoi es el método de interpolación más simple, que se basa e
 %
 \begin{center}
 \includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/voronoi.png}
-\figcaption{\emph{Representación gráfica de la teselación de Voronoi y Delaunay. En esta gráfica se puede ver la doble topología del digrama de Voronoi, pues es equivalente topológicamente a la teselación de Delaunay. El panel al lado izquierda representa la teselación de Voronoi, el panel del centro a la teselación de Delaunay y el panel del lado derecho es la superposición de las dos teselaciones (linea punteada es teselación Delaunay y linea continua teselación de Voronoi). }}\label{fig: voronoi}
+\figcaption[Representación gráfica de la teselación de Voronoi y Delaunay]{\emph{Representación gráfica de la teselación de Voronoi y Delaunay. En esta gráfica se puede ver la doble topología del digrama de Voronoi, pues es equivalente topológicamente a la teselación de Delaunay. El panel al lado izquierda representa la teselación de Voronoi, el panel del centro a la teselación de Delaunay y el panel del lado derecho es la superposición de las dos teselaciones (linea punteada es teselación Delaunay y linea continua teselación de Voronoi). }}\label{fig: voronoi}
 \end{center}
 %
 La importancia de usar el método de Voronoi en simulaciones  es que permite que los puntos en la malla se muevan con el fluido a la velocidad del fluido, esto garantiza que a medida que trascurren los pasos numéricos se actualice la información del fluido en la celda. Este método posibilita solucionar el problema de no invariabilidad galileana que emergía del método de la malla de Euler. Al solucionar esto se impide la alta sensibilidad en el cambio de las velocidades, haciendo que la dinámica del sistema sea consistente, y por ende se obtengan valores no sesgados para  el espín de los BHs y su disco de acreción.  
@@ -155,7 +155,7 @@ El código que se esta implementando para la clasificación del entorno, hace us
 \subfloat{ 
 %\label{fig: función de masa halos}
 \includegraphics[width=0.43\textwidth]{./figures/5_Algoritmo_Modelacion/Distribution_density_superior.png}}
-\caption{\emph{Distribución del campo de sobre densidad, resultado del modelo T-Web, las figuras son cortes en el eje $z$ a diferentes alturas. La figura superior izquierda representa un corte inferior, la superior derecha un corte medio  y la inferior da cuenta del corte superior.}} 
+\caption[Distribución del campo de sobre densidad]{\emph{Distribución del campo de sobre densidad, resultado del modelo T-Web, las figuras son cortes en el eje $z$ a diferentes alturas. La figura superior izquierda representa un corte inferior, la superior derecha un corte medio  y la inferior da cuenta del corte superior.}} 
 \label{fig: Campo de densidad } 
 \end{figure}
 
@@ -193,7 +193,7 @@ Estas estructuras serán caracterizadas por la cantidad y ubicación de las part
 %
 \begin{center}
 \includegraphics[scale=.35]{./figures/5_Algoritmo_Modelacion/FoF_metodo.png}
-\figcaption{\emph{Esquema de cómo funciona el método de FoF, consiste en determinar que partículas interactuan entre sí a partir de la intersección de regiones de vinculación. }}\label{fig: FoF esquema}
+\figcaption[Esquema de cómo funciona el método de FoF]{\emph{Esquema de cómo funciona el método de FoF, consiste en determinar que partículas interactuan entre sí a partir de la intersección de regiones de vinculación. }}\label{fig: FoF esquema}
 \end{center}
 %
 
