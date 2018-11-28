@@ -13,17 +13,17 @@
 \chapter{Alineamiento de AGNs con su entorno a gran escala}
 \label{cha:cosmic_web}
 
-En esta sección se presentan los resultados obtenidos en la búsqueda de un posible alineamiento del espín de los AGNs con el entorno cosmológico al cual pertenecen. Con este fin  se hace uso de dos simulaciones cosmológicas ({\it{cosmo01}} y {\it{cosmo02}}) y el método  de clasificación de estructuras T-Web. A continuación se presentan las características de las simulaciones y  los resultados obtenidos.
+En esta sección se presentan los resultados obtenidos en la búsqueda de un posible alineamiento entre el espín de los AGNs con el entorno cosmológico al cual pertenecen. Con este fin  se hace uso de dos simulaciones cosmológicas ({\it{cosmo01}} y {\it{cosmo02}}) y el método  de clasificación de estructuras T-Web. A continuación se presentan las características de las simulaciones y  los resultados obtenidos.
 
 %------------------------------------------------
 \section{Características de las simulaciones}
 \label{sec: propiedades en las simulaciones}
 %------------------------------------------------
 
-Haciendo uso del modelo de Illustris TNG AGN+ physics model\footnote{Simulación cosmológica a gran escala de formación de galaxias \url{http://www.illustris-project.org}. TNG AGN+ physics model, hace referencia a simulaciones hidrodinámicas que involucran AGNs y toda la física que ello conlleva.} que implementa el modelo de evolución de espín \cite{Bustamante2018b}, se realizan dos simulaciones {\it{cosmo01}} y {\it{cosmo02}}. Estas simulaciones tienen consigo una serie de variables que evolucionan con la simulación, las cuales permiten describir la dinámica de cada galaxia.
+Haciendo uso del modelo físico de Illustris TNG AGN + physics model\footnote{Simulación cosmológica a gran escala de formación de galaxias \url{http://www.illustris-project.org}. TNG AGN+ physics model, hace referencia a simulaciones hidrodinámicas que involucran AGNs y toda la física que ello conlleva.}, cuyo physics model implementa el modelo de evolución de espín planteado por \cite{Bustamante2018b}, se realizan dos simulaciones {\it{cosmo01}} y {\it{cosmo02}}. Estas simulaciones tienen consigo una serie de variables que evolucionan con la simulación, las cuales permiten describir la dinámica de cada galaxia.
 %Estas simulaciones tienen consigo una serie de parámetros propios de la dinámica de cada galaxia. 
 Entre las variables que nos interesa están: el espín del BH, momentum angular del halo, momentum angular del disco de acreción del BH, masa del BH, masa del halo, masa de la galaxia, masa estelar que contiene el halo y la rata de acreción de materia en el disco de acreción y del BH. Estas simulaciones se corrieron en una caja cosmológica con un tamaño de 25Mpc/h, con 2$\times$512$^{3}$ partículas (entre materia oscura y gas) %indicando una alta resolución. 
-ofreciendo una resolución de $m_{dm}=$, $m_{g} = $ 
+ofreciendo una resolución de $m_{dm}= 12415960.170233943 M_{\odot}$, $m_{g} = $ 
 . En las simulaciones se tiene alrededor de 1200 SMBHs, donde 60 de ellos son más masivos que 10$^{8}M_{\odot}$ a un redshift $z=0$.
 
 {\it{cosmo01}} presenta acreción de gas bajo el régimen caótico y {\it{cosmo02}} acreción de gas bajo el régimen coherente. La acreción caótica asume que la distribución de momentum angular del gas acretado, puede estar orientado en una dirección aleatoria  
@@ -33,12 +33,12 @@ ofreciendo una resolución de $m_{dm}=$, $m_{g} = $
 (ver sección \ref{subsec: Acrecion_gas}).
 ~\\
 
-En las simulaciones hay variables que dan información sobre la dinámica entre galaxias, que arrojan criterios suficientes para decidir si lo obtenido está en concordancia con
+En las simulaciones hay variables que dan información sobre la dinámica entre galaxias, que arrojan criterios suficientes para decidir si lo obtenido está en relación con
 %: La distribución de masas en galaxias y la relación $Masa\ BH$ - $Masa\ estelar$, con 
-las observaciones %\cite{schneider2006}. 
-. Conforme a esto, se realiza un análisis a la distribución de masa de los halos, BHs y de masa estelar del halo, y además se a la relación $Masa\ BH$ - $Masa\ estelar$.
+las observaciones \cite{hutsemekers2014}. 
+Conforme a esto, se realiza un análisis a la distribución de masa de los halos, BHs y de masa estelar del halo, y además se busca ver cómo se relaciona $Masa\ BH$ - $Masa\ estelar$.
 
-Debido a efectos de resolución en la simulación, no todos los halos hospedan un BH en su interior, fue necesario descartar los halos que no cumplen con esta condición. Esto reduce en gran manera la cantidad de galaxias a estudiar, sin embargo es suficiente para realizar un análisis adecuado.
+Debido a efectos de resolución en la simulación, no todos los halos hospedan un BH en su interior, fue necesario descartar los halos que no cumplen con esta condición. Esto reduce  la cantidad de galaxias a estudiar, sin embargo es suficiente para realizar un análisis adecuado.
 
 %------------------------------------------------
     \subsection{ Función de distribución de masa}
@@ -84,7 +84,7 @@ Al observar las figuras (\ref{fig: Funciones de masa cosmo01} y \ref{fig: Funcio
 
 A parte de la función de distribución de masa, es posible usar otros criterios que dan información de la simulación y de su veracidad. 
 
-La teoría sobre la formación de galaxias indica la existencia de una relación lineal entre la masa estelar de una galaxia y la masa del BH huésped \cite{marconi2003} i.e., las galaxias que poseen una masa estelar considerable poseen también un BH con una masa considerable. Por tanto las simulaciones debe reproducir este resultado teórico y observacional. Al observa las figuras (\ref{fig: Mass_bhVsMass_stelar}), es posible observar que las simulaciones bajo este criterio, reproducen lo esperado. 
+La teoría sobre la formación de galaxias indica la existencia de una relación lineal entre la masa estelar de una galaxia y la masa del BH huésped \cite{marconi2003} i.e., las galaxias que poseen una masa estelar considerable poseen también un BH con una masa considerable. Por tanto las simulaciones debe reproducir este resultado teórico y observacional. Al observar las figuras (\ref{fig: Mass_bhVsMass_stelar}), es posible ver que las simulaciones bajo este criterio, reproducen lo esperado. 
 %
  \begin{figure}
  \centering
@@ -128,13 +128,14 @@ Al observar la distribución de BHs en las simulaciones, se observa que gran par
 \label{sec: Alineamiento}
 %------------------------------------------------
 
-En esta sección se presentan los resultados que permitan concluir si existe alguna relación entre la orientación del espín del BH y el entorno. Se mostrarán los resultados logrados con diferentes variables (momentum angular de BHs, discos de acreción, halos y entorno), encaminados a comparar los resultados y poder dar respuesta a la pregunta central de este proyecto. 
+En esta sección se presentan los resultados que permitan concluir si existe alguna relación entre la orientación del espín del BH y su entorno. Se mostrarán los resultados logrados con diferentes variables (momentum angular de BHs, discos de acreción, halos y entorno), encaminados a comparar los resultados y poder dar respuesta a la pregunta central de este proyecto. 
 
-Recordando la estructura de las galaxias, en la cual se afirma que todas cuentan con un halo y que en su interior presenta un BH. Cuando por procesos de acreción de materia repentina por parte del BH, provocando una ``activación"\hspace{0.1cm} del BH y generando un AGN.
+Recordando la estructura de las galaxias, en la cual se afirma que todas cuentan con un halo y en su interior presentan un BH \cite{schneider2006}.
+%Cuando por procesos de acreción de materia repentina y prolongada por parte del BH, se provoca una ``activación"\hspace{0.1cm} del BH, el cual genera un AGN.
 %del cual se dice que si está "activo" se denomina AGN. 
-Se consideran tres variables fundamentales para cada galaxia: para los halos se estudiarán la masa estelar contenida en el halo, posición y momentum angular; para los AGN se estudiarán el SMBH y el disco de acreción del SMBH, del SMBH se extrae la masa, espín y posición; del disco de acreción el momentum angular. Estas variables fueron calculadas usando la teoría de evolución de espín (ver capitulo \ref{cha:Modelo de Spin}) y usando el modelo de simulaciones hidrodinámicas (ver capítulo \ref{cha: Algoritmo y modelacion} ) que reproduce la evolución y formación de galaxias. 
+Se consideran entonces diferentes variables que permitan conocer los procesos que ocurren en cada galaxia: Para los halos se estudiarán la masa estelar contenida en el halo, posición y momentum angular; para los AGN se estudiarán el SMBH y el disco de acreción del SMBH, del SMBH se extrae la masa, espín y posición; del disco de acreción el momentum angular. Estas variables fueron calculadas usando la teoría de evolución de espín (ver capitulo \ref{cha:Modelo de Spin}) y usando el modelo de simulaciones hidrodinámicas (ver capítulo \ref{cha: Algoritmo y modelacion} ) que reproduce la evolución y formación de galaxias. 
 
-Para estudiar la alineación se utiliza como variable el $\cos (\theta)$, el cual está acotado entre -1 y 1 (ver sección \ref{subsubsec: Aling_Spin}). Partiendo de esto se argumenta que hay alineamiento sí y solo sí  $\cos (\theta) \to 1$, anti-alineamiento si $\cos (\theta)\to -1$, ortogonalidad si $\cos (\theta)\to 0$ y si $\cos (\theta)\to \pm 0.5 $ no es posible concluir algo (completamente aleatorio).
+Para estudiar la alineación se utiliza como variable el $\cos (\theta)$, el cual está acotado entre -1 y 1 (ver sección \ref{subsubsec: Aling_Spin}). Partiendo de esto se argumenta que hay alineamiento sí y solo sí  $\cos (\theta) \to 1$, anti-alineamiento si $\cos (\theta)\to -1$, ortogonalidad si $\cos (\theta)\to 0$ y si $\cos (\theta)\to \pm 0.5 $ es  completamente aleatorio.
 %Con base en esto se procede a calcular la relación entre los momentum angulares de cada sistema, a continuación se nombrar los ángulos con los cuales se busca encontrar alguna relación:
 
 %$\theta$ : ángulo entre el espín del BH ${\bf{J_{bh}}}$ y el autovector tres $\vec{\bf{e}}_{3}$.
@@ -156,7 +157,8 @@ Valiéndonos de los resultados obtenidos de las simulaciones y  la teoría de ev
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$. Las relaciones que se obtengan de $\theta$ son de gran importancia, ya que estás son las responsables de indicar si hay o no alineamiento con el entorno. Por tanto observemos que ocurre con la distribución de $\cos \theta$ para diferentes autovalores $\lambda_{i}$.
+%Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$. 
+Los valores que se obtengan de $\theta$ son de gran importancia, ya que estás son los responsables de indicar si hay o no alineamiento. Por tanto observemos que ocurre con la distribución de $\cos \theta$ para diferentes autovalores $\lambda_{i}$.
 %
 \begin{center}
 \includegraphics[scale=.37]{./figures/6_Resultados/cosmo01/histograma_cos_theta.png}
@@ -166,7 +168,7 @@ Una vez visto estas relaciones, procedamos a estudiar como se comporta $\theta$.
 Al observar la figura (\ref{fig: histograma costeta}) se evidencia una gran aleatoriedad en la distribución de $\cos\theta$, la razón de ello es que la distribución considera tanto BHs alineados como no alineados. Además se evidencia que para los tres autovalores ocurre lo mismo, una gran aleatoriedad. Para deshacernos de este problema es necesario estudiar el comportamiento de los BHs en regiones especificas de la simulación.
 %donde se tenga alguna idea de un alineamiento.  
 
-Ahora en búsqueda de encontrar una relación más directa para el alineamiento se estudiará entornos particulares, y ver si existe alguna relación entre el parámetro de alineamiento $\cos\theta$ y las variables relacionadas con el entorno, como lo son la masa del BH, la masa estelar del halo, masa del halo y autovectores, en especial $\lambda_{3}$. La teoría de formación de galaxias y estructuras muestra que en regiones de sobre densidad (clusters o filamentos) las galaxias presentan una mayor cantidad de masa  con respecto a las galaxias que se encuentran el regiones de baja densidad  \cite{zhao2015}, lo cual se puede traducir en una relación directa entre el entorno y la masa de los BHs. Es entonces la masa el criterio usado para encontrar el posible alineamiento. 
+Ahora en búsqueda de encontrar una relación más directa para el alineamiento se estudiarán entornos particulares, y ver si existe alguna relación entre el parámetro de alineamiento $\cos\theta$ y las variables relacionadas con el entorno, como lo son la masa del BH, la masa estelar del halo, masa del halo y autovectores, en especial $\lambda_{3}$. La teoría de formación de galaxias y estructuras muestra que en regiones de sobre densidad (clusters o filamentos) las galaxias presentan una mayor cantidad de masa  con respecto a las galaxias que se encuentran el regiones de baja densidad  \cite{zhao2015}, lo cual se puede traducir en una relación directa entre el entorno y la masa de los BHs. Es entonces la masa el criterio usado para encontrar el posible alineamiento. 
 
 La figura (\ref{fig: proyeccion espines}) da cuenta de la discretización que se pretende hacer para reconocer la variable que permita analizar más en detalle el alineamiento de los BHs con su entorno,  
 %separar los BHs alineados de los no alineados, 
@@ -199,7 +201,7 @@ Se estiman tres rangos de masas de BHs para la discretización: Rango 1 equivale
 
 Para entrar a analizar el alineamiento se busca la relación con la masa o con el mismo autovalores $\lambda_{3}$. 
 %(¿PONGO QUE EL ANALISIS PARA LOS OTROS TRES AUTOVALORES?).
-La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) indica que las regiones donde se forman filamentos está determinada por el valor del autovalor  $\lambda_{3}$, al estudiar la dinámica del flujo de materia en las estructuras, se estima  que en filamentos hay una mayor concentración de materia en una dirección, esto puede suponer que los objetos inmersos en esa región tienden a alinearse en la dirección del flujo de materia. No solo en los filamentos se debería esperar algún tipo de alineación, se puede suponer que en regiones de alta densidad de materia, donde la materia apunta hacia una misma dirección debería ocurrir también algún tipo de alineación. La figura (\ref{fig: Histograma Autovalores}) indica que la mayoría de los BHs de las simulación van a estar en filamentos o clusters. 
+La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) indica que las regiones donde se forman filamentos está determinada por el valor del autovalor  $\lambda_{3}$, al estudiar la dinámica del flujo de materia en las estructuras, se estima  que en filamentos hay una mayor concentración de materia en una dirección, esto puede suponer que los objetos inmersos en esa región tienden a alinearse en la dirección del flujo de materia. No solo en los filamentos se debería esperar algún tipo de alineación, se puede suponer que en regiones de alta densidad de materia, donde la materia apunta hacia una misma dirección debería ocurrir también algún tipo de alineación o desalineación. La figura (\ref{fig: Histograma Autovalores}) indica que la mayoría de los BHs de las simulación van a estar en filamentos o clusters. 
 
 \begin{figure}
     \centering
@@ -210,18 +212,22 @@ La teoría de formación de estructuras ( sección \ref{subsec: Metodo_T-web}) i
  
 Uno de los criterios por los cuales no se presento un análisis sobre {\it{cosmo02}}, son lo resultados obtenidos 
 %de su proceso de acreción coherente
-, no se logra constatar un claro  alineamiento. Al observar la figura (\ref{fig: comparacion cosmo01 y cosmo02}) se puede evidenciar que la mediana de los diferentes rangos de masas de los BHs para la simulación {\it{comos02}} siempre está muy cercano de 0.5, con lo cual no es posible concluir algo, mientras que para la simulación {\it{cosmo01}} si presenta un cambio, una tendencia a que el espín del BH y la dirección del autovector ${\bf{e}}_{3}$ sean ortogonales. 
+, no se logra constatar una clara tendencia de alineamiento o desalineamiento. 
+Al observar la figura (\ref{fig: comparacion cosmo01 y cosmo02}) se puede ver que la mediana en los diferentes rangos de masas de los BHs para la simulación {\it{comos02}} siempre está cercana a  0.5, con lo cual no se tiene certeza de lo que está ocurriendo, mientras que para la simulación {\it{cosmo01}} si se observa un cambio, una tendencia a que el espín del BH y la dirección del autovector ${\bf{e}}_{3}$ se desalineen.  
 
 La figura (\ref{fig: median dispercion}) representa el resultado final de este trabajo. Se presentan cuatro  figuras, cada figura contiene a su vez dos gráficas, la gráfica superior de cada figura muestra la mediana para un rango de datos ($\lambda_{3}, M_{bh}, M_{halo}\,\, y\,\, M_{estelar}$), además se muestra los percentiles al 25$\%$ y 75$\%$, que brinda información de la distribución de los datos para cada rango; la gráfica inferior muestra los valores de la  mediana para cada rango.
 %voy acala primera da información de la mediana de los datos ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$) para cada rango de masa o de autovalor. 
 
-Se evidencia que el valor del $|\cos \theta|$ varia con respecto a la masa, a medida que aumenta la masa de los objetos.
+%Se evidencia que el valor del $|\cos \theta|$ varia con respecto a la masa.%, a medida que aumenta la masa de los objetos.
 %la distribución apunta a un alineamiento ortogonal entre el entorno y las masas. 
-Se observa en especial, que el mayor alineamiento ocurre entre el entorno y la masa del BH, para BHs muy masivos $|\cos\theta| \to 0.2$. Contrastando este resultados con \cite{wang2018}, que estudia la relación del entorno con el espín del halo. Es importante resaltar que los resultados acá obtenidos son capaces de reproducir lo mostrado por \cite{wang2018} y además reproduce las observaciones \cite{hutsemekers2014}.
+Al observar las figura (\ref{fig: median dispercion}) se evidencia una clara relación entre la masa y el criterio de alineación ($\cos\theta$). 
+Se observa en especial, una fuerte tendencia de desalineación que ocurre al relacionar el entorno y la masa del BH, es decir, para BHs  masivos $|\cos\theta| \to 0.2$. Contrastando estos resultados con \cite{wang2018}, el cual estudia la relación del entorno con el espín del halo. Se evidencia que el modelo presentado en este trabajo es capaz de reproducir los datos obtenidos por \cite{wang2018} y además reproduce las predicciones hechas en las observaciones \cite{hutsemekers2014}.
+
+%Es importante resaltar que los resultados acá obtenidos son capaces de reproducir lo mostrado por \cite{wang2018} y además reproduce las observaciones \cite{hutsemekers2014}.
 %por lo tanto el modelo de evolución espín presentado por \cite{Bustamante2018b} permite 
 %los resultados finales de nuestra simulación son capaces de reproducir su resultado, dando  respaldo a la simulación y al modelo.
 
-Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a gran escala sí afecta algunos procesos internos en las galaxias, es decir, el campo de densidad que fluye a través de los filamentos o clusters influye en la dirección del espín del BH. Por tanto el espín del BH ${\bf{J_{bh}}}$ se alinea de forma ortogonal con el autovector tres $\vec{\bf{e}_3}$ para masas grandes. 
+Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a gran escala sí afecta algunos procesos internos en las galaxias, en particular, el campo de densidad que fluye a través de los filamentos o clusters influye en la orientación de los espines de los BHs hospedados en estos entornos. Por tanto se puede afirmar que  el espín de los BHs ${\bf{J_{bh}}}$ tienden a desalinearse con el autovector $\vec{\bf{e}_3}$ para masas grandes. 
 %
 %\begin{align}
 % |\cos \theta| =   \left\| \frac{{\bf{J_{bh}}}\cdot \vec{\bf{e}_3}}{ %|\bf{J_{bh}}| |\vec{\bf{e}_3}|} \right\| \to 0.2
@@ -241,7 +247,7 @@ Entonces, se puede afirmar que la dinámica del entorno o de las  estructuras a 
 \subfloat{
 %\label{fig: función de masa estelar}
 \includegraphics[width=0.79\textwidth]{./figures/6_Resultados/cosmo01/percentiles_pdf/mean_cos_theta3_vs_Mass_stelar_bin4.pdf}} 
-\caption[Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$)]{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$). Se tienen 4 figuras, cada figura contiene dos gráficas, las gráficas superiores muestran el valor de la mediana para varios rangos de datos, donde además se muestra los percentiles al 25$\%$ y 75$\%$. la gráfica inferior muestra solamente los valores de la mediana para cada rango.} }
+\caption[Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}\,\, y \,\, M_{estelar}$)]{\emph{Alineamiento entre el espín del BH y autovector $\vec{\bf{e}}_3$ en función de las variables ($\lambda_{3}, M_{bh}, M_{halo}, M_{estelar}$). Se tienen 4 figuras, cada figura contiene dos gráficas, las gráficas superiores muestran el valor de la mediana para varios rangos de datos, donde además se muestra los percentiles al 25$\%$ y 75$\%$. la gráfica inferior muestra solamente los valores de la mediana para cada rango.} }
 \label{fig: median dispercion} 
 \end{figure}
 
@@ -275,13 +281,13 @@ Durante todo este trabajo, se ha encaminado en un objetivo específico, encontra
 
 En este trabajo se presento un modelo de evolución de espín, a partir del cual se pretende encontrar algún tipo de alineación entre el entorno cosmológico y la orientación del AGN. Se hizo uso de las simulaciones cosmológicas hidrodinámicas presentadas en \cite{Bustamante2018b}. El criterio de alineamiento está basado en el valor obtenido del $|\cos \theta|$ para diferentes variables en la simulación ($\lambda_{3}, M_{bh}, M_{halo} \,\, y \,\, M_{estelar}$). 
 
-Al usar los datos obtenidos de las simulaciones {\it{cosmo01}} y {\it{cosmo02}} se evidencia que los procesos que ocurren bajo la acreción caótica dan cuenta de una ortogonalización más contundente, en especial para la masa. Para la acreción coherente no se evidencia un posible alineamiento, los resultados no permiten concluir. 
+Al usar los datos obtenidos de las simulaciones {\it{cosmo01}} y {\it{cosmo02}} se evidencia que los procesos que ocurren bajo la acreción caótica dan cuenta de una tendencia de desalineación fuerte, en especial en función de la masa. Para la acreción coherente no se evidencia un posible tendencia de alineamiento o desalineamiento, los resultados no permiten concluir. 
 
-Inspeccionando las figuras (\ref{fig: proyeccion espines} y \ref{fig: median dispercion}) es posible afirmar que existe una relación entre la masa y el ángulo de alineamiento, se observa una ortogonalización  para grandes valores en la masa de los BHs. La figura (\ref{fig: median dispercion}) deja ver que para los BHs más masivos, la dirección del gradiente del campo de densidad y la orientación del espín del BH tienden a ser ortogonales. 
+%Inspeccionando las figuras (\ref{fig: proyeccion espines} y \ref{fig: median dispercion}) es posible afirmar que existe una relación entre la masa y el ángulo de alineamiento, se observa una tendencia de desalineamiento para BHs masivos. 
+La figura (\ref{fig: median dispercion}) deja ver que para los BHs masivos, la dirección del gradiente del campo de densidad y la orientación del espín de los BHs tienden a desalinearse, se pasa de tener una aleatoriedad en los valores que indican un alineamiento ($\expval{\abs{\cos \theta}}\to 0.5$) a presentar una dirección  privilegiada a medida que aumenta la masa ($\expval{\abs{\cos \theta}}\to 0.2$), indicando una desalineación. %Se puede afirmar que el campo de densidad que fluye a través de los filamentos o clusters influye en la orientación de los espines de los BHs hospedados en estos entornos.
 
-Del resultado anterior se puede concluir que hay un posible relación entre la masa y el espín del BH. Debido a la relación que existe entre la masa y el entorno, se puede concluir por tanto que si hay evidencia que apunta a una relación entre el entorno cosmológico y la orientación del AGN. Se podría afirmar que el flujo de materia que circula por las estructuras, sí afecta la orientación de los AGNs y esto se observa en gran medida para AGNs muy masivos.
+De lo expuesto anterior se puede concluir que hay un posible relación entre la masa y el espín del BH. Debido a la relación que existe entre la masa y el entorno, se puede concluir por tanto que sí hay evidencia que apunta a una relación entre el entorno cosmológico y la orientación del AGN. Se podría afirmar que el campo de densidad de materia que circula a través de las estructuras, sí afecta la orientación de los AGNs y esto se observa en gran medida para AGNs masivos.
 %Por lo tanto, se puede decir que se ha encontrado  ha logrado encontrar un alineamiento 
-
 
 %***********************************************************************
 
